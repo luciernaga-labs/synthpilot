@@ -1,0 +1,19 @@
+[package]
+name = "synthpilot"
+description = "Open-source desktop editor for MIDI synthesizer parameters"
+categories = ["multimedia::audio", "gui"]
+readme = "../../README.md"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+
+[dependencies]
+eframe.workspace = true
+synthpilot-core.workspace = true
+synthpilot-midi.workspace = true
+
+[lints]
+workspace = true

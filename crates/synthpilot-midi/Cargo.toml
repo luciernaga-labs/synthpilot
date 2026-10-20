@@ -1,0 +1,19 @@
+[package]
+name = "synthpilot-midi"
+description = "MIDI output transport for SynthPilot"
+categories = ["multimedia::audio"]
+readme = "../../README.md"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+
+[dependencies]
+midir.workspace = true
+synthpilot-core.workspace = true
+thiserror.workspace = true
+
+[lints]
+workspace = true

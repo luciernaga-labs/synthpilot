@@ -1,0 +1,10 @@
+[alias]
+coverage = [
+    "llvm-cov",
+    "--workspace",
+    "--all-features",
+    "--ignore-filename-regex",
+    "(synthpilot/src/main\\.rs|synthpilot/src/app/(mod|editor|preview|sidebar|theme)\\.rs|synthpilot-midi/src/device\\.rs)$",
+    "--fail-under-lines",
+    "90",
+]
