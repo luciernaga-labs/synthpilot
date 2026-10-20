@@ -274,7 +274,7 @@ fn implemented_parameters_cite_the_data_list() {
                         definition.id
                     );
                 }
-                Support::NotImplemented { reason } => assert!(!reason.is_empty()),
+                Support::NotImplemented { reason } => assert_ne!(reason, ""),
             }
         }
     }

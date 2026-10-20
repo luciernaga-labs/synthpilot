@@ -158,7 +158,7 @@ mod tests {
         assert_eq!(message.len(), 3);
         assert!(!message.is_empty());
         assert_eq!(message.as_ref(), &[START, 0x43, END]);
-        assert!(message.segments().is_empty());
+        assert_eq!(message.segments(), []);
         assert_eq!(message.into_bytes(), vec![START, 0x43, END]);
     }
 }

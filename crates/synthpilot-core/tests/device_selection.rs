@@ -52,7 +52,7 @@ fn modx_plus_declares_awm2_fm_x_and_drum() {
         ]
     );
     for engine in profile.engines() {
-        assert!(!engine.description().is_empty());
+        assert_ne!(engine.description(), "");
         assert_eq!(engine.support(), EngineSupport::Partial);
         assert_eq!(engine.layout().parts, 16);
     }

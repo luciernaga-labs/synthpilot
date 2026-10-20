@@ -292,13 +292,15 @@ mod tests {
         let hex: Vec<_> = sent.iter().map(SysExMessage::to_hex).collect();
         assert_eq!(hex, ["F0 43 10 7F 1C 07 41 00 28 64 F7"]);
 
-        assert!(
-            workspace
-                .apply(Action::SetValue(awm2::ELEMENT_LEVEL, 999))
-                .is_empty()
+        assert_eq!(
+            workspace.apply(Action::SetValue(awm2::ELEMENT_LEVEL, 999)),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
         );
         assert!(workspace.error().is_some());
-        assert!(workspace.apply(Action::SelectElement(2)).is_empty());
+        assert_eq!(
+            workspace.apply(Action::SelectElement(2)),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
+        );
     }
 
     #[test]
@@ -375,11 +377,13 @@ mod tests {
             ..PartData::default()
         });
         assert!(workspace.sound().is_none());
-        assert!(workspace.apply(Action::ReadFromKeyboard).is_empty());
-        assert!(
-            workspace
-                .apply(Action::SetValue(awm2::ELEMENT_LEVEL, 1))
-                .is_empty()
+        assert_eq!(
+            workspace.apply(Action::ReadFromKeyboard),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
+        );
+        assert_eq!(
+            workspace.apply(Action::SetValue(awm2::ELEMENT_LEVEL, 1)),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
         );
     }
 
