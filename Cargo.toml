@@ -1,0 +1,30 @@
+[workspace]
+resolver = "3"
+members = ["crates/synthpilot", "crates/synthpilot-core", "crates/synthpilot-midi"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT"
+repository = "https://github.com/luciernaga-labs/synthpilot"
+keywords = ["midi", "sysex", "synthesizer", "yamaha", "modx"]
+
+[workspace.dependencies]
+eframe = { version = "0.37", default-features = false, features = ["accesskit", "default_fonts", "glow", "wayland", "x11"] }
+midir = "0.11"
+synthpilot-core = { path = "crates/synthpilot-core", version = "0.1.0" }
+synthpilot-midi = { path = "crates/synthpilot-midi", version = "0.1.0" }
+thiserror = "2"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unreachable_pub = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"

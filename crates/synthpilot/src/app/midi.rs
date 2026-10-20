@@ -218,7 +218,7 @@ mod tests {
     fn idle_links_do_not_scan() {
         let mut link = MidiLink::idle();
         link.tick(Instant::now());
-        assert!(link.ports().is_empty());
+        assert_eq!(link.ports(), []);
         assert!(link.last_scan.is_none());
     }
 
@@ -251,7 +251,7 @@ mod tests {
         let mut link = MidiLink::idle();
         link.attach(Box::new(FailingOutput(port("MODX+"))));
         assert!(!link.can_receive());
-        assert!(link.receive().is_empty());
+        assert_eq!(link.receive(), [] as [synthpilot_midi::Packet; 0]);
         link.send(&[message(), message()]);
         assert!(link.live_port().is_none());
         assert_eq!(link.sent(), 0);

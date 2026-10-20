@@ -1,9 +1,11 @@
 use synthpilot_core::devices;
 use synthpilot_core::domain::{
     DeviceId, DeviceProfile, EncodeError, EngineProfile, Location, ParameterChange,
-    ParameterDefinition, ParameterId, PartData, Scope, Sound,
+    ParameterDefinition, ParameterId, Part, PartData, Scope, Sound,
 };
 use synthpilot_core::protocol::SysExMessage;
+
+pub(crate) const EFFECTS: u8 = 0;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub(crate) enum Action {
@@ -67,8 +69,22 @@ impl Workspace {
     }
 
     pub(crate) fn engine(&self) -> Option<&dyn EngineProfile> {
-        let part = self.sound.as_ref()?.part(self.part)?;
-        self.device.engine(part.engine())
+        engine_for(self.device.as_ref(), self.sound.as_ref()?, self.part)
+    }
+
+    pub(crate) fn has_effects(&self) -> bool {
+        self.sound
+            .as_ref()
+            .is_some_and(|sound| sound.common().is_some())
+    }
+
+    fn current(&self) -> Option<&Part> {
+        let sound = self.sound.as_ref()?;
+        if self.part == EFFECTS {
+            sound.common()
+        } else {
+            sound.part(self.part)
+        }
     }
 
     pub(crate) fn location(&self, definition: &ParameterDefinition) -> Location {
@@ -76,12 +92,11 @@ impl Workspace {
     }
 
     pub(crate) fn value(&self, definition: &ParameterDefinition) -> Option<i32> {
-        let part = self.sound.as_ref()?.part(self.part)?;
         let element = match definition.scope {
-            Scope::Part => None,
+            Scope::Performance | Scope::Part => None,
             Scope::Element => Some(self.element),
         };
-        part.value(definition.id, element)
+        self.current()?.value(definition.id, element)
     }
 
     pub(crate) fn preview(&self) -> Option<Preview> {
@@ -123,6 +138,18 @@ impl Workspace {
         }
     }
 
+    pub(crate) fn receive_common(&mut self, values: &[ParameterChange]) {
+        let Some(sound) = self.sound.as_mut() else {
+            return;
+        };
+        let Some(engine) = self.device.common() else {
+            return;
+        };
+        for change in values {
+            let _ = sound.store(engine, *change);
+        }
+    }
+
     pub(crate) fn apply(&mut self, action: Action) -> Vec<SysExMessage> {
         self.error = None;
         match action {
@@ -153,9 +180,7 @@ impl Workspace {
     fn set_value(&mut self, id: ParameterId, value: i32) -> Option<SysExMessage> {
         self.selected = Some(id);
         let sound = self.sound.as_mut()?;
-        let engine = sound
-            .part(self.part)
-            .and_then(|part| self.device.engine(part.engine()))?;
+        let engine = engine_for(self.device.as_ref(), sound, self.part)?;
         let definition = engine.parameter(id)?;
         let location = Location::for_scope(definition.scope, self.part, self.element);
         match sound.apply(engine, ParameterChange::new(id, location, value)) {
@@ -176,9 +201,21 @@ impl Workspace {
     }
 }
 
+fn engine_for<'a>(
+    device: &'a dyn DeviceProfile,
+    sound: &Sound,
+    part: u8,
+) -> Option<&'a dyn EngineProfile> {
+    if part == EFFECTS {
+        sound.common()?;
+        return device.common();
+    }
+    device.engine(sound.part(part)?.engine())
+}
+
 #[cfg(test)]
 mod tests {
-    use synthpilot_core::devices::modx_plus::{self, awm2, fm_x, part};
+    use synthpilot_core::devices::modx_plus::{self, awm2, effects, fm_x, part};
     use synthpilot_core::domain::EngineId;
 
     use super::*;
@@ -255,13 +292,15 @@ mod tests {
         let hex: Vec<_> = sent.iter().map(SysExMessage::to_hex).collect();
         assert_eq!(hex, ["F0 43 10 7F 1C 07 41 00 28 64 F7"]);
 
-        assert!(
-            workspace
-                .apply(Action::SetValue(awm2::ELEMENT_LEVEL, 999))
-                .is_empty()
+        assert_eq!(
+            workspace.apply(Action::SetValue(awm2::ELEMENT_LEVEL, 999)),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
         );
         assert!(workspace.error().is_some());
-        assert!(workspace.apply(Action::SelectElement(2)).is_empty());
+        assert_eq!(
+            workspace.apply(Action::SelectElement(2)),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
+        );
     }
 
     #[test]
@@ -338,11 +377,13 @@ mod tests {
             ..PartData::default()
         });
         assert!(workspace.sound().is_none());
-        assert!(workspace.apply(Action::ReadFromKeyboard).is_empty());
-        assert!(
-            workspace
-                .apply(Action::SetValue(awm2::ELEMENT_LEVEL, 1))
-                .is_empty()
+        assert_eq!(
+            workspace.apply(Action::ReadFromKeyboard),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
+        );
+        assert_eq!(
+            workspace.apply(Action::SetValue(awm2::ELEMENT_LEVEL, 1)),
+            [] as [synthpilot_core::protocol::SysExMessage; 0]
         );
     }
 
@@ -373,5 +414,54 @@ mod tests {
         assert_eq!(workspace.element(), 3);
         assert_eq!(workspace.value(&switch), Some(0));
         assert_eq!(workspace.location(&switch), Location::element(1, 3));
+    }
+
+    #[test]
+    fn the_effects_page_edits_performance_effects() {
+        let mut workspace = with(awm2::ENGINE_ID);
+        assert!(workspace.has_effects());
+        workspace.apply(Action::SelectPart(EFFECTS));
+        assert_eq!(workspace.engine().map(EngineProfile::name), Some("Effects"));
+        assert_eq!(workspace.selected(), Some(effects::REVERB_TYPE));
+
+        let reverb = definition(&workspace, effects::REVERB_TYPE);
+        assert_eq!(workspace.value(&reverb), Some(2));
+        assert_eq!(workspace.location(&reverb), Location::performance());
+
+        let sent = workspace.apply(Action::SetValue(effects::REVERB_TYPE, 9));
+        let hex: Vec<_> = sent.iter().map(SysExMessage::to_hex).collect();
+        assert_eq!(hex, ["F0 43 10 7F 1C 07 30 41 00 01 21 F7"]);
+        assert_eq!(workspace.value(&reverb), Some(9));
+        assert_eq!(
+            workspace.preview().unwrap().result.unwrap().to_hex(),
+            "F0 43 10 7F 1C 07 30 41 00 01 21 F7"
+        );
+    }
+
+    #[test]
+    fn keyboard_changes_update_performance_effects() {
+        let mut workspace = with(awm2::ENGINE_ID);
+        workspace.receive_common(&[ParameterChange::new(
+            effects::REVERB_RETURN,
+            Location::performance(),
+            20,
+        )]);
+        workspace.apply(Action::SelectPart(EFFECTS));
+        let ret = definition(&workspace, effects::REVERB_RETURN);
+        assert_eq!(workspace.value(&ret), Some(20));
+
+        let mut empty = Workspace::new(devices::load(modx_plus::DEVICE_ID).unwrap());
+        empty.receive_common(&[]);
+        assert!(!empty.has_effects());
+        empty.apply(Action::SelectPart(EFFECTS));
+        assert!(empty.engine().is_none());
+    }
+
+    #[test]
+    fn part_effect_sends_are_edited_per_part() {
+        let mut workspace = with(awm2::ENGINE_ID);
+        let sent = workspace.apply(Action::SetValue(part::REVERB_SEND, 40));
+        let hex: Vec<_> = sent.iter().map(SysExMessage::to_hex).collect();
+        assert_eq!(hex, ["F0 43 10 7F 1C 07 31 00 29 28 F7"]);
     }
 }

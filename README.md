@@ -16,6 +16,7 @@ SynthPilot connects to your synthesizer, reads the Performance it is playing and
 - Device selector, starting with the **Yamaha MODX+**.
 - **Reads the current Performance from the keyboard**: the Performance name, and every Part with its name, engine (AWM2, FM-X or Drum) and values.
 - Part controls that work on any Performance (Volume, Pan, Note Shift and offsets for the amplitude envelope and filter), plus per-Element (AWM2) and per-Operator (FM-X) parameters.
+- Effects: Reverb and Variation types and levels for the whole Performance, and per Part the Insertion A/B types, how they are connected, the Reverb and Variation sends, Dry Level and the 3-band EQ gains.
 - Every edit is sent to the keyboard as a parameter change, and edits made on the keyboard show up in the app.
 - Validated values: out-of-range input is rejected before any bytes are produced.
 - SysEx preview split into header, address and data, with a source reference for each parameter.
@@ -66,7 +67,7 @@ The implemented MODX+ parameters, their addresses and the Data List pages they w
 ## Current limitations
 
 - SynthPilot reads the Performance edit buffer but never writes bulk dumps, stores Performances or touches firmware.
-- Drum keys, effects, arpeggios, Motion Sequences and most Performance-level settings are not modelled yet.
+- Drum keys, effect parameters other than the effect type, arpeggios, Motion Sequences and most Performance-level settings are not modelled yet.
 - The SysEx device number is fixed to `0`.
 - Sounds live only in memory; there is no file import or export yet.
 - Only a verified subset of parameters is editable.

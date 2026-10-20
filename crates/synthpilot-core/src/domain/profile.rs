@@ -71,6 +71,10 @@ pub trait DeviceProfile: Send + Sync {
 
     fn engines(&self) -> &[Box<dyn EngineProfile>];
 
+    fn common(&self) -> Option<&dyn EngineProfile> {
+        None
+    }
+
     fn engine(&self, id: EngineId) -> Option<&dyn EngineProfile> {
         self.engines()
             .iter()

@@ -31,7 +31,7 @@ pub const LEVEL_SCALING_BREAK_POINT: ParameterId =
 
 const COMMON: Block = Block::new(
     0x48,
-    Addressing::Part,
+    Addressing::PART,
     "MIDI Parameter Change Table (FM Part Common)",
 );
 const OPERATOR: Block = Block::new(
@@ -220,7 +220,7 @@ const ENTRIES: &[Entry] = &[
 ];
 
 pub(super) fn entries() -> Vec<Entry> {
-    let mut entries = part::entries(ENGINE_ID, false);
+    let mut entries = part::entries(ENGINE_ID, part::Kind::Fm);
     entries.extend_from_slice(ENTRIES);
     entries
 }
@@ -317,6 +317,6 @@ mod tests {
     fn describes_itself() {
         let engine = FmX::new(DeviceNumber::default());
         assert_eq!(engine.name(), "FM-X");
-        assert!(!engine.description().is_empty());
+        assert_ne!(engine.description(), "");
     }
 }

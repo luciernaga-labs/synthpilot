@@ -279,7 +279,7 @@ fn drum_parts_expose_only_part_parameters() {
     assert!(drum_engine.parameter(part::NOTE_SHIFT).is_none());
     assert!(drum_engine.parameter(part::VOLUME).is_some());
     assert_eq!(drum_engine.element_label(), "Key");
-    assert!(!drum_engine.description().is_empty());
+    assert_ne!(drum_engine.description(), "");
     let message = drum_engine
         .encode(&ParameterChange::new(part::VOLUME, Location::part(10), 64))
         .unwrap();

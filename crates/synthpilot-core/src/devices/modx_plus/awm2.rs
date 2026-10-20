@@ -15,6 +15,7 @@ pub const ELEMENT_SWITCH: ParameterId = ParameterId::new("awm2.element-switch");
 pub const XA_CONTROL: ParameterId = ParameterId::new("awm2.xa-control");
 pub const WAVE_NUMBER: ParameterId = ParameterId::new("awm2.wave-number");
 pub const ELEMENT_LEVEL: ParameterId = ParameterId::new("awm2.element-level");
+pub const ELEMENT_CONNECTION: ParameterId = ParameterId::new("awm2.element-connection");
 pub const ELEMENT_PAN: ParameterId = ParameterId::new("awm2.element-pan");
 pub const LEVEL_VELOCITY_SENSITIVITY: ParameterId =
     ParameterId::new("awm2.level-velocity-sensitivity");
@@ -35,6 +36,7 @@ const GROUP_1_PAGE: u16 = 217;
 const GROUP_2_PAGE: u16 = 218;
 
 const OFF_ON: &[&str] = &["Off", "On"];
+const CONNECTIONS: &[&str] = &["Thru", "InsA", "InsB"];
 const XA_MODES: &[&str] = &[
     "Normal", "Legato", "Key Off", "Cycle", "Random", "A.SW Off", "A.SW1 On", "A.SW2 On",
 ];
@@ -216,10 +218,22 @@ const ENTRIES: &[Entry] = &[
         .with_help("Resonance emphasizes the frequencies around the cutoff for a sharper, more nasal tone. With band filters it sets the width of the band instead."),
         group_2(0x05, 1, (0x00, 0x7F)),
     ),
+    Entry::verified(
+        element(
+            ELEMENT_CONNECTION,
+            "Element Connection Switch",
+            "Effects",
+            ValueRange::new(0, 2),
+        )
+        .with_format(ValueFormat::Choice(CONNECTIONS))
+        .with_default(1)
+        .with_help("Sends this Element through Insertion A, Insertion B, or past both (Thru)."),
+        group_1(0x17, (0x00, 0x02)),
+    ),
 ];
 
 pub(super) fn entries() -> Vec<Entry> {
-    let mut entries = part::entries(ENGINE_ID, false);
+    let mut entries = part::entries(ENGINE_ID, part::Kind::Normal);
     entries.extend_from_slice(ENTRIES);
     entries
 }
@@ -326,6 +340,6 @@ mod tests {
     fn describes_itself() {
         let engine = Awm2::new(DeviceNumber::default());
         assert_eq!(engine.name(), "AWM2");
-        assert!(!engine.description().is_empty());
+        assert_ne!(engine.description(), "");
     }
 }

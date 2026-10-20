@@ -73,6 +73,10 @@ From the Parameter Base Address table on page 191. `p` is the part number (`0`�
 | Normal Part Element Group 2: Filter, EQ, LFO | `42 ep 00` | AWM2 |
 | FM Part Common | `48 0p 00` | FM-X |
 | FM Part Operator | `49 op 00` | FM-X |
+| Reverb | `30 41 00` | Performance effects |
+| Variation | `30 42 00` | Performance effects |
+| Insertion A | `31 2p 00` | Every Part |
+| Insertion B | `31 3p 00` | Every Part |
 
 ## Implemented parameters
 
@@ -90,6 +94,49 @@ From the Parameter Base Address table on page 191. `p` is the part number (`0`�
 | Filter Resonance/Width | `31 0p 51` | 1 | `00`–`7F` | -64 – +63 | 0 | 208 |
 
 Note Shift and AEG Release Time are not available for Drum Parts, so Drum Parts do not list them.
+
+### Every Part: effects routing and EQ (MIDI Parameter Change Table (Performance Part))
+
+| Parameter | Address | Size | Data | Display | Default | Page |
+| --- | --- | --- | --- | --- | --- | --- |
+| Insertion FX Switch | `31 0p 26` | 1 | `00`–`03` | Both off, A on, B on, A and B on | A and B on | 207 |
+| Reverb Send | `31 0p 29` | 1 | `00`–`7F` | 0 – 127 | 12 | 207 |
+| Variation Send | `31 0p 2A` | 1 | `00`–`7F` | 0 – 127 | 0 | 207 |
+| Dry Level | `31 0p 2C` | 1 | `00`–`7F` | 0 – 127 | 127 | 207 |
+| Insertion Connection Type | `31 0p 3B` | 1 | `00`–`02` | Parallel, Ins A->B, Ins B->A | Parallel | 207 |
+| 3-band EQ Low Gain | `31 0p 55` | 1 | `20`–`60` | -12.00 dB – +12.00 dB | 0.00 dB | 208 |
+| 3-band EQ Mid Gain | `31 0p 59` | 1 | `20`–`60` | -12.00 dB – +12.00 dB | 0.00 dB | 208 |
+| 3-band EQ High Gain | `31 0p 5D` | 1 | `20`–`60` | -12.00 dB – +12.00 dB | 0.00 dB | 208 |
+| Insertion A Type | `31 2p 00` | 2 | Effect Type List | THRU and 88 effect types | THRU | 209 |
+| Insertion B Type | `31 3p 00` | 2 | Effect Type List | THRU and 88 effect types | THRU | 209 |
+
+The Data List notes that Parallel is not available for FM Parts, so FM-X Parts offer only Ins A->B and Ins B->A.
+
+The EQ gain table gives only the end points of the range. SynthPilot shows the 64 steps between `20` and `60` as equal steps of 0.375 dB, which matches both end points and `40` = 0 dB.
+
+Effect types are two bytes, MSB first, taken from the Type (HEX) MSB and LSB columns of the Effect Type List (pages 144–145). The editor lists the types of the matching column: REV for Reverb, VAR for Variation, InsA and InsB for the insertions.
+
+### AWM2: effect routing (MIDI Parameter Change Table (Normal Part Element))
+
+| Parameter | Address | Size | Data | Display | Default | Page |
+| --- | --- | --- | --- | --- | --- | --- |
+| Element Connection Switch | `41 ep 17` | 1 | `00`–`02` | Thru, InsA, InsB | InsA | 217 |
+
+### Performance effects: MIDI Parameter Change Table (Performance Common)
+
+| Parameter | Address | Size | Data | Display | Default | Page |
+| --- | --- | --- | --- | --- | --- | --- |
+| Reverb Type | `30 41 00` | 2 | Effect Type List, REV column | NO EFFECT and 12 reverb types | REV-X HALL (`01 00`) | 197 |
+| Reverb Return | `30 41 44` | 1 | `00`–`7F` | 0 – 127 | 64 | 198 |
+| Reverb Pan | `30 41 45` | 1 | `01`–`7F` | L63 – C – R63 | C | 198 |
+| Reverb Switch | `30 41 46` | 1 | `00`–`01` | Off, On | On | 198 |
+| Variation Type | `30 42 00` | 2 | Effect Type List, VAR column | NO EFFECT and 88 effect types | G CHORUS (`03 00`) | 198 |
+| Variation Return | `30 42 44` | 1 | `00`–`7F` | 0 – 127 | 96 | 198 |
+| Variation Pan | `30 42 45` | 1 | `01`–`7F` | L63 – C – R63 | C | 198 |
+| Send Variation To Reverb | `30 42 46` | 1 | `00`–`7F` | 0 – 127 | 0 | 198 |
+| Variation Switch | `30 42 47` | 1 | `00`–`01` | Off, On | On | 198 |
+
+Reverb and Variation arrive with the Performance Common bulk dump, so they are read with the rest of the sound.
 
 ### AWM2: MIDI Parameter Change Table (Normal Part Element)
 
@@ -140,6 +187,9 @@ Note Shift and AEG Release Time are not available for Drum Parts, so Drum Parts 
 | AWM2 and FM-X Filter Type | The data range is `00`–`15` (22 values) but the table names 19 filter types, so the mapping cannot be verified. |
 | FM-X Level Scaling Break Point | The Data List does not spell out how `00`–`63` maps onto the note names A-1 to C8. |
 | Drum Key parameters | The Drum Voice Key table (page 219) is not modelled yet. |
+| Reverb, Variation and Insertion A/B Parameters 1–24 | Their meaning, range and display change with the effect type (Effect Parameter List, pages 146–177), which is not modelled yet. |
+| Effect Preset Number | The preset numbers depend on the effect type (Effect Preset List), which is not modelled yet. |
+| 3-band EQ frequencies and Mid Q | The Data List gives only the end points in Hz and Q, not the value of each step. |
 
 ## Not modelled yet
 
