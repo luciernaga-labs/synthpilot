@@ -8,8 +8,21 @@ use crate::protocol::yamaha::{self, Address, DeviceNumber};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub(super) enum Addressing {
-    Part,
+    Performance { mid: u8 },
+    Part { base: u8 },
     Element,
+}
+
+impl Addressing {
+    pub(super) const PART: Self = Self::Part { base: 0x00 };
+
+    const fn accepts(self, mid: u8) -> bool {
+        match self {
+            Self::Performance { mid: expected } => mid == expected,
+            Self::Part { base } => mid & 0xF0 == base,
+            Self::Element => true,
+        }
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -36,6 +49,7 @@ pub(super) struct Mapping {
     size: usize,
     raw_min: u32,
     raw_max: u32,
+    table: Option<&'static [u32]>,
     page: u16,
 }
 
@@ -60,7 +74,56 @@ impl Mapping {
             size,
             raw_min: raw.0,
             raw_max: raw.1,
+            table: None,
             page,
+        }
+    }
+
+    pub(super) const fn listed(
+        block: Block,
+        low: u8,
+        size: usize,
+        table: &'static [u32],
+        page: u16,
+    ) -> Self {
+        assert!(!table.is_empty(), "a value table needs at least one value");
+        let mut min = table[0];
+        let mut max = table[0];
+        let mut index = 1;
+        while index < table.len() {
+            let mut earlier = 0;
+            while earlier < index {
+                assert!(
+                    table[earlier] != table[index],
+                    "table values must be unique"
+                );
+                earlier += 1;
+            }
+            if table[index] < min {
+                min = table[index];
+            }
+            if table[index] > max {
+                max = table[index];
+            }
+            index += 1;
+        }
+        let mut mapping = Self::new(block, low, size, (min, max), page);
+        mapping.table = Some(table);
+        mapping
+    }
+
+    const fn steps(&self) -> u32 {
+        match self.table {
+            Some(table) => {
+                let mut steps = 0;
+                let mut index = 1;
+                while index < table.len() {
+                    steps += 1;
+                    index += 1;
+                }
+                steps
+            }
+            None => self.raw_max - self.raw_min,
         }
     }
 
@@ -77,9 +140,10 @@ impl Mapping {
         definition: &ParameterDefinition,
         location: Location,
     ) -> Result<Address, EncodeError> {
-        let part = location.part_number() - 1;
+        let part = location.part_number().wrapping_sub(1);
         let mid = match (self.block.addressing, location.element_number()) {
-            (Addressing::Part, _) => part,
+            (Addressing::Performance { mid }, _) => mid,
+            (Addressing::Part { base }, _) => base | part,
             (Addressing::Element, Some(element)) => ((element - 1) << 4) | part,
             (Addressing::Element, None) => {
                 return Err(ValidationError::MissingElement(definition.id).into());
@@ -90,17 +154,21 @@ impl Mapping {
 
     fn location(&self, mid: u8) -> Location {
         match self.block.addressing {
-            Addressing::Part => Location::part(mid + 1),
+            Addressing::Performance { .. } => Location::performance(),
+            Addressing::Part { .. } => Location::part((mid & 0x0F) + 1),
             Addressing::Element => Location::element((mid & 0x0F) + 1, (mid >> 4) + 1),
         }
     }
 
     fn value(&self, definition: &ParameterDefinition, raw: u32) -> Option<i32> {
-        if !(self.raw_min..=self.raw_max).contains(&raw) {
-            return None;
-        }
-        let steps = i32::try_from(raw - self.raw_min).ok()?;
-        Some(definition.range.min() + steps)
+        let steps = match self.table {
+            Some(table) => table.iter().position(|value| *value == raw)?,
+            None if (self.raw_min..=self.raw_max).contains(&raw) => {
+                usize::try_from(raw - self.raw_min).ok()?
+            }
+            None => return None,
+        };
+        Some(definition.range.min() + i32::try_from(steps).ok()?)
     }
 
     pub(super) fn data(
@@ -109,7 +177,19 @@ impl Mapping {
         value: i32,
     ) -> Result<Vec<u8>, EncodeError> {
         let offset = value.abs_diff(definition.range.min());
-        Ok(yamaha::encode_data(self.raw_min + offset, self.size)?)
+        let raw = match self.table {
+            Some(table) => usize::try_from(offset)
+                .ok()
+                .and_then(|index| table.get(index).copied())
+                .ok_or(ValidationError::OutOfRange {
+                    parameter: definition.id,
+                    value,
+                    min: definition.range.min(),
+                    max: definition.range.max(),
+                })?,
+            None => self.raw_min + offset,
+        };
+        Ok(yamaha::encode_data(raw, self.size)?)
     }
 }
 
@@ -122,7 +202,7 @@ pub(super) struct Entry {
 impl Entry {
     pub(super) const fn verified(definition: ParameterDefinition, mapping: Mapping) -> Self {
         assert!(
-            mapping.raw_max - mapping.raw_min == definition.range.span(),
+            mapping.steps() == definition.range.span(),
             "raw range and display range must have the same number of steps"
         );
         let definition = definition.with_support(Support::Implemented(mapping.source()));
@@ -161,7 +241,9 @@ pub(super) fn decode(
         .iter()
         .filter_map(|entry| {
             let mapping = entry.mapping?;
-            if mapping.block.high != address.high() {
+            if mapping.block.high != address.high()
+                || !mapping.block.addressing.accepts(address.mid())
+            {
                 return None;
             }
             let start = usize::from(mapping.low.checked_sub(address.low())?);
@@ -282,8 +364,83 @@ mod tests {
 
     #[test]
     fn part_addresses_use_the_part_number() {
-        let mapping = Mapping::new(block(Addressing::Part), 0x4F, 1, (0x00, 0x7F), 220);
+        let mapping = Mapping::new(block(Addressing::PART), 0x4F, 1, (0x00, 0x7F), 220);
         let address = mapping.address(&definition(Scope::Part), Location::part(16));
         assert_eq!(address.map(Address::to_bytes), Ok([0x41, 0x0F, 0x4F]));
+    }
+
+    #[test]
+    fn offset_part_blocks_add_their_base() {
+        let mapping = Mapping::new(
+            block(Addressing::Part { base: 0x20 }),
+            0x00,
+            1,
+            (0x00, 0x7F),
+            209,
+        );
+        let address = mapping.address(&definition(Scope::Part), Location::part(3));
+        assert_eq!(address.map(Address::to_bytes), Ok([0x41, 0x22, 0x00]));
+        assert_eq!(mapping.location(0x22), Location::part(3));
+    }
+
+    #[test]
+    fn performance_blocks_use_a_fixed_address() {
+        let mapping = Mapping::new(
+            block(Addressing::Performance { mid: 0x42 }),
+            0x44,
+            1,
+            (0x00, 0x7F),
+            198,
+        );
+        let address = mapping.address(&definition(Scope::Performance), Location::performance());
+        assert_eq!(address.map(Address::to_bytes), Ok([0x41, 0x42, 0x44]));
+        assert_eq!(mapping.location(0x42), Location::performance());
+        assert!(Addressing::Performance { mid: 0x42 }.accepts(0x42));
+        assert!(!Addressing::Performance { mid: 0x42 }.accepts(0x41));
+        assert!(Addressing::Part { base: 0x30 }.accepts(0x3F));
+        assert!(!Addressing::Part { base: 0x30 }.accepts(0x0F));
+    }
+
+    const TABLE: &[u32] = &[0x0000, 0x0083, 0x0080];
+
+    fn listed() -> (ParameterDefinition, Mapping) {
+        let definition = ParameterDefinition::new(
+            ParameterId::new("type"),
+            "Type",
+            EngineId::new("engine"),
+            "Category",
+            Scope::Part,
+            ValueRange::new(0, 2),
+        );
+        let mapping = Mapping::listed(block(Addressing::PART), 0x00, 2, TABLE, 144);
+        (definition, mapping)
+    }
+
+    #[test]
+    fn listed_values_translate_through_the_table() {
+        let (definition, mapping) = listed();
+        assert_eq!((mapping.raw_min, mapping.raw_max), (0x0000, 0x0083));
+        assert_eq!(mapping.steps(), 2);
+        assert_eq!(mapping.data(&definition, 1), Ok(vec![0x01, 0x03]));
+        assert_eq!(mapping.data(&definition, 2), Ok(vec![0x01, 0x00]));
+        assert_eq!(mapping.value(&definition, 0x0080), Some(2));
+        assert_eq!(mapping.value(&definition, 0x0081), None);
+        assert!(mapping.data(&definition, 3).is_err());
+        let entry = Entry::verified(definition, mapping);
+        assert!(entry.definition.is_implemented());
+    }
+
+    #[test]
+    fn linear_values_outside_the_raw_range_are_ignored() {
+        let mapping = Mapping::new(block(Addressing::PART), 0x00, 1, (0x10, 0x20), 207);
+        let definition = definition(Scope::Part);
+        assert_eq!(mapping.value(&definition, 0x0F), None);
+        assert_eq!(mapping.value(&definition, 0x10), Some(-64));
+    }
+
+    #[test]
+    #[should_panic(expected = "unique")]
+    fn table_values_must_be_unique() {
+        let _ = Mapping::listed(block(Addressing::PART), 0x00, 2, &[1, 2, 1], 144);
     }
 }

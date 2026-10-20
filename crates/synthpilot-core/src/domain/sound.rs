@@ -19,6 +19,7 @@ impl Part {
         let mut values = BTreeMap::new();
         for parameter in engine.parameters() {
             let locations: Vec<Location> = match parameter.scope {
+                Scope::Performance => vec![Location::performance()],
                 Scope::Part => vec![Location::part(number)],
                 Scope::Element => (1..=elements)
                     .map(|element| Location::element(number, element))
@@ -54,6 +55,7 @@ impl Part {
 pub struct Sound {
     device: DeviceId,
     name: Option<String>,
+    common: Option<Part>,
     parts: Vec<Option<Part>>,
 }
 
@@ -62,6 +64,7 @@ impl Sound {
         Self {
             device: device.id(),
             name: None,
+            common: device.common().map(|engine| Part::initialized(0, engine)),
             parts: vec![None; usize::from(device.part_count())],
         }
     }
@@ -86,6 +89,27 @@ impl Sound {
 
     pub fn part_count(&self) -> u8 {
         u8::try_from(self.parts.len()).unwrap_or(u8::MAX)
+    }
+
+    pub fn common(&self) -> Option<&Part> {
+        self.common.as_ref()
+    }
+
+    pub fn load_common(&mut self, engine: &dyn EngineProfile, values: &[ParameterChange]) -> usize {
+        let mut common = Part::initialized(0, engine);
+        let layout = engine.layout();
+        let mut loaded = 0;
+        for change in values {
+            let valid = engine
+                .parameter(change.parameter)
+                .is_some_and(|definition| definition.validate(change, layout).is_ok());
+            if valid {
+                common.values.insert((change.parameter, None), change.value);
+                loaded += 1;
+            }
+        }
+        self.common = Some(common);
+        loaded
     }
 
     pub fn part(&self, number: u8) -> Option<&Part> {
@@ -163,10 +187,13 @@ impl Sound {
     }
 
     fn part_for(&self, number: u8, engine: &dyn EngineProfile) -> Result<&Part, EditError> {
-        let part = self
-            .slot(number)?
-            .as_ref()
-            .ok_or(EditError::EmptyPart(number))?;
+        let part = if number == 0 {
+            self.common.as_ref().ok_or(EditError::NoPerformance)?
+        } else {
+            self.slot(number)?
+                .as_ref()
+                .ok_or(EditError::EmptyPart(number))?
+        };
         if part.engine == engine.id() {
             Ok(part)
         } else {
@@ -179,8 +206,14 @@ impl Sound {
     }
 
     fn insert(&mut self, change: ParameterChange) {
-        let index = usize::from(change.location.part_number() - 1);
-        if let Some(part) = self.parts.get_mut(index).and_then(Option::as_mut) {
+        let part = match change.location.part_number().checked_sub(1) {
+            None => self.common.as_mut(),
+            Some(index) => self
+                .parts
+                .get_mut(usize::from(index))
+                .and_then(Option::as_mut),
+        };
+        if let Some(part) = part {
             part.values.insert(
                 (change.parameter, change.location.element_number()),
                 change.value,

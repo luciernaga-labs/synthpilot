@@ -16,7 +16,7 @@ pub(super) const FIRST_HIGH: u8 = 0x50;
 pub(super) const LAST_HIGH: u8 = 0x5F;
 
 pub(super) fn entries() -> Vec<Entry> {
-    let mut entries = part::entries(ENGINE_ID, true);
+    let mut entries = part::entries(ENGINE_ID, part::Kind::Drum);
     entries.push(Entry::unverified(
         ParameterDefinition::new(
             KEY_LEVEL,

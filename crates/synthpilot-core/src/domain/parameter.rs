@@ -35,12 +35,14 @@ impl ValueRange {
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Unit {
     Semitones,
+    Decibels,
 }
 
 impl Unit {
     pub const fn suffix(self) -> &'static str {
         match self {
             Self::Semitones => "st",
+            Self::Decibels => "dB",
         }
     }
 }
@@ -51,6 +53,7 @@ pub enum ValueFormat {
     Signed,
     Pan,
     Choice(&'static [&'static str]),
+    Scaled { thousandths: u32, decimals: u8 },
 }
 
 impl ValueFormat {
@@ -67,12 +70,35 @@ impl ValueFormat {
                 .ok()
                 .and_then(|index| labels.get(index))
                 .map_or_else(|| value.to_string(), |label| (*label).to_owned()),
+            Self::Scaled {
+                thousandths,
+                decimals,
+            } => scaled(value, thousandths, decimals),
         }
+    }
+}
+
+fn scaled(value: i32, thousandths: u32, decimals: u8) -> String {
+    let total = i64::from(value) * i64::from(thousandths);
+    let divisor = 10_i64.pow(3 - u32::from(decimals.min(3)));
+    let rounded = (total.abs() + divisor / 2) / divisor;
+    let sign = match total.cmp(&0) {
+        Ordering::Less => "-",
+        Ordering::Equal => "",
+        Ordering::Greater => "+",
+    };
+    let unit = 10_i64.pow(u32::from(decimals.min(3)));
+    if decimals == 0 {
+        format!("{sign}{rounded}")
+    } else {
+        let width = usize::from(decimals.min(3));
+        format!("{sign}{}.{:0width$}", rounded / unit, rounded % unit)
     }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Scope {
+    Performance,
     Part,
     Element,
 }
@@ -227,6 +253,24 @@ mod tests {
         assert_eq!(ValueFormat::Pan.format(12), "R12");
         assert_eq!(ValueFormat::Choice(&["Off", "On"]).format(1), "On");
         assert_eq!(ValueFormat::Choice(&["Off", "On"]).format(7), "7");
+    }
+
+    #[test]
+    fn formats_scaled_values() {
+        let eq = ValueFormat::Scaled {
+            thousandths: 375,
+            decimals: 2,
+        };
+        assert_eq!(eq.format(-32), "-12.00");
+        assert_eq!(eq.format(0), "0.00");
+        assert_eq!(eq.format(1), "+0.38");
+        assert_eq!(eq.format(32), "+12.00");
+        let whole = ValueFormat::Scaled {
+            thousandths: 500,
+            decimals: 0,
+        };
+        assert_eq!(whole.format(3), "+2");
+        assert_eq!(whole.format(-4), "-2");
     }
 
     #[test]

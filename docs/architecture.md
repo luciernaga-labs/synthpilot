@@ -20,10 +20,11 @@ synthpilot (app) ──▶ domain ◀── devices/modx_plus ──▶ protocol
 
 ## Core concepts
 
-- **`DeviceProfile`**: a synthesizer model. It exposes its identity, part count and engines.
+- **`DeviceProfile`**: a synthesizer model. It exposes its identity, part count and engines, and optionally a `common` profile for settings shared by every Part, such as system effects.
 - **`EngineProfile`**: a synthesis engine of a device, such as AWM2 or FM-X. It publishes its `ParameterDefinition`s, its `Layout` (parts and elements or operators) and encodes a validated `ParameterChange` into a `SysExMessage`.
 - **`ParameterDefinition`**: stable ID, display name, category, scope (whole part or element), value range, default, unit, display format, support status and optional help text shown as a tooltip. `Support::Implemented` carries a `SourceReference` to the document page the mapping was verified against.
-- **`Sound`**: an in-memory sound with a name and one slot per Part. `Sound::apply` validates a change, encodes it and only then stores the new value; `Sound::store` stores a validated change received from the instrument.
+- **`Scope`**: where a parameter lives. `Performance` parameters apply to the whole sound and use `Location::performance()`, `Part` parameters to one Part and `Element` parameters to one element, operator or key of a Part.
+- **`Sound`**: an in-memory sound with a name, the performance-wide values of the `common` profile and one slot per Part. `Sound::apply` validates a change, encodes it and only then stores the new value; `Sound::store` stores a validated change received from the instrument.
 - **`DeviceProfile::read_requests` and `DeviceProfile::decode`**: how a device asks for its current sound and turns incoming bytes into `Received` events (parts, names, values).
 - **`SoundReader`**: collects `Received` events and builds the `Sound` once the instrument has answered.
 

@@ -22,6 +22,8 @@ pub enum ValidationError {
     MissingElement(ParameterId),
     #[error("{0} applies to the whole Part, not to one Element or Operator.")]
     UnexpectedElement(ParameterId),
+    #[error("{0} applies to the whole Performance, not to one Part.")]
+    PerformanceOnly(ParameterId),
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Error)]
@@ -38,6 +40,8 @@ pub enum EncodeError {
 pub enum EditError {
     #[error("Part {0} is empty, so there's nothing to edit.")]
     EmptyPart(u8),
+    #[error("This keyboard has no settings shared by the whole Performance.")]
+    NoPerformance,
     #[error(
         "Part {part} is a {actual} Part, not {expected}. Select Read from keyboard to update it."
     )]

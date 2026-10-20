@@ -9,7 +9,7 @@ use synthpilot_core::domain::{
 };
 
 use super::controller::Controller;
-use super::state::{Action, Workspace};
+use super::state::{Action, EFFECTS, Workspace};
 use super::theme;
 
 const CONTROL_WIDTH: f32 = 200.0;
@@ -44,7 +44,7 @@ struct View<'a> {
 impl View<'_> {
     fn element_for(&self, parameter: &ParameterDefinition) -> Option<u8> {
         match parameter.scope {
-            Scope::Part => None,
+            Scope::Performance | Scope::Part => None,
             Scope::Element => Some(self.workspace.element()),
         }
     }
@@ -76,7 +76,12 @@ pub(crate) fn show(
     let originals = originals(ui, workspace, sound, reading.is_some(), just_read);
 
     let number = workspace.part();
-    let (Some(engine), Some(part)) = (workspace.engine(), sound.part(number)) else {
+    let current = if number == EFFECTS {
+        sound.common()
+    } else {
+        sound.part(number)
+    };
+    let (Some(engine), Some(part)) = (workspace.engine(), current) else {
         empty_part(ui, sound, number, actions);
         return;
     };
@@ -112,6 +117,7 @@ pub(crate) fn show(
         egui::ScrollArea::vertical()
             .auto_shrink([false, false])
             .show(ui, |ui| {
+                performance_section(ui, &view, actions);
                 part_section(ui, &view, number, actions);
                 ui.add_space(12.0);
                 element_section(ui, &view, has_elements, actions);
@@ -140,6 +146,13 @@ fn originals(
         return stored;
     }
     let mut values = HashMap::new();
+    if let (Some(common), Some(engine)) = (sound.common(), workspace.device().common()) {
+        for parameter in engine.parameters().iter().filter(|p| p.is_implemented()) {
+            if let Some(value) = common.value(parameter.id, None) {
+                values.insert((EFFECTS, None, parameter.id), value);
+            }
+        }
+    }
     for number in 1..=sound.part_count() {
         let Some(part) = sound.part(number) else {
             continue;
@@ -149,7 +162,7 @@ fn originals(
         };
         for parameter in engine.parameters().iter().filter(|p| p.is_implemented()) {
             let elements: Vec<Option<u8>> = match parameter.scope {
-                Scope::Part => vec![None],
+                Scope::Performance | Scope::Part => vec![None],
                 Scope::Element => (1..=engine.layout().elements).map(Some).collect(),
             };
             for element in elements {
@@ -227,6 +240,10 @@ fn empty_part(ui: &mut egui::Ui, sound: &Sound, number: u8, actions: &mut Vec<Ac
 fn header(ui: &mut egui::Ui, number: u8, part: &Part, engine: &dyn EngineProfile) {
     ui.add_space(4.0);
     ui.horizontal(|ui| {
+        if number == EFFECTS {
+            ui.heading(RichText::new("Performance effects").strong());
+            return;
+        }
         ui.heading(RichText::new(format!("Part {number}")).strong());
         if let Some(name) = part.name() {
             ui.heading(RichText::new(format!("· {name}")).strong());
@@ -330,6 +347,20 @@ fn element_shortcuts(ui: &egui::Ui, view: &View<'_>, actions: &mut Vec<Action>) 
             }
         }
     });
+}
+
+fn performance_section(ui: &mut egui::Ui, view: &View<'_>, actions: &mut Vec<Action>) {
+    let parameters = by_scope(view.engine, Scope::Performance);
+    if parameters.is_empty() {
+        return;
+    }
+    theme::scope_frame(
+        ui,
+        theme::PART_ACCENT,
+        "Performance",
+        "Common: shared by every Part of the Performance.",
+        |ui| parameter_groups(ui, view, &parameters, "performance", actions),
+    );
 }
 
 fn part_section(ui: &mut egui::Ui, view: &View<'_>, number: u8, actions: &mut Vec<Action>) {
@@ -734,22 +765,22 @@ fn control(ui: &mut egui::Ui, parameter: &ParameterDefinition, value: &mut i32) 
             }
             off | on
         }
-        ValueFormat::Choice(labels) => {
+        ValueFormat::Choice(_) => {
             egui::ComboBox::from_id_salt(parameter.id.as_str())
                 .width(CONTROL_WIDTH)
+                .height(320.0)
                 .selected_text(parameter.display_value(*value))
                 .show_ui(ui, |ui| {
-                    for (index, label) in
-                        (parameter.range.min()..=parameter.range.max()).zip(labels.iter())
-                    {
-                        ui.selectable_value(value, index, *label);
+                    for option in parameter.range.min()..=parameter.range.max() {
+                        ui.selectable_value(value, option, parameter.display_value(option));
                     }
                 })
                 .response
         }
-        ValueFormat::Number | ValueFormat::Signed | ValueFormat::Pan => {
-            slider(ui, parameter, value)
-        }
+        ValueFormat::Number
+        | ValueFormat::Signed
+        | ValueFormat::Pan
+        | ValueFormat::Scaled { .. } => slider(ui, parameter, value),
     }
 }
 
@@ -829,6 +860,10 @@ fn parse(parameter: &ParameterDefinition, text: &str) -> Option<i32> {
                 }
             }
         },
+        ValueFormat::Scaled { thousandths, .. } if thousandths > 0 => text
+            .parse::<f64>()
+            .ok()
+            .map(|number| round(number * 1000.0 / f64::from(thousandths))),
         _ => text.parse::<i32>().ok(),
     }?;
     parameter.range.contains(number).then_some(number)

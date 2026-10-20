@@ -236,7 +236,8 @@ fn unknown_parameters_are_rejected() {
 fn unimplemented_parameters_never_produce_messages() {
     let awm2 = awm2();
     let fm_x = fm_x();
-    let engines: [&dyn EngineProfile; 2] = [&awm2, &fm_x];
+    let effects = modx_plus::Effects::new(DeviceNumber::default());
+    let engines: [&dyn EngineProfile; 3] = [&awm2, &fm_x, &effects];
     let mut checked = 0;
     for engine in engines {
         for definition in engine.parameters().iter().filter(|p| !p.is_implemented()) {
@@ -251,19 +252,24 @@ fn unimplemented_parameters_never_produce_messages() {
             checked += 1;
         }
     }
-    assert_eq!(checked, 4);
+    assert_eq!(checked, 10);
 }
 
 #[test]
 fn implemented_parameters_cite_the_data_list() {
     let device = ModxPlus::new();
-    for engine in device.engines() {
+    for engine in device
+        .engines()
+        .iter()
+        .map(AsRef::as_ref)
+        .chain(device.common())
+    {
         for definition in engine.parameters() {
             match definition.support {
                 Support::Implemented(source) => {
                     assert_eq!(source.document, modx_plus::DATA_LIST);
                     assert!(
-                        [207, 208, 217, 218, 219, 220].contains(&source.page),
+                        [197, 198, 207, 208, 209, 217, 218, 219, 220].contains(&source.page),
                         "{}",
                         definition.id
                     );
@@ -278,10 +284,12 @@ fn implemented_parameters_cite_the_data_list() {
 fn every_implemented_value_in_range_encodes() {
     let awm2 = awm2();
     let fm_x = fm_x();
-    let engines: [&dyn EngineProfile; 2] = [&awm2, &fm_x];
+    let effects = modx_plus::Effects::new(DeviceNumber::default());
+    let engines: [&dyn EngineProfile; 3] = [&awm2, &fm_x, &effects];
     for engine in engines {
         for definition in engine.parameters().iter().filter(|p| p.is_implemented()) {
             let location = match definition.scope {
+                Scope::Performance => Location::performance(),
                 Scope::Part => Location::part(16),
                 Scope::Element => Location::element(16, 8),
             };

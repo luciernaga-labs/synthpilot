@@ -15,6 +15,7 @@ pub enum Received {
     PartStarted(u8),
     PartFinished(u8),
     Part(PartData),
+    Common(Vec<ParameterChange>),
     SoundName(String),
     CommonFinished,
     Ignored,
@@ -31,6 +32,7 @@ struct PartRead {
 pub struct SoundReader {
     name: Option<String>,
     parts: BTreeMap<u8, PartRead>,
+    common: Vec<ParameterChange>,
     finished: BTreeSet<u8>,
     common_finished: bool,
     accepted: usize,
@@ -52,6 +54,7 @@ impl SoundReader {
             }
             Received::SoundName(name) => self.name = Some(name),
             Received::CommonFinished => self.common_finished = true,
+            Received::Common(values) => self.common.extend(values),
             Received::Part(data) => {
                 let part = self.parts.entry(data.part).or_default();
                 if data.engine.is_some() {
@@ -78,6 +81,9 @@ impl SoundReader {
     pub fn into_sound(self, device: &dyn DeviceProfile) -> Sound {
         let mut sound = Sound::new(device);
         sound.rename(self.name);
+        if let Some(common) = device.common() {
+            sound.load_common(common, &self.common);
+        }
         for (number, part) in self.parts {
             let Some(engine) = part.engine.and_then(|engine| device.engine(engine)) else {
                 continue;

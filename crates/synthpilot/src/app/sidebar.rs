@@ -1,7 +1,7 @@
 use eframe::egui::{self, RichText, text::LayoutJob};
 use synthpilot_core::domain::{EngineProfile, Sound};
 
-use super::state::{Action, Workspace};
+use super::state::{Action, EFFECTS, Workspace};
 use super::theme;
 
 const ROW_HEIGHT: f32 = 28.0;
@@ -29,10 +29,31 @@ pub(crate) fn show(
         ui.add_space(4.0);
         keyboard_controls(ui, reading, actions);
 
+        if workspace.has_effects() {
+            effects(ui, workspace, actions);
+        }
+
         if let Some(sound) = workspace.sound() {
             parts(ui, workspace, sound, actions);
         }
     });
+}
+
+fn effects(ui: &mut egui::Ui, workspace: &Workspace, actions: &mut Vec<Action>) {
+    theme::section(ui, "Effects");
+    let selected = workspace.part() == EFFECTS;
+    let response = ui
+        .with_layout(egui::Layout::top_down_justified(egui::Align::LEFT), |ui| {
+            ui.add(
+                egui::Button::selectable(selected, "Reverb and Variation")
+                    .min_size(egui::vec2(0.0, ROW_HEIGHT)),
+            )
+        })
+        .inner
+        .on_hover_text("Effects shared by every Part of the Performance.");
+    if response.clicked() {
+        actions.push(Action::SelectPart(EFFECTS));
+    }
 }
 
 fn parts(ui: &mut egui::Ui, workspace: &Workspace, sound: &Sound, actions: &mut Vec<Action>) {
