@@ -20,6 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Live editing: edits are sent as parameter changes, and parameter changes sent by the keyboard update the editor.
 - Parameter tooltips that explain what each Part, Element and Operator parameter does.
 - Pull request checks for unit tests, a 90% line coverage gate and an autofix workflow that applies `cargo fmt` and `cargo clippy --fix`.
+- Effects for the MODX+: Reverb and Variation type, return, pan and switch for the whole sound; Insertion A/B type, Insertion FX Switch, Insertion Connection Type, Reverb Send, Variation Send, Dry Level and 3-band EQ gains per Part; Element Connection Switch per AWM2 Element.
+- Performance-wide parameters in the domain model (`Scope::Performance`, `Location::performance`, `DeviceProfile::common`).
 
 ### Changed
 

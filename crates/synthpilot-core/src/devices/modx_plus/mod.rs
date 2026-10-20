@@ -1,12 +1,14 @@
 pub mod awm2;
 mod catalog;
 pub mod drum;
+pub mod effects;
 pub mod fm_x;
 pub mod part;
 mod reader;
 
 pub use awm2::Awm2;
 pub use drum::Drum;
+pub use effects::Effects;
 pub use fm_x::FmX;
 
 use reader::Decoder;
@@ -31,6 +33,7 @@ fn create() -> Box<dyn DeviceProfile> {
 pub struct ModxPlus {
     device_number: DeviceNumber,
     engines: Vec<Box<dyn EngineProfile>>,
+    effects: Effects,
     decoder: Decoder,
 }
 
@@ -47,6 +50,7 @@ impl ModxPlus {
                 Box::new(FmX::new(device_number)),
                 Box::new(Drum::new(device_number)),
             ],
+            effects: Effects::new(device_number),
             decoder: Decoder::new(),
         }
     }
@@ -77,6 +81,10 @@ impl DeviceProfile for ModxPlus {
 
     fn engines(&self) -> &[Box<dyn EngineProfile>] {
         &self.engines
+    }
+
+    fn common(&self) -> Option<&dyn EngineProfile> {
+        Some(&self.effects)
     }
 
     fn read_requests(&self) -> Vec<SysExMessage> {

@@ -163,11 +163,11 @@ impl Controller {
                         reading.other += 1;
                     }
                 }
-                None => {
-                    if let Received::Part(data) = received {
-                        workspace.receive(&data);
-                    }
-                }
+                None => match received {
+                    Received::Part(data) => workspace.receive(&data),
+                    Received::Common(values) => workspace.receive_common(&values),
+                    _ => {}
+                },
             }
         }
 
@@ -459,6 +459,38 @@ mod tests {
             .part(1)
             .unwrap();
         assert_eq!(part.value(part::VOLUME, None), Some(12));
+    }
+
+    #[test]
+    fn effect_edits_on_the_keyboard_reach_the_editor() {
+        let now = Instant::now();
+        let (mut controller, keyboard) = connected(now);
+        piano(&keyboard);
+        settle(&mut controller, now);
+
+        let device = modx_plus::ModxPlus::new();
+        let effects = device.common().unwrap();
+        let change = effects
+            .encode(&ParameterChange::new(
+                modx_plus::effects::VARIATION_RETURN,
+                Location::performance(),
+                33,
+            ))
+            .unwrap();
+        keyboard.deliver(change.into_bytes());
+        controller.tick(now + QUIET_PERIOD);
+
+        let common = controller
+            .workspace()
+            .unwrap()
+            .sound()
+            .unwrap()
+            .common()
+            .unwrap();
+        assert_eq!(
+            common.value(modx_plus::effects::VARIATION_RETURN, None),
+            Some(33)
+        );
     }
 
     #[test]
