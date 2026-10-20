@@ -317,6 +317,6 @@ mod tests {
     fn describes_itself() {
         let engine = FmX::new(DeviceNumber::default());
         assert_eq!(engine.name(), "FM-X");
-        assert!(!engine.description().is_empty());
+        assert_ne!(engine.description(), "");
     }
 }

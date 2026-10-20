@@ -326,6 +326,6 @@ mod tests {
     fn describes_itself() {
         let engine = Awm2::new(DeviceNumber::default());
         assert_eq!(engine.name(), "AWM2");
-        assert!(!engine.description().is_empty());
+        assert_ne!(engine.description(), "");
     }
 }

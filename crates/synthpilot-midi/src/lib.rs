@@ -160,6 +160,6 @@ mod tests {
                 }
             ]
         );
-        assert!(connection.receive().is_empty());
+        assert_eq!(connection.receive(), [] as [Packet; 0]);
     }
 }
