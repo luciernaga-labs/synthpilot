@@ -48,12 +48,34 @@ impl Unit {
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub struct ListedValue {
+    pub name: &'static str,
+    pub group: &'static str,
+}
+
+/// A heading in a long list of choices, such as the effect categories of the
+/// Effect Type List. It applies to the choices from `first` until the next group.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub struct ChoiceGroup {
+    pub name: &'static str,
+    pub first: i32,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum ValueFormat {
     Number,
     Signed,
     Pan,
     Choice(&'static [&'static str]),
-    Scaled { thousandths: u32, decimals: u8 },
+    Scaled {
+        thousandths: u32,
+        decimals: u8,
+    },
+    Listed {
+        first: i32,
+        values: &'static [ListedValue],
+    },
+    Note,
 }
 
 impl ValueFormat {
@@ -74,8 +96,35 @@ impl ValueFormat {
                 thousandths,
                 decimals,
             } => scaled(value, thousandths, decimals),
+            Self::Listed { first, values } => usize::try_from(value - first)
+                .ok()
+                .and_then(|index| values.get(index))
+                .map_or_else(
+                    || value.to_string(),
+                    |listed| format!("{value} {}", listed.name),
+                ),
+            Self::Note => note(value),
         }
     }
+
+    pub fn listed(self, value: i32) -> Option<ListedValue> {
+        match self {
+            Self::Listed { first, values } => usize::try_from(value - first)
+                .ok()
+                .and_then(|index| values.get(index))
+                .copied(),
+            _ => None,
+        }
+    }
+}
+
+const NOTE_NAMES: [&str; 12] = [
+    "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B",
+];
+
+fn note(value: i32) -> String {
+    let name = NOTE_NAMES[usize::try_from(value.rem_euclid(12)).unwrap_or_default()];
+    format!("{name}{}", value.div_euclid(12) - 2)
 }
 
 fn scaled(value: i32, thousandths: u32, decimals: u8) -> String {
@@ -135,6 +184,7 @@ pub struct ParameterDefinition {
     pub format: ValueFormat,
     pub support: Support,
     pub help: Option<&'static str>,
+    pub groups: &'static [ChoiceGroup],
 }
 
 impl ParameterDefinition {
@@ -160,6 +210,7 @@ impl ParameterDefinition {
                 reason: "SynthPilot can't edit this parameter yet.",
             },
             help: None,
+            groups: &[],
         }
     }
 
@@ -192,6 +243,29 @@ impl ParameterDefinition {
     }
 
     #[must_use]
+    pub const fn with_groups(mut self, groups: &'static [ChoiceGroup]) -> Self {
+        self.groups = groups;
+        self
+    }
+
+    /// The group heading that starts at `value`, if any.
+    pub fn group_starting_at(&self, value: i32) -> Option<&'static str> {
+        self.groups
+            .iter()
+            .find(|group| group.first == value)
+            .map(|group| group.name)
+    }
+
+    /// The group `value` belongs to, if the choices are grouped.
+    pub fn group_of(&self, value: i32) -> Option<&'static str> {
+        self.groups
+            .iter()
+            .rev()
+            .find(|group| group.first <= value)
+            .map(|group| group.name)
+    }
+
+    #[must_use]
     pub const fn with_support(mut self, support: Support) -> Self {
         self.support = support;
         self
@@ -207,6 +281,17 @@ impl ParameterDefinition {
             Some(unit) => format!("{text} {}", unit.suffix()),
             None => text,
         }
+    }
+
+    pub fn value_named(&self, text: &str) -> Option<i32> {
+        let wanted = text.trim();
+        (self.range.min()..=self.range.max()).find(|value| {
+            self.format.format(*value).eq_ignore_ascii_case(wanted)
+                || self
+                    .format
+                    .listed(*value)
+                    .is_some_and(|listed| listed.name.eq_ignore_ascii_case(wanted))
+        })
     }
 
     pub fn display_range(&self) -> String {
@@ -253,6 +338,49 @@ mod tests {
         assert_eq!(ValueFormat::Pan.format(12), "R12");
         assert_eq!(ValueFormat::Choice(&["Off", "On"]).format(1), "On");
         assert_eq!(ValueFormat::Choice(&["Off", "On"]).format(7), "7");
+    }
+
+    #[test]
+    fn formats_listed_values() {
+        const WAVES: &[ListedValue] = &[
+            ListedValue {
+                name: "EP1 Sw",
+                group: "Keys/Rd",
+            },
+            ListedValue {
+                name: "DX1",
+                group: "Keys/FM",
+            },
+        ];
+        let format = ValueFormat::Listed {
+            first: 1,
+            values: WAVES,
+        };
+        assert_eq!(format.format(1), "1 EP1 Sw");
+        assert_eq!(format.format(2), "2 DX1");
+        assert_eq!(format.format(3), "3");
+        assert_eq!(format.format(0), "0");
+        assert_eq!(format.listed(2).map(|value| value.group), Some("Keys/FM"));
+        assert_eq!(format.listed(9), None);
+        assert_eq!(ValueFormat::Number.listed(1), None);
+    }
+
+    #[test]
+    fn formats_notes_from_c_minus_2() {
+        assert_eq!(ValueFormat::Note.format(0), "C-2");
+        assert_eq!(ValueFormat::Note.format(60), "C3");
+        assert_eq!(ValueFormat::Note.format(61), "C#3");
+        assert_eq!(ValueFormat::Note.format(127), "G8");
+    }
+
+    #[test]
+    fn values_are_found_by_their_label() {
+        let note = level().with_format(ValueFormat::Note);
+        assert_eq!(note.value_named("c3"), Some(60));
+        assert_eq!(note.value_named(" G8 "), Some(127));
+        assert_eq!(note.value_named("H2"), None);
+        let switch = level().with_format(ValueFormat::Choice(&["Off", "On"]));
+        assert_eq!(switch.value_named("on"), Some(1));
     }
 
     #[test]

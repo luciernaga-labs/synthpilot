@@ -1,0 +1,22 @@
+[package]
+name = "synthpilot-assistant"
+description = "Optional AI assistant that proposes SynthPilot parameter changes from a text description"
+categories = ["multimedia::audio"]
+readme = "../../README.md"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+keywords.workspace = true
+
+[dependencies]
+dotenvy.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+synthpilot-core.workspace = true
+thiserror.workspace = true
+ureq.workspace = true
+
+[lints]
+workspace = true

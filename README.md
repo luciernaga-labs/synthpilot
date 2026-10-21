@@ -16,12 +16,14 @@ SynthPilot connects to your synthesizer, reads the Performance it is playing and
 - Device selector, starting with the **Yamaha MODX+**.
 - **Reads the current Performance from the keyboard**: the Performance name, and every Part with its name, engine (AWM2, FM-X or Drum) and values.
 - Part controls that work on any Performance (Volume, Pan, Note Shift and offsets for the amplitude envelope and filter), plus per-Element (AWM2) and per-Operator (FM-X) parameters.
-- Effects: Reverb and Variation types and levels for the whole Performance, and per Part the Insertion A/B types, how they are connected, the Reverb and Variation sends, Dry Level and the 3-band EQ gains.
+- Effects: Reverb and Variation for the whole Performance, Insertion A/B per Part, how they are connected, the Reverb and Variation sends, Dry Level and the 3-band EQ gains. The parameters of each effect type (reverb time, chorus speed and depth, delay time, rotary speed…) are named and limited by the selected type.
+- Sound design controls: the Wave of each AWM2 Element chosen by name from the 6347 Preset Waves, amplitude and filter envelopes, velocity sensitivity and LFO for AWM2 Elements, and filter EG, 2nd LFO, spectral forms, envelope levels and level scaling for FM-X.
 - Every edit is sent to the keyboard as a parameter change, and edits made on the keyboard show up in the app.
 - Validated values: out-of-range input is rejected before any bytes are produced.
 - SysEx preview split into header, address and data, with a source reference for each parameter.
 - Parameters that exist on the instrument but are not verified yet are listed and clearly marked **Not editable yet**.
 - Tooltips that explain what each parameter does and how it sounds.
+- Optional **AI assistant**: describe a sound ("a crystal Rhodes", "brighter, with more space") and your own OpenAI, Anthropic or local model proposes parameter changes that you review before they reach the keyboard.
 
 ## Getting started
 
@@ -45,6 +47,24 @@ SynthPilot builds on macOS, Windows and Linux. On Linux you need the ALSA develo
 
 Changes go to the keyboard's edit buffer. Store the Performance on the MODX+ to keep them.
 
+## AI assistant (optional)
+
+The Assistant panel on the right asks an AI model you choose for parameter changes that match a description. It works with your own API key; SynthPilot has no account or server of its own.
+
+1. Copy `.env.example` to `.env` in the folder you start SynthPilot from.
+2. Fill it in:
+
+   ```dotenv
+   SYNTHPILOT_AI_PROVIDER=openai
+   SYNTHPILOT_AI_MODEL=gpt-4.1-mini
+   SYNTHPILOT_AI_API_KEY=sk-...
+   ```
+
+   Use `anthropic` and a Claude model name for Anthropic. For a local OpenAI-compatible server such as Ollama or LM Studio, set `SYNTHPILOT_AI_BASE_URL` (for example `http://localhost:11434/v1`) and leave the key empty.
+3. Restart SynthPilot, connect the keyboard and describe the sound you want.
+
+The model only sees the parameters SynthPilot can edit, with their current values, ranges and options. It can't send anything to the keyboard: every proposed change is validated like a manual edit, shown with its old and new value and a reason, and sent only when you select **Apply**. **Undo** puts the previous values back. Variables already set in the environment take precedence over `.env`. Your `.env` is ignored by git.
+
 ## Project layout
 
 ```text
@@ -55,6 +75,7 @@ crates/
 │       ├── protocol/    SysEx framing and the Yamaha parameter change format
 │       └── devices/     device catalog and the Yamaha MODX+ profile
 ├── synthpilot-midi   MIDI output transport built on midir
+├── synthpilot-assistant  optional AI assistant: model configuration, prompts and validated proposals
 └── synthpilot        desktop application built with eframe/egui
 ```
 
@@ -71,7 +92,7 @@ The implemented MODX+ parameters, their addresses and the Data List pages they w
 - The SysEx device number is fixed to `0`.
 - Sounds live only in memory; there is no file import or export yet.
 - Only a verified subset of parameters is editable.
-- SynthPilot is a manual editor. It does not generate or suggest sounds.
+- The AI assistant can only change parameters SynthPilot supports. Effect parameter values are shown as the instrument's raw numbers next to their documented range, not converted to seconds or hertz.
 
 ## Contributing
 

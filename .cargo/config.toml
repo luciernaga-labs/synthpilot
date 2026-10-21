@@ -4,7 +4,7 @@ coverage = [
     "--workspace",
     "--all-features",
     "--ignore-filename-regex",
-    "(synthpilot/src/main\\.rs|synthpilot/src/app/(mod|editor|preview|sidebar|theme)\\.rs|synthpilot-midi/src/device\\.rs)$",
+    "(synthpilot/src/main\\.rs|synthpilot/src/app/(mod|editor|preview|sidebar|theme|assistant_view)\\.rs|synthpilot-midi/src/device\\.rs|synthpilot-assistant/src/http\\.rs)$",
     "--fail-under-lines",
     "90",
 ]

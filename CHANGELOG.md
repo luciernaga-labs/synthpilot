@@ -22,6 +22,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Pull request checks for unit tests, a 90% line coverage gate and an autofix workflow that applies `cargo fmt` and `cargo clippy --fix`.
 - Effects for the MODX+: Reverb and Variation type, return, pan and switch for the whole sound; Insertion A/B type, Insertion FX Switch, Insertion Connection Type, Reverb Send, Variation Send, Dry Level and 3-band EQ gains per Part; Element Connection Switch per AWM2 Element.
 - Performance-wide parameters in the domain model (`Scope::Performance`, `Location::performance`, `DeviceProfile::common`).
+- `.env.example` with the settings for connecting an AI model (provider, model, API key and optional base URL). Local `.env` files are ignored by git.
+- Optional AI assistant (`synthpilot-assistant` crate and Assistant panel): describe a sound and an OpenAI, Anthropic or local OpenAI-compatible model configured in `.env` proposes changes to the selected Part and the Performance effects, which you review, apply and undo.
+- Wave selection for AWM2 Elements by number and name from the 6347 Preset Waves, with a searchable picker.
+- AWM2 Element amplitude envelope levels, pitch and filter velocity sensitivity, filter envelope and LFO; FM-X filter envelope, velocity sensitivity, 2nd LFO, spectral form, operator envelope levels, level scaling depths and LFO sensitivity.
+- Effect parameters for 89 effect types, named and limited by the selected Reverb, Variation or Insertion type. SynthPilot reads the Performance again after an effect type changes.
+- The AI assistant can look up Wave groups and effect type parameters before proposing changes, and validates effect parameters against the type it chooses.
+- Part Common settings from the Performance Part table: Part Category Main (Piano, Pad/Choir, Chromatic Perc and the rest), Mono/Poly, Key Assign, Portamento, Pitch Bend Range, Velocity and Note Limit, Part Output, Element Pan and Arp Play Only.
+- Effect type dropdowns are grouped by the Effect Type List categories, as on the instrument.
+- The AI assistant works on the whole Performance: it sees every Part (the open one in full, the others summarized, and any of them in full on request), and each proposed change names the Part it edits, so it can balance, layer and split Parts. It can look things up up to three times before answering.
+- Loading any of the 2227 preset sounds of the MODX+ into a Part, from a searchable list by name and category: fill an empty Part or replace a Part's sound. SynthPilot reads the Part back to confirm it loaded. The AI assistant can propose sounds to load too.
+- Part Switch, Keyboard Control and Mute per Part.
+
+### Fixed
+
+- Insertion B no longer offers VINYL BREAK and the four BEAT REPEAT types, which the Effect Type List makes available on Insertion A only, and numbers the types after them as the InsB column does.
+- Velocity and note ranges, velocity cross fade and velocity-dependent envelope times for AWM2 Elements, and Velocity Sensitivity Depth and Offset per Part, so layered sounds respond to playing strength. The AI assistant follows layering and attack guidance and always answers in English.
 
 ### Changed
 

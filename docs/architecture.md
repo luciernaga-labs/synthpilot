@@ -1,11 +1,12 @@
 # Architecture
 
-SynthPilot is a Cargo workspace with three crates. All device knowledge lives in `synthpilot-core`. `synthpilot-midi` moves bytes to a MIDI port. The desktop application in `synthpilot` only draws what the core describes and hands the resulting messages to the transport.
+SynthPilot is a Cargo workspace with four crates. All device knowledge lives in `synthpilot-core`. `synthpilot-midi` moves bytes to a MIDI port. The desktop application in `synthpilot` only draws what the core describes and hands the resulting messages to the transport.
 
 ```text
 synthpilot (app) ──▶ domain ◀── devices/modx_plus ──▶ protocol
         │
-        └──────────▶ synthpilot-midi ──▶ midir (CoreMIDI, WinMM, ALSA)
+        ├──────────▶ synthpilot-midi ──▶ midir (CoreMIDI, WinMM, ALSA)
+        └──────────▶ synthpilot-assistant ──▶ domain, HTTPS (OpenAI, Anthropic, local servers)
 ```
 
 | Layer | Crate and path | Responsibility | Must not depend on |
@@ -14,9 +15,12 @@ synthpilot (app) ──▶ domain ◀── devices/modx_plus ──▶ protocol
 | Domain | `synthpilot-core/src/domain` | Identifiers, parameter definitions, value ranges and formats, validation, the `DeviceProfile` and `EngineProfile` traits, the `Sound` model | Any specific manufacturer, UI |
 | Devices | `synthpilot-core/src/devices` | The device catalog and one module per instrument. Addresses, model IDs and value mappings stay here | UI |
 | Transport | `synthpilot-midi` | Listing MIDI ports, opening an input and output on the same port, and moving bytes through the `Connection` trait | Devices, UI |
+| Assistant | `synthpilot-assistant` | Reading the model configuration from the environment and `.env`, describing the editable parameters to the model, calling the provider through the `Transport` trait and turning the reply into validated `ParameterChange`s | UI, MIDI transport, specific devices |
 | App | `synthpilot/src/app` | Device selector, sound editor, SysEx preview and connection controls built with eframe/egui. Logic lives in `state.rs`, `controller.rs` and `midi.rs`; the view modules only draw and collect actions | Manufacturer-specific modules |
 
 `synthpilot-core` has no GUI or MIDI dependency, so it can be reused from a command-line tool, tests or a future plugin.
+
+`synthpilot-assistant` never produces SysEx. It returns proposals that name parameter IDs and values; `plan::resolve` checks each one against the same `ParameterDefinition` validation as a manual edit, and the app only sends the ones the user applies.
 
 ## Core concepts
 

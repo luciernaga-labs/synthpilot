@@ -3,7 +3,7 @@ use super::catalog::{self, Entry};
 use super::part;
 use crate::domain::{
     EncodeError, EngineId, EngineProfile, Layout, ParameterChange, ParameterDefinition,
-    ParameterId, Scope, ValueRange,
+    ParameterId, Part, Scope, ValueRange,
 };
 use crate::protocol::SysExMessage;
 use crate::protocol::yamaha::DeviceNumber;
@@ -78,5 +78,17 @@ impl EngineProfile for Drum {
 
     fn encode(&self, change: &ParameterChange) -> Result<SysExMessage, EncodeError> {
         catalog::encode(&self.entries, self.layout(), self.device_number, change)
+    }
+
+    fn refine(&self, parameter: &ParameterDefinition, part: &Part) -> Option<ParameterDefinition> {
+        part::refine(parameter, part)
+    }
+
+    fn dependents(&self, control: &ParameterDefinition, value: i32) -> Vec<ParameterDefinition> {
+        part::dependents(&self.parameters, control, value)
+    }
+
+    fn reshapes(&self, parameter: ParameterId) -> bool {
+        part::reshapes(parameter)
     }
 }

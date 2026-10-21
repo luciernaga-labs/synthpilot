@@ -1,0 +1,2227 @@
+1	CFX + FM EP	Piano	Acoustic
+2	CFX + FM EP 2	Piano	Acoustic
+3	CFX Concert	Piano	Acoustic
+4	CFX Stage	Piano	Acoustic
+5	CFX Pop/Rock	Piano	Acoustic
+6	CFX PopStudioGrand	Piano	Acoustic
+7	CFX Moody	Piano	Acoustic
+8	CFX & Pad	Piano	Acoustic
+9	CFX & Pad 2	Piano	Acoustic
+10	CFX & Orch	Piano	Acoustic
+11	CFX & Orch 2	Piano	Acoustic
+12	CFX Shrine	Piano	Acoustic
+13	CFX Shrine 2	Piano	Acoustic
+14	CFX Padded	Piano	Acoustic
+15	CFX Padded 2	Piano	Acoustic
+16	CFX & Pad & Sub	Piano	Acoustic
+17	Sky Keys	Piano	Acoustic
+18	Lonely Keys	Piano	Acoustic
+19	S700 for Montage	Piano	Acoustic
+20	Upright Piano	Piano	Acoustic
+21	Upright Mod 1	Piano	Acoustic
+22	Upright Mod 2	Piano	Acoustic
+23	Upright Tack Piano	Piano	Acoustic
+24	Upright Atmos	Piano	Acoustic
+25	Imaginary Upright	Piano	Acoustic
+26	Cold Upright	Piano	Acoustic
+27	Acoustic Piano DA	Piano	Modern
+28	AcPiano+FMPiano DA	Piano	Modern
+29	AcPf+FM Pf+Pad DA	Piano	Modern
+30	Full AP/EP/Pd/Str	Piano	Acoustic
+31	Full AP/FMEP/Pd/St	Piano	Acoustic
+32	FM EP & CFX Grand	Piano	Acoustic
+33	FM EP & CFX Grand 2	Piano	Acoustic
+34	Schlager Weapon 1	Piano	Modern
+35	The New Ballad	Piano	Modern
+36	CP80 Layer	Piano	Vintage
+37	CP80	Piano	Vintage
+38	CP80 Amp	Piano	Vintage
+39	CP80 Chorus	Piano	Vintage
+40	CP80 & Pad	Piano	Vintage
+41	FM Grand Piano	Piano	Vintage
+42	FM Digi Ac Piano	Piano	Vintage
+43	FM Bright Piano	Piano	Vintage
+44	FM Ragtime Piano	Piano	Vintage
+45	DX CP	Piano	Vintage
+46	FM Toy Piano	Piano	Vintage
+47	The Bridge	Piano	Acoustic
+48	The Prepared Piano	Piano	Acoustic
+49	CFX Chill	Piano	Acoustic
+50	Rd 1 Gallery	Keyboard	Electric Piano
+51	Rd 1 Gallery 2	Keyboard	Electric Piano
+52	Rd 2 Gallery	Keyboard	Electric Piano
+53	88 key Case Hard	Keyboard	Electric Piano
+54	88 key Case Soft	Keyboard	Electric Piano
+55	Case 73 Soft	Keyboard	Electric Piano
+56	Case 75 Medium	Keyboard	Electric Piano
+57	Case 75 Amp	Keyboard	Electric Piano
+58	Case 78 Hard	Keyboard	Electric Piano
+59	Rd 73	Keyboard	Electric Piano
+60	Rd Old	Keyboard	Electric Piano
+61	Rd Stage	Keyboard	Electric Piano
+62	SuperDynoChorus DI	Keyboard	Electric Piano
+63	SuperDynoChorusAmp	Keyboard	Electric Piano
+64	Rd Echo	Keyboard	Electric Piano
+65	74 Phase	Keyboard	Electric Piano
+66	Rd Soft Touch Wah	Keyboard	Electric Piano
+67	Rd Phase	Keyboard	Electric Piano
+68	Dyno Chorus Rd	Keyboard	Electric Piano
+69	Rd Scratched	Keyboard	Electric Piano
+70	Rd 78 Brite Tremolo	Keyboard	Electric Piano
+71	Rd 75 Soft Dist	Keyboard	Electric Piano
+72	Neo R&B Clean	Keyboard	Electric Piano
+73	Rd HD Warm Chorus	Keyboard	Electric Piano
+74	J Phased Rd 73	Keyboard	Electric Piano
+75	Tine Transformer	Keyboard	Electric Piano
+76	Nu Hybrid EP	Keyboard	Electric Piano
+77	Rd & Pad	Keyboard	Electric Piano
+78	EP goes to 11	Keyboard	Electric Piano
+79	Case 73 + FM	Keyboard	Electric Piano
+80	Early 80s DiscoPop	Keyboard	Electric Piano
+81	Wr Gallery	Keyboard	Electric Piano
+82	Wr Gallery 2	Keyboard	Electric Piano
+83	Wr EP 2	Keyboard	Electric Piano
+84	Wr EP 2 Bright	Keyboard	Electric Piano
+85	Wr Tremolo Amp	Keyboard	Electric Piano
+86	Wr Amp	Keyboard	Electric Piano
+87	Wr Rock	Keyboard	Electric Piano
+88	Wr Pops	Keyboard	Electric Piano
+89	Velo EP FX	Keyboard	Electric Piano
+90	FM Wr 1	Keyboard	Electric Piano
+91	FM Wr 2	Keyboard	Electric Piano
+92	Ring Echo EP	Keyboard	Electric Piano
+93	EP & Jazz Gt Comp	Keyboard	Electric Piano
+94	Chill Me	Keyboard	Electric Piano
+95	Wr 8ths	Keyboard	Electric Piano
+96	FM Piano DA	Keyboard	FM Piano
+97	SparkleDegree Full	Keyboard	FM Piano
+98	FM - What else	Keyboard	FM Piano
+99	GS E.Piano	Keyboard	FM Piano
+100	FM EP Brite > Comp	Keyboard	FM Piano
+101	FM Roads	Keyboard	FM Piano
+102	EP 1980	Keyboard	FM Piano
+103	DX Road	Keyboard	FM Piano
+104	The FM E.Piano	Keyboard	FM Piano
+105	DX FM EP	Keyboard	FM Piano
+106	Heart of FM EP	Keyboard	FM Piano
+107	Urban EP	Keyboard	FM Piano
+108	Full Tine 2	Keyboard	FM Piano
+109	Gentle FM EP	Keyboard	FM Piano
+110	Mellow DX AF1&2	Keyboard	FM Piano
+111	TV Show FM EP	Keyboard	FM Piano
+112	Glass Tines	Keyboard	FM Piano
+113	Classic 80's DX7 EP	Keyboard	FM Piano
+114	The TX816 E.Piano 1	Keyboard	FM Piano
+115	The TX416 E.Piano 1	Keyboard	FM Piano
+116	The TX816 E.Piano 2	Keyboard	FM Piano
+117	The TX416 E.Piano 2	Keyboard	FM Piano
+118	FM EP Plus	Keyboard	FM Piano
+119	Margot's Song	Keyboard	FM Piano
+120	FM Morph Keys	Keyboard	FM Piano
+121	FM EP & Strings	Keyboard	FM Piano
+122	Grace EP	Keyboard	FM Piano
+123	FM Heavens Harp	Keyboard	FM Piano
+124	Midnight Funk	Keyboard	FM Piano
+125	FM EP Dyna Swell	Keyboard	FM Piano
+126	Bell Tines	Keyboard	FM Piano
+127	FM - What else X	Keyboard	FM Piano
+128	DX Chill	Keyboard	FM Piano
+129	Toy EP	Keyboard	Electric Piano
+130	Toy EP Amp Hybrid	Keyboard	Electric Piano
+131	Clavi Amp Gallery	Keyboard	Clavi
+132	Nu Touch Clavi	Keyboard	Clavi
+133	Super Clavi 2	Keyboard	Clavi
+134	PhaserClavi Mt AF1	Keyboard	Clavi
+135	Clavi/Toy EP Duo	Keyboard	Clavi
+136	Power Clavi	Keyboard	Clavi
+137	Clavi Touch Wah 2	Keyboard	Clavi
+138	Clavi Amp Phaser AF1	Keyboard	Clavi
+139	FM Clavi>FretlessB	Keyboard	Clavi
+140	Clavi Stuff	Keyboard	Clavi
+141	Hybrid Clavi	Keyboard	Clavi
+142	EL Grand Clavi	Keyboard	Clavi
+143	E.Harpsichord	Keyboard	Clavi
+144	FM Harpsichord	Keyboard	Clavi
+145	Harpsi > Celesta	Keyboard	Clavi
+146	Easy Filter	Keyboard	Synth
+147	All 9 Bars!	Organ	Tone Wheel
+148	The Basics	Organ	Tone Wheel
+149	8.8.8.8.6.2.2.0.0	Organ	Tone Wheel
+150	8.8.8.8.6.2.2.0.0 2	Organ	Tone Wheel
+151	Hot Smoky	Organ	Tone Wheel
+152	J's Jazz	Organ	Tone Wheel
+153	J's Jazz 2	Organ	Tone Wheel
+154	Dave's Nu Organ	Organ	Tone Wheel
+155	X Draw Organ	Organ	Tone Wheel
+156	All Bar None	Organ	Tone Wheel
+157	More Shade	Organ	Tone Wheel
+158	The Jazz Organ	Organ	Tone Wheel
+159	Jazz To All Out	Organ	Tone Wheel
+160	Jazz To All Out 2	Organ	Tone Wheel
+161	Gospel To Reggae	Organ	Tone Wheel
+162	Curved To Straight	Organ	Tone Wheel
+163	Groove Organ	Organ	Tone Wheel
+164	The Preacher	Organ	Tone Wheel
+165	The Preacher 2	Organ	Tone Wheel
+166	Evens and Odds	Organ	Tone Wheel
+167	Glassy	Organ	Tone Wheel
+168	Two Blue Hands	Organ	Tone Wheel
+169	Lovin' Happiness	Organ	Tone Wheel
+170	Bowed Bars CV	Organ	Tone Wheel
+171	The Grinder	Organ	Tone Wheel
+172	Rock Organ 2	Organ	Tone Wheel
+173	Overdriven Organ	Organ	Tone Wheel
+174	Whiter Bars	Organ	Tone Wheel
+175	Hybrid Organ	Organ	Tone Wheel
+176	Rich Bars	Organ	Tone Wheel
+177	Clarinet Bars	Organ	Tone Wheel
+178	Rock Hard	Organ	Tone Wheel
+179	Lake Fire	Organ	Tone Wheel
+180	FM Full Organ	Organ	Tone Wheel
+181	FM Draw Organ 1	Organ	Tone Wheel
+182	FM Jazz Organ	Organ	Tone Wheel
+183	FM Draw Organ 2	Organ	Tone Wheel
+184	The FM DX7 Organ	Organ	Tone Wheel
+185	FM Rock Organ 3	Organ	Tone Wheel
+186	FM Rock Organ 4	Organ	Tone Wheel
+187	Multi Bars Organ	Organ	Tone Wheel
+188	Perc Alone	Organ	Tone Wheel
+189	Up Close B	Organ	Tone Wheel
+190	Go-Come Organ	Organ	Tone Wheel
+191	FM YC Combo Organ	Organ	Combo
+192	BOX FM Combo Organ	Organ	Combo
+193	FM Perc Organ 1	Organ	Synth
+194	FM Perc Organ 2	Organ	Synth
+195	FM Perc Organ 3	Organ	Synth
+196	FM Rock Organ 1	Organ	Synth
+197	FM Rock Organ 2	Organ	Synth
+198	Digital Tonewheels	Organ	Electronic
+199	Bright Perc Organ	Organ	Synth
+200	Foolish Organ	Organ	Rock/Pop
+201	Flying Bars	Organ	Tone Wheel
+202	Tempo Bars	Organ	Tone Wheel
+203	Morse Organ	Organ	Tone Wheel
+204	Cathedral	Organ	Pipe
+205	Cathedral 2	Organ	Pipe
+206	FM Church Pipes	Organ	Pipe
+207	FM Pipe Organ	Organ	Pipe
+208	FM Puff Organ	Organ	Pipe
+209	FM Accordion 1	Organ	Pipe
+210	FM Accordion 2	Organ	Pipe
+211	AccordionTrnsfrmer	Organ	Pipe
+212	Jahrmarkt	Organ	Pipe
+213	ScotsAccordion MMM	Organ	Jazz/World
+214	OrganSubBass Swell	Organ	Synth
+215	Steel Twin Gallery	Guitar	Acoustic
+216	6 String Finger	Guitar	Acoustic
+217	Picked Son of Gt	Guitar	Acoustic
+218	Fingered Steel	Guitar	Acoustic
+219	Picked Steel	Guitar	Acoustic
+220	Flamenco Guitar	Guitar	Acoustic
+221	Fiesta Guitar	Guitar	Acoustic
+222	Ac Chicken Pick	Guitar	Acoustic
+223	Fingered 12 String	Guitar	Acoustic
+224	American 12 String	Guitar	Acoustic
+225	American Steel Duo	Guitar	Acoustic
+226	Two Acoustics 2	Guitar	Acoustic
+227	Songwriter 2015	Guitar	Acoustic
+228	Serenity	Guitar	Acoustic
+229	Proximity Effect	Guitar	Acoustic
+230	Acoustic Jam	Guitar	Acoustic
+231	8 Amps and a TC	Guitar	Electric Clean
+232	Clean Fingers	Guitar	Electric Clean
+233	TC Clean Pick	Guitar	Electric Clean
+234	Clean BalladFinger	Guitar	Electric Clean
+235	Clean Ballad Pick	Guitar	Electric Clean
+236	American Garage	Guitar	Electric Clean
+237	Texas Chicken Pick	Guitar	Electric Clean
+238	Duo TC Clean	Guitar	Electric Clean
+239	Hybrid 1coil E.Gtr	Guitar	Electric Clean
+240	French Br ED	Guitar	Electric Clean
+241	1 Finger Gangster	Guitar	Electric Clean
+242	Lead Feedbacker	Guitar	Distortion
+243	Comp Hero	Guitar	Distortion
+244	Modern Finger Hero	Guitar	Distortion
+245	Texas Chicken MW	Guitar	Distortion
+246	Modern Pick Hero	Guitar	Distortion
+247	Duo TC Drive	Guitar	Distortion
+248	FM Ac Guitar 1	Guitar	Synth
+249	FM Ac Guitar 2	Guitar	Synth
+250	FM Pick Guitar 1	Guitar	Synth
+251	FM Pick Guitar 2	Guitar	Synth
+252	FM Tight Guitar	Guitar	Synth
+253	FM EPish Guitar	Guitar	Synth
+254	FM The Jazz Guitar	Guitar	Synth
+255	FM Clean E.Gt 1	Guitar	Synth
+256	FM Clean E.Gt 2	Guitar	Synth
+257	FM Clean 12st E.Gt	Guitar	Synth
+258	FM Clean E.Gt 3	Guitar	Synth
+259	FM Mute E.Gt	Guitar	Synth
+260	FM Distortion E.Gt	Guitar	Synth
+261	Rock Star	Guitar	Synth
+262	Upright Bass AF1	Bass	Acoustic
+263	Bass+RideCym/Piano	Bass	Acoustic
+264	New Grunge Bass	Bass	Synth
+265	DX SuperBass+ DA	Bass	Synth
+266	Bass Morpher	Bass	Synth
+267	Dub Rock Bass	Bass	Synth
+268	FM Boogie Syn Bass	Bass	Synth
+269	FM The DX E.Bass	Bass	Synth
+270	FM Hybrid Bass	Bass	Synth
+271	FM Octaves	Bass	Synth
+272	FM Wood Bass	Bass	Synth
+273	FM Smooth WoodBass	Bass	Synth
+274	FM Finger Bass	Bass	Synth
+275	FM Prog Elec Bass	Bass	Synth
+276	FM Pick Bass	Bass	Synth
+277	FM Pick Pluck Bass	Bass	Synth
+278	FM Owl Bass	Bass	Synth
+279	FM Fretless Bass 1	Bass	Synth
+280	FM Fretless Bass 2	Bass	Synth
+281	FM Round Wound EB	Bass	Synth
+282	FM Super Bass	Bass	Synth
+283	FM SuperUnisonBass	Bass	Synth
+284	FM Slap Bass	Bass	Synth
+285	FM Syn Bass	Bass	Synth
+286	FM Lately Bass	Bass	Synth
+287	Judgement Bass	Bass	Synth
+288	Round Sync	Bass	Synth
+289	FM Flange Bass	Bass	Synth
+290	Phat Bass	Bass	Synth
+291	Johnny Bass	Bass	Synth
+292	T3 Uber funk	Bass	Synth
+293	Warped Bass Traxx	Bass	Synth
+294	FM Abstracts	Bass	Synth
+295	Tektonic Dub	Bass	Synth
+296	Tremble Bass	Bass	Synth
+297	Tear Bass	Bass	Synth
+298	Sweep Motion Bass	Bass	Synth
+299	FM Bouncer FX	Bass	Synth
+300	Mr Producer	Bass	Synth
+301	Chronic Circuits	Bass	Synth
+302	Dub Me...SK	Bass	Synth
+303	Mega Complextro	Bass	Electronic
+304	The Frog	Bass	Electronic
+305	Trap 'n' Bass	Bass	Electronic
+306	Solo 1stViolin AF1	Strings	Solo
+307	Solo 2ndViolin AF1	Strings	Solo
+308	Celtic Violin	Strings	Solo
+309	Secret Violin	Strings	Solo
+310	Solo Viola AF1	Strings	Solo
+311	Solo Cello AF1	Strings	Solo
+312	Seattle Violins 1	Strings	Ensemble
+313	Seattle Violins 2	Strings	Ensemble
+314	Seattle Violas	Strings	Ensemble
+315	Seattle Cellos	Strings	Ensemble
+316	Seattle Basses	Strings	Ensemble
+317	Chamber Strings	Strings	Ensemble
+318	Ballad Strings	Strings	Ensemble
+319	Classical Strings	Strings	Ensemble
+320	Romance Strings	Strings	Ensemble
+321	Seattle Sections	Strings	Ensemble
+322	A Few Strings	Strings	Ensemble
+323	Rich Strings	Strings	Ensemble
+324	String Sect Swell	Strings	Ensemble
+325	St Ensemble K	Strings	Ensemble
+326	Strings & Brass	Strings	Ensemble
+327	Strings&BrassSwell	Strings	Ensemble
+328	Hybrid Violins	Strings	Ensemble
+329	Hybrid Violas	Strings	Ensemble
+330	Hybrid Cellos	Strings	Ensemble
+331	Share The Shed	Strings	Ensemble
+332	Concert Harp	Strings	Pizzicato
+333	Mellow Harp	Strings	Pizzicato
+334	CelticHarpEthereal	Strings	Pizzicato
+335	Celtic Harp Choral	Strings	Pizzicato
+336	FM Harp	Strings	Pizzicato
+337	Disk Dusk	Strings	Pizzicato
+338	Pizza Insomniato	Strings	Pizzicato
+339	FM Strings	Strings	Synth
+340	FM Syn Strings	Strings	Synth
+341	FM Tron Strings	Strings	Synth
+342	FM Square Strings	Strings	Synth
+343	Yo Luv	Strings	Synth
+344	Slow and Steady	Strings	Synth
+345	Trumpet 3	Brass	Solo
+346	Piccolo Trumpet	Brass	Solo
+347	Scott's Teacher	Brass	Solo
+348	Trombone	Brass	Solo
+349	Bass Trombone	Brass	Solo
+350	French Horn 2	Brass	Solo
+351	Euphonium 2	Brass	Solo
+352	Trumps and Bones	Brass	Solo
+353	Attack Brass	Brass	Solo
+354	Horn To Horns	Brass	Solo
+355	Orch Trumpets	Brass	Orchestra
+356	Trumpet Ensemble	Brass	Ensemble
+357	Trumpets Swell	Brass	Ensemble
+358	Orch Trombones	Brass	Orchestra
+359	Trombone Ensemble	Brass	Ensemble
+360	Trombones Swell	Brass	Ensemble
+361	Orchestra Horns	Brass	Orchestra
+362	Orchestral Horns	Brass	Orchestra
+363	FrenchHornSection3	Brass	Ensemble
+364	Fr Horns Swell	Brass	Ensemble
+365	Orch Brass Tutti	Brass	Orchestra
+366	Orch Brass Oct	Brass	Ensemble
+367	Orchestral Brass	Brass	Ensemble
+368	Orch Brass Swell	Brass	Ensemble
+369	PopHorns Dyn Shake	Brass	Ensemble
+370	Pop Horns Mellow	Brass	Ensemble
+371	Modern Jazz Horns	Brass	Ensemble
+372	Pop Horns Bright	Brass	Ensemble
+373	Pop Horns Accent	Brass	Ensemble
+374	Pop Horns Swell	Brass	Ensemble
+375	Slow and Speedy	Brass	Ensemble
+376	Pop Brass Swell	Brass	Ensemble
+377	Trapped Brass!	Brass	Ensemble
+378	Hybrid Ana Brass	Brass	Synth
+379	Brassy Synth MW	Brass	Synth
+380	FM Dual Trumpets	Brass	Synth
+381	FM Horn	Brass	Synth
+382	FM Mallet Horn	Brass	Synth
+383	FM Alps Horn	Brass	Synth
+384	FM GX1 Brass 1	Brass	Synth
+385	FM GX1 Brass 2	Brass	Synth
+386	DX Brass	Brass	Synth
+387	FM Warm Brass	Brass	Synth
+388	FM CS80 Brass	Brass	Synth
+389	FM JP Brass	Brass	Synth
+390	FM The Brass	Brass	Synth
+391	FM Brass	Brass	Synth
+392	FM BrassEnsemble 1	Brass	Synth
+393	FM BrassEnsemble 2	Brass	Synth
+394	The Synth Brass 1	Brass	Synth
+395	The Synth Brass 2	Brass	Synth
+396	PopBrass & SynBrass	Brass	Synth
+397	The Hybrid BRASS Sec	Brass	Synth
+398	Piccolo 2	Woodwind	Flute
+399	Concert Flute	Woodwind	Flute
+400	Latin Flutist	Woodwind	Flute
+401	Penny Whistle	Woodwind	Flute
+402	Low D Whistle	Woodwind	Flute
+403	FM Pan Flute	Woodwind	Flute
+404	Oboe 3	Woodwind	Woodwind
+405	Orch Clarinet	Woodwind	Woodwind
+406	Bassoon 3	Woodwind	Woodwind
+407	Contra Bassoon	Woodwind	Woodwind
+408	Wind Ensemble	Woodwind	Reed / Pipe
+409	Inauguration	Woodwind	Woodwind
+410	60s Movie Melody	Woodwind	Flute
+411	FM Harmonica	Woodwind	Reed / Pipe
+412	FM Saxophone	Woodwind	Saxophone
+413	Singleline 2	Syn Lead	Analog
+414	FM Vocal Lead	Syn Lead	Analog
+415	Monster Lead	Syn Lead	Analog
+416	MainRoomRiff Maker	Syn Lead	Dance
+417	EDM PiTCh Bomb	Syn Lead	Dance
+418	3o3 Talker	Syn Lead	Dance
+419	ComercialLd & Cmp	Syn Lead	Dance
+420	Major Fazor	Syn Lead	Dance
+421	FM MotionSeq Ld DA	Syn Lead	Digital
+422	FM Sync	Syn Lead	Digital
+423	FM Syn Lead 1	Syn Lead	Digital
+424	FM Syn Lead 2	Syn Lead	Digital
+425	FM SynLeadSubHarmo	Syn Lead	Digital
+426	FM Syn Lead 3	Syn Lead	Digital
+427	Anemone Lead	Syn Lead	Analog
+428	Milk & Honey	Syn Lead	Analog
+429	Milky Way	Syn Lead	Analog
+430	Dust to Gold	Syn Lead	Digital
+431	Soft and Dirty FM	Syn Lead	Digital
+432	Kool FM Disco Lead	Syn Lead	Digital
+433	Hybrid Sync	Syn Lead	Digital
+434	Mr. Coin	Syn Lead	Digital
+435	FM Motion Lead	Syn Lead	Digital
+436	Radiation	Syn Lead	Digital
+437	Syncronizers	Syn Lead	Digital
+438	Motion Grid	Syn Lead	Digital
+439	Aogashima	Syn Lead	Analog
+440	Star Poly	Syn Lead	Analog
+441	Double Triller	Syn Lead	Digital
+442	Arcade	Syn Lead	Dance
+443	Growling Wolf	Syn Lead	Dance
+444	Legato Pitcher	Syn Lead	Dance
+445	Catatonix	Syn Lead	Dance
+446	Elecktronic Chat	Syn Lead	Dance
+447	Freaky Dancer	Syn Lead	Electronic
+448	Flying Dub	Syn Lead	Digital
+449	Iluminator	Syn Lead	Dance
+450	WaveRunner MW DA	Syn Lead	Digital
+451	SuperGlider MW DA	Syn Lead	Digital
+452	Reflection Twinkle	Syn Lead	Analog
+453	Synth Noise Vocoder	Syn Lead	Analog
+454	Wax And Wane	Pad/Choir	Bright
+455	Trigger Horizon	Pad/Choir	Bright
+456	Chillomatik	Pad/Choir	Bright
+457	Padderday	Pad/Choir	Bright
+458	DX Classix	Pad/Choir	Bright
+459	PiTCh Up Vowel Pad	Pad/Choir	Bright
+460	Dreamy FM Keys	Pad/Choir	Bright
+461	FM Astral Pad	Pad/Choir	Bright
+462	FM Double Filtered	Pad/Choir	Bright
+463	Fizzy FM Mod Pad	Pad/Choir	Bright
+464	Deep Filter Kino	Pad/Choir	Bright
+465	Deep Pitch Kino	Pad/Choir	Bright
+466	FM PWM Pad	Pad/Choir	Bright
+467	FM Forest Pad	Pad/Choir	Bright
+468	FM Bell SquarePad	Pad/Choir	Bright
+469	Poly Pad MW DA	Pad/Choir	Bright
+470	FM Ice Heaven Pad	Pad/Choir	Bright
+471	FM Bow RingMod Pad	Pad/Choir	Bright
+472	FM Crystal Pad	Pad/Choir	Bright
+473	FM 5th Pad	Pad/Choir	Bright
+474	Schlager Weapon 4	Pad/Choir	Bright
+475	FM Strings & Bells	Pad/Choir	Bright
+476	HyperTrance Stereo	Pad/Choir	Bright
+477	Fluctuations	Pad/Choir	Bright
+478	Introduce Me	Pad/Choir	Bright
+479	Satellite	Pad/Choir	Bright
+480	Ethereal	Pad/Choir	Warm
+481	Ocean Pad	Pad/Choir	Warm
+482	Isle of Skye	Pad/Choir	Warm
+483	Momentary FM	Pad/Choir	Warm
+484	Stardust FM	Pad/Choir	Warm
+485	FM Warm Shivers	Pad/Choir	Warm
+486	Nu Age Designer FM	Pad/Choir	Warm
+487	FM Slow Square Pad	Pad/Choir	Warm
+488	Tranquility AF1&2	Pad/Choir	Warm
+489	FM Film Pad	Pad/Choir	Warm
+490	FM Saw Pad	Pad/Choir	Warm
+491	FM Cloud Sine Pad	Pad/Choir	Warm
+492	Apollo	Pad/Choir	Warm
+493	FM Heavenly Pad	Pad/Choir	Warm
+494	FM Ambient Keys	Pad/Choir	Warm
+495	Rotary Bell Voices	Pad/Choir	Warm
+496	Groovin Spheres	Pad/Choir	Warm
+497	Whip Motion	Pad/Choir	Warm
+498	Snow Run	Pad/Choir	Warm
+499	Creation	Pad/Choir	Warm
+500	Universal Comp	Pad/Choir	Analog
+501	Square don't care	Pad/Choir	Analog
+502	Octo Supreme	Pad/Choir	Analog
+503	UnderWater Worlds	Pad/Choir	Analog
+504	R's Logo	Pad/Choir	Analog
+505	FM Sweeping Poly	Pad/Choir	Analog
+506	Firey Pad	Pad/Choir	Analog
+507	That's a Pad	Pad/Choir	Analog
+508	FM Analogy Pad	Pad/Choir	Analog
+509	FM Sweep AnalogPad	Pad/Choir	Analog
+510	SinePad<>Strs<>Nz	Pad/Choir	Analog
+511	New Groove Pad	Pad/Choir	Analog
+512	Meteor Shower	Pad/Choir	Electronic
+513	Subspace Oceans	Pad/Choir	Electronic
+514	Choir Service	Pad/Choir	Choir
+515	Gospel Hmm	Pad/Choir	Choir
+516	Gospel Wow	Pad/Choir	Choir
+517	Gospel Hey	Pad/Choir	Choir
+518	Latin Vocal	Pad/Choir	Choir
+519	Jazz Singers	Pad/Choir	Choir
+520	BoysChoir MW Xfade	Pad/Choir	Choir
+521	FM Choir	Pad/Choir	Choir
+522	Choir/Str/Pipe Org	Pad/Choir	Choir
+523	FM Linear Synth	Pad/Choir	Bright
+524	Color Wheel	Pad/Choir	Bright
+525	Drift & Pulse	Pad/Choir	Bright
+526	Filter & Funky	Pad/Choir	Bright
+527	Chilled Vocoder	Pad/Choir	Bright
+528	Scorpius	Pad/Choir	Bright
+529	Flexi Filters AF1&2	Pad/Choir	Bright
+530	Morph Waveforms	Pad/Choir	Bright
+531	Orient Envelope	Pad/Choir	Bright
+532	Art Strealla	Pad/Choir	Analog
+533	Funk Motion Pad	Pad/Choir	Analog
+534	Praise Mr. 80	Pad/Choir	Analog
+535	Vintage Arp LFO	Pad/Choir	Analog
+536	Power of Emotion	Pad/Choir	Analog
+537	The Golden Key	Pad/Choir	Analog
+538	Pink Oracle	Pad/Choir	Analog
+539	Particles in Space	Pad/Choir	Analog
+540	Galactic Nucleus	Pad/Choir	Analog
+541	Glistening Grove	Pad/Choir	Analog
+542	Motion PAD & ARP	Pad/Choir	Analog
+543	Polyphonic LFOs	Pad/Choir	Analog
+544	Journey Within	Pad/Choir	Analog
+545	Deep Dreams	Pad/Choir	Analog
+546	Cloud Electric	Pad/Choir	Analog
+547	Choir SEQ	Pad/Choir	Choir
+548	Envelope Seq Scenes	Pad/Choir	Choir
+549	Spaced Voices	Pad/Choir	Choir
+550	Free Running	Pad/Choir	Warm
+551	The Great Red Spot	Pad/Choir	Warm
+552	Particle Pad	Pad/Choir	Electronic
+553	Increasing Tension	Pad/Choir	Electronic
+554	EDM Fun 2	Pad/Choir	Bright
+555	EDM Fun 1	Pad/Choir	Bright
+556	Schlager Herz	Pad/Choir	Analog
+557	Mr. Side Chain	Pad/Choir	Analog
+558	Chart Topper	Pad/Choir	Analog
+559	Travel Frontiers	Pad/Choir	Analog
+560	Ethno ARP Beat	Pad/Choir	Analog
+561	Honeyfaces	Pad/Choir	Warm
+562	One Chord EDM	Pad/Choir	Analog
+563	Chasing Clouds	Pad/Choir	Warm
+564	Breathless Safri	Syn Comp	Analog
+565	Pluck Away	Syn Comp	Analog
+566	One&Only massive	Syn Comp	Analog
+567	FM Harpune AF1&2	Syn Comp	Decay
+568	FM Atmos Decay	Syn Comp	Decay
+569	FM Baroque Decay	Syn Comp	Decay
+570	FM Koto & Shamisen	Syn Comp	Decay
+571	Percussive Dance 2	Syn Comp	Decay
+572	Rising Comp	Syn Comp	Decay
+573	90s Harp	Syn Comp	Digital
+574	Schlager Weapon 2	Syn Comp	Digital
+575	Turn It On	Syn Comp	Digital
+576	Kool Dis Comp	Syn Comp	Digital
+577	Saws Vs Bells	Syn Comp	Digital
+578	FM Comper	Syn Comp	Digital
+579	Schlager Weapon 3	Syn Comp	Digital
+580	FM Wave Dreams	Syn Comp	Digital
+581	FM Polyesterday	Syn Comp	Digital
+582	Angel Hood	Syn Comp	Digital
+583	Hybrid Comp	Syn Comp	Digital
+584	Fusion Keys	Syn Comp	Digital
+585	FM Hard Comp	Syn Comp	Digital
+586	FM Brite Comp	Syn Comp	Digital
+587	Epiphany	Syn Comp	Digital
+588	FM India Ethnic	Syn Comp	Digital
+589	FM Two Kalimbas	Syn Comp	Digital
+590	FM Funky Companion	Syn Comp	Digital
+591	FM Clabrass	Syn Comp	Digital
+592	Red Ones	Syn Comp	Digital
+593	EDM Chord Playa	Syn Comp	Digital
+594	Dynamic Pad	Syn Comp	Digital
+595	ArpFilteredSynth	Syn Comp	Digital
+596	LaidBack House	Syn Comp	Digital
+597	Multi Saw MW DA	Syn Comp	Hook
+598	Dance Synth MW DA	Syn Comp	Hook
+599	Percussive Dance	Syn Comp	Hook
+600	Mega Stack	Syn Comp	Hook
+601	Power Hook	Syn Comp	Hook
+602	Dance Surviver	Syn Comp	Hook
+603	FM&AN Classic Arps	Syn Comp	Digital
+604	Caramel Ice	Syn Comp	Analog
+605	DJ Montage	Syn Comp	Decay
+606	DNA Lounge	Syn Comp	Decay
+607	Solaris	Syn Comp	Decay
+608	Crumbler	Syn Comp	Digital
+609	Moving Floor	Syn Comp	Digital
+610	Hands Up!	Syn Comp	Hook
+611	Horizon	Syn Comp	Digital
+612	Trance Master	Syn Comp	Hook
+613	Spark Saw	Syn Comp	Hook
+614	my saw	Syn Comp	Hook
+615	Bell Majestic	Chromatic Perc	Bell
+616	Expanded DX Bells	Chromatic Perc	Bell
+617	Far Away FM	Chromatic Perc	Bell
+618	FM Music Box	Chromatic Perc	Bell
+619	FM Carillon	Chromatic Perc	Bell
+620	Glassbell Pindrops	Chromatic Perc	Bell
+621	Vibraphone MotorOn	Chromatic Perc	Mallet
+622	Orch Xylophone	Chromatic Perc	Mallet
+623	Orch Marimba	Chromatic Perc	Mallet
+624	Orch Glockenspiel	Chromatic Perc	Mallet
+625	FM Woody Keys	Chromatic Perc	Mallet
+626	FM Vibe 1	Chromatic Perc	Mallet
+627	FM Vibe 2	Chromatic Perc	Mallet
+628	FM Marimba	Chromatic Perc	Mallet
+629	FM Xylophone	Chromatic Perc	Mallet
+630	FM Marimba Guitar	Chromatic Perc	Mallet
+631	FM Celesta	Chromatic Perc	Mallet
+632	FM Glocken	Chromatic Perc	Mallet
+633	FM Metal Glocken	Chromatic Perc	Mallet
+634	FM Lullaby AF1&2	Chromatic Perc	Mallet
+635	Beaten Gong	Chromatic Perc	Mallet
+636	Shape of Marimbas	Chromatic Perc	Mallet
+637	Ethno Festivo	Chromatic Perc	Mallet
+638	FM Vibraphone	Chromatic Perc	Electronic
+639	Haccato Steaven	Chromatic Perc	Synth Bell
+640	Fantasy	Chromatic Perc	Synth Bell
+641	FM Fantasy	Chromatic Perc	Synth Bell
+642	FM Vari Bell	Chromatic Perc	Synth Bell
+643	FM Tubular Bells	Chromatic Perc	Synth Bell
+644	FM Hand Bell	Chromatic Perc	Synth Bell
+645	Super Bell	Chromatic Perc	Synth Bell
+646	FM Smart Bells	Chromatic Perc	Synth Bell
+647	FM Dulcimer	Chromatic Perc	Pitched Drum
+648	FM Steel Drum	Chromatic Perc	Pitched Drum
+649	FM Japanese Taiko	Chromatic Perc	Pitched Drum
+650	FM Electric Drums	Chromatic Perc	Pitched Drum
+651	Real Drums Kit	Drum / Perc	Drums
+652	Real Drums Kit 2	Drum / Perc	Drums
+653	New Oak Custom Kit	Drum / Perc	Drums
+654	NewMapleCustom Kit	Drum / Perc	Drums
+655	BeechwoodSnare Kit	Drum / Perc	Drums
+656	BeechwoodSnareKit2	Drum / Perc	Drums
+657	Real Brushes Kit	Drum / Perc	Drums
+658	Jazz Brushes Kit	Drum / Perc	Drums
+659	Jazz Sticks Kit	Drum / Perc	Drums
+660	D'elo Kit	Drum / Perc	Drums
+661	T's EDM Kit	Drum / Perc	Drums
+662	T's EDM Kit 2	Drum / Perc	Drums
+663	T's Hip Hop Kit	Drum / Perc	Drums
+664	T's Hip Hop Kit 2	Drum / Perc	Drums
+665	Trap Kit	Drum / Perc	Drums
+666	Trap Kit 2	Drum / Perc	Drums
+667	Downtempo HipHop Kit	Drum / Perc	Drums
+668	EDM Kit	Drum / Perc	Drums
+669	House-Techno Kit	Drum / Perc	Drums
+670	House-Techno Kit 2	Drum / Perc	Drums
+671	Electro Kit	Drum / Perc	Drums
+672	Electro Kit 2	Drum / Perc	Drums
+673	DUB Kit	Drum / Perc	Drums
+674	DUB Kit 2	Drum / Perc	Drums
+675	European EDM Kit 1	Drum / Perc	Drums
+676	European EDM Kit 2	Drum / Perc	Drums
+677	Dancefloor Kit	Drum / Perc	Drums
+678	Dancefloor Kit 2	Drum / Perc	Drums
+679	Psychedelic Dub Kit	Drum / Perc	Drums
+680	Brachial Kit	Drum / Perc	Drums
+681	Epic Kit	Drum / Perc	Drums
+682	Arabic Mixed Kit 2	Drum / Perc	Drums
+683	Iranian Mix Kit	Drum / Perc	Drums
+684	Modern Rock Kit 2	Drum / Perc	Drums
+685	Brazil Kit 1	Drum / Perc	Percussion
+686	Brazil Kit 2	Drum / Perc	Percussion
+687	Turkish St Kit	Drum / Perc	Percussion
+688	New Arabic Kit 1	Drum / Perc	Percussion
+689	New Arabic Kit 2	Drum / Perc	Percussion
+690	New Maghrebi Kit	Drum / Perc	Percussion
+691	New Khaligi Kit 1	Drum / Perc	Percussion
+692	New Khaligi Kit 2	Drum / Perc	Percussion
+693	New Iranian Kit 1	Drum / Perc	Percussion
+694	New Iranian Kit 2	Drum / Perc	Percussion
+695	Darbuka Sagat Riq	Drum / Perc	Percussion
+696	Bodhran&Cajon Kit	Drum / Perc	Percussion
+697	Bones&Spoons Kit	Drum / Perc	Percussion
+698	Highland Snares	Drum / Perc	Percussion
+699	Experimental Work	Drum / Perc	Electronic
+700	Flix Flux FM	Drum / Perc	Electronic
+701	FM Techre	Drum / Perc	Electronic
+702	FM Scraper	Drum / Perc	Electronic
+703	DubStepping	Drum / Perc	Drums
+704	Minimal Techno	Drum / Perc	Drums
+705	Surprise Package	Drum / Perc	Drums
+706	ATL Flexin	Drum / Perc	Drums
+707	Infamous	Drum / Perc	Drums
+708	Plastic Beat	Drum / Perc	Drums
+709	Bodhran Scrape	Drum / Perc	Percussion
+710	Handcussion	Drum / Perc	Percussion
+711	Scatter Dance	Drum / Perc	Percussion
+712	FM Landscapes	Sound FX	Electronic
+713	FM Flight	Sound FX	Moving
+714	FM The Wave	Sound FX	Nature
+715	Warp Speed Atmos	Sound FX	Moving
+716	Telharmonics	Sound FX	Moving
+717	MOON BASE	Sound FX	Moving
+718	Spiral Feedbacker	Sound FX	Moving
+719	Spirals	Sound FX	Moving
+720	4Bar1NoteRisers	Sound FX	Moving
+721	Galactic Static	Sound FX	Sci-Fi
+722	Robot Junkyard	Sound FX	Sci-Fi
+723	Entropy	Sound FX	Sci-Fi
+724	Blaster Beam	Sound FX	Sci-Fi
+725	InsideTheWormhole	Sound FX	Moving
+726	Creeping Voltage	Sound FX	Electronic
+727	Start The Machine	Sound FX	Electronic
+728	Dernt to Bwow	Sound FX	Ambient
+729	Sentimental Boy	Musical FX	Ambient
+730	The Green Flash	Musical FX	Ambient
+731	FM For Airports	Musical FX	Ambient
+732	Slow Fast	Musical FX	Electronic
+733	Smartbar Funk	Musical FX	Electronic
+734	Fusion Science	Musical FX	Electronic
+735	Kreuzberg Funk	Musical FX	Electronic
+736	Electro Boo	Musical FX	Electronic
+737	More & More	Musical FX	Electronic
+738	Magnetism	Musical FX	Electronic
+739	Freaky FM AF1&2	Musical FX	Electronic
+740	Electron	Musical FX	Electronic
+741	Envelope Beatz	Musical FX	Electronic
+742	Tribaltronic	Musical FX	Electronic
+743	Electrone	Musical FX	Electronic
+744	CirrocumulusClouds	Musical FX	Jazz/World
+745	FM Tribal Council	Musical FX	Jazz/World
+746	Cricket Night	Musical FX	Sweep
+747	Canterbury Tales	Musical FX	Moving
+748	FM Chillout	Musical FX	Moving
+749	Pearly Gates	Musical FX	Moving
+750	Thursday Evening	Musical FX	Moving
+751	Marine Life	Musical FX	Moving
+752	Wave Surfer	Musical FX	Moving
+753	The Undecided	Musical FX	Moving
+754	Motion Sweep	Musical FX	Moving
+755	Bit Performer	Musical FX	Moving
+756	Pacific	Musical FX	Moving
+757	Pond Ripples	Musical FX	Moving
+758	Emerald Forest	Musical FX	Moving
+759	Piano Asylum	Musical FX	Moving
+760	Pad Pulsations	Musical FX	Moving
+761	Motion Filters AF	Musical FX	Moving
+762	Turn It Up! AF1&2	Musical FX	Moving
+763	Waveseq FM	Musical FX	Moving
+764	FM Wallop	Musical FX	Moving
+765	Iceworld	Musical FX	Moving
+766	Fax Science	Musical FX	Moving
+767	FM Spectral Spheres	Musical FX	Moving
+768	Granular Motion	Musical FX	Moving
+769	Mysterious Invention	Musical FX	Moving
+770	M-Seq Choir Pad	Musical FX	Moving
+771	Cold Motion	Musical FX	Moving
+772	Shades of Yesterday	Musical FX	Moving
+773	Shaking Trees	Musical FX	Moving
+774	Hypnosis	Musical FX	Moving
+775	Cliff	Musical FX	Moving
+776	Vocal&Marim Ld	Musical FX	Moving
+777	Vocal&Marim Ld 2	Musical FX	Moving
+778	VoxTrix	Musical FX	Moving
+779	FM Spiral Dist	Musical FX	Ambient
+780	Shapeshifter	Musical FX	Moving
+781	Hot Corner	Musical FX	Moving
+782	Run It	Musical FX	R&B/Hip Hop
+783	Under Dirt	Musical FX	R&B/Hip Hop
+784	Rock Ready	Musical FX	Rock/Pop
+785	Motion Pad	Musical FX	Sweep
+786	EDM SideChainer	Musical FX	Sweep
+787	Santur-A-Delic	Ethnic	Struck
+788	African Garage Beat	Ethnic	Jazz/World
+789	Vocoder & Follower	Pad/Choir	Choir
+790	Vocoder Dance	Pad/Choir	Choir
+791	Full Concert Grand	Piano	Acoustic
+792	Rock Grand Piano	Piano	Modern
+793	Mellow Grand Piano	Piano	Acoustic
+794	Glasgow	Piano	Acoustic
+795	Romantic Piano	Piano	Acoustic
+796	Aggressive Grand	Piano	Modern
+797	Tacky	Piano	Modern
+798	House Piano	Piano	Modern
+799	Old and Squashed	Piano	Vintage
+800	Ballad Key	Piano	Layer
+801	80s Layer	Piano	Layer
+802	Ballad Stack	Piano	Layer
+803	Piano Back	Piano	Layer
+804	Piano & Strings	Piano	Layer
+805	Piano & Ooh Choir	Piano	Layer
+806	Monaural Grand MW	Piano	Acoustic
+807	Old Blues	Piano	Vintage
+808	1968	Piano	Vintage
+809	CP 1979	Piano	Vintage
+810	CP70 Chorus	Piano	Vintage
+811	Journey	Piano	Vintage
+812	Vintage'74	Keyboard	Electric Piano
+813	R&B Soft	Keyboard	Electric Piano
+814	Early 70's	Keyboard	Electric Piano
+815	Soft Case	Keyboard	Electric Piano
+816	Crunchy Comp	Keyboard	Electric Piano
+817	Vintage Case	Keyboard	Electric Piano
+818	Hard Vintage	Keyboard	Electric Piano
+819	Sweetness MW	Keyboard	Electric Piano
+820	Phaser Vintage	Keyboard	Electric Piano
+821	Vintage Phase	Keyboard	Electric Piano
+822	Early Fusion	Keyboard	Electric Piano
+823	Neo Soul MW	Keyboard	Electric Piano
+824	1983 MW	Keyboard	Electric Piano
+825	Contempo	Keyboard	Electric Piano
+826	Clicky Dyno MW	Keyboard	Electric Piano
+827	DynoStraightMW	Keyboard	Electric Piano
+828	Dyno Chorus MW	Keyboard	Electric Piano
+829	80s Boosted	Keyboard	Electric Piano
+830	Chorus Hard	Keyboard	Electric Piano
+831	Max Tine	Keyboard	Electric Piano
+832	Bell Chorus	Keyboard	FM Piano
+833	Drive EP	Keyboard	Electric Piano
+834	Vinyl EP	Keyboard	Electric Piano
+835	Natural Wr	Keyboard	Electric Piano
+836	Wr EP 1 Bright	Keyboard	Electric Piano
+837	Wr Distortion	Keyboard	Electric Piano
+838	Phaze Wr	Keyboard	Electric Piano
+839	DX Legend	Keyboard	FM Piano
+840	Bell DX	Keyboard	FM Piano
+841	DX Woody	Keyboard	FM Piano
+842	Full Tine 1	Keyboard	FM Piano
+843	DX Mellow	Keyboard	FM Piano
+844	DX Crisp	Keyboard	FM Piano
+845	DX Celesta EP	Keyboard	FM Piano
+846	DX Pluck EP	Keyboard	FM Piano
+847	DX-7 II	Keyboard	FM Piano
+848	GS Tines AF1&2	Keyboard	FM Piano
+849	Galaxy DX	Keyboard	FM Piano
+850	TX816 Bell Piano	Keyboard	FM Piano
+851	Marimba DX	Keyboard	FM Piano
+852	DX5-Zero	Keyboard	FM Piano
+853	Hybrid EP	Keyboard	Electric Piano
+854	Mixed Up	Keyboard	Electric Piano
+855	Dyno Wr	Keyboard	Electric Piano
+856	Analog Piano	Keyboard	Synth
+857	AhrAmI	Keyboard	Synth
+858	Electro Piano	Keyboard	Electric Piano
+859	Transistor Piano	Keyboard	Synth
+860	EP Pad	Keyboard	Electric Piano
+861	DX Pad	Keyboard	Electric Piano
+862	Dyno Choir	Keyboard	Electric Piano
+863	Vintage Clavi	Keyboard	Clavi
+864	Super Clavi 1	Keyboard	Clavi
+865	Stereo Clavi	Keyboard	Clavi
+866	Hollow Clavi	Keyboard	Clavi
+867	Nu Phasing	Keyboard	Clavi
+868	Touch Clavi	Keyboard	Clavi
+869	PedalWah Clavi FC2	Keyboard	Clavi
+870	Pulse Clavi	Keyboard	Clavi
+871	Guitarpsichord	Keyboard	Clavi
+872	Hipsichord	Keyboard	Clavi
+873	16 + 8 + 5&1/3	Organ	Tone Wheel
+874	Jazz 2nd Perc + C3	Organ	Tone Wheel
+875	First 3 w/Perc	Organ	Tone Wheel
+876	Slow Jam	Organ	Tone Wheel
+877	Cool Cat	Organ	Tone Wheel
+878	Jazzy 1	Organ	Tone Wheel
+879	Jazzy 2	Organ	Tone Wheel
+880	Jazzy Chorus	Organ	Tone Wheel
+881	On Road	Organ	Tone Wheel
+882	Progressy	Organ	Tone Wheel
+883	Rocky	Organ	Tone Wheel
+884	Crunchy	Organ	Tone Wheel
+885	1972	Organ	Combo
+886	Glassy AF1	Organ	Tone Wheel
+887	Clean	Organ	Tone Wheel
+888	All Bars Perc AF	Organ	Tone Wheel
+889	Rotor Vibrato	Organ	Tone Wheel
+890	Vib Chorus AF1	Organ	Tone Wheel
+891	Soulemn	Organ	Tone Wheel
+892	Mellow	Organ	Tone Wheel
+893	Fully	Organ	Tone Wheel
+894	FullDraw/CVibrato	Organ	Tone Wheel
+895	Even Out	Organ	Tone Wheel
+896	Harmonic Hole	Organ	Tone Wheel
+897	A Few Wheels	Organ	Tone Wheel
+898	Left Manual	Organ	Tone Wheel
+899	Draw Control	Organ	Tone Wheel
+900	Stop Rotar	Organ	Tone Wheel
+901	Clean Noise	Organ	Tone Wheel
+902	Walking Bass	Organ	Tone Wheel
+903	Greasy	Organ	Tone Wheel
+904	Swishie	Organ	Tone Wheel
+905	Solo Percussion AF	Organ	Tone Wheel
+906	Percussion Vibrato	Organ	Tone Wheel
+907	Tiny Combo Bars 1	Organ	Combo
+908	Tiny Combo Bars 2	Organ	Combo
+909	Panther	Organ	Combo
+910	1967 Keys	Organ	Combo
+911	YD-45C	Organ	Combo
+912	Diamond Head	Organ	Synth
+913	Early Bird	Organ	Tone Wheel
+914	Moet	Organ	Synth
+915	Bollinger	Organ	Synth
+916	Vinyl Organ	Organ	Synth
+917	Alternator	Organ	Tone Wheel
+918	Flying Rhythm Bars	Organ	Synth
+919	Roundabout	Organ	Electronic
+920	Tradi	Organ	Tone Wheel
+921	Petit	Organ	Tone Wheel
+922	Fluty	Organ	Tone Wheel
+923	Fluty Pipe	Organ	Pipe
+924	St. Peter	Organ	Pipe
+925	St. Paul AF1&2	Organ	Pipe
+926	Impromptu	Organ	Pipe
+927	Mixture	Organ	Pipe
+928	Reed Split	Organ	Pipe
+929	Medieval MW	Organ	Pipe
+930	Breath Pipe	Organ	Pipe
+931	Reedy Pipe	Organ	Pipe
+932	Sunday	Organ	Pipe
+933	Accordions AF1&2	Organ	Pipe
+934	Soft Marimba	Chromatic Perc	Mallet
+935	Vibes Bow MW	Chromatic Perc	Mallet
+936	Twinkle	Chromatic Perc	Bell
+937	Stick Bell	Chromatic Perc	Bell
+938	Ice Bells	Chromatic Perc	Bell
+939	Bell Ice	Chromatic Perc	Bell
+940	Stack Bell	Chromatic Perc	Synth Bell
+941	J-Pop	Chromatic Perc	Bell
+942	Chorus Bell	Chromatic Perc	Bell
+943	Handbell	Chromatic Perc	Bell
+944	Bell Chiff	Chromatic Perc	Synth Bell
+945	Sako Bell	Chromatic Perc	Synth Bell
+946	Nice Bell	Chromatic Perc	Synth Bell
+947	Noisy Bell	Chromatic Perc	Synth Bell
+948	Pop Bells & Pad MW	Chromatic Perc	Bell
+949	Going To Heaven	Chromatic Perc	Rock/Pop
+950	Digibox	Chromatic Perc	Synth Bell
+951	Nibelungen	Chromatic Perc	Bell
+952	Wood Bell	Chromatic Perc	Bell
+953	Marimbell	Chromatic Perc	Synth Bell
+954	Synth Steel Drum	Chromatic Perc	Pitched Drum
+955	Gamelan	Chromatic Perc	Bell
+956	Ethnic Dream	Chromatic Perc	Mallet
+957	Mystic Bowl	Chromatic Perc	Bell
+958	Mbira	Ethnic	Plucked
+959	Glass Mbira	Chromatic Perc	Pitched Drum
+960	Island Bell	Chromatic Perc	Synth Bell
+961	Tibetan	Chromatic Perc	Bell
+962	Rimba Bells	Chromatic Perc	Synth Bell
+963	Lost in Asia	Chromatic Perc	Bell
+964	Coconuts Random	Chromatic Perc	Jazz/World
+965	Kodo	Chromatic Perc	Pitched Drum
+966	Timp/Bell/Glocken	Chromatic Perc	Bell
+967	Orc Percussion	Chromatic Perc	Bell
+968	Classical AF1&2	Guitar	Acoustic
+969	High Tension AF1&2	Guitar	Acoustic
+970	Sao Paulo	Guitar	Acoustic
+971	Barcelona	Guitar	Acoustic
+972	Nylon Slide Vel	Guitar	Acoustic
+973	NylonHarmonics Vel	Guitar	Acoustic
+974	Classical12Strings	Guitar	Acoustic
+975	Hip-HopNylonGuitar	Guitar	Acoustic
+976	Steel String AF1&2	Guitar	Acoustic
+977	Old Strings AF1&2	Guitar	Acoustic
+978	Steel Slide Vel	Guitar	Acoustic
+979	Mute & Slide Vel	Guitar	Acoustic
+980	SteelHarmonics Vel	Guitar	Acoustic
+981	Hip-HopSteelGuitar	Guitar	Acoustic
+982	Hi Strings	Guitar	Acoustic
+983	Two Acoustics 1	Guitar	Acoustic
+984	2 Steel Strings	Guitar	Acoustic
+985	Big 12 Strings	Guitar	Acoustic
+986	Airy 12 AF1&2	Guitar	Acoustic
+987	Wide 12 strings AF	Guitar	Acoustic
+988	12Strings Mono	Guitar	Acoustic
+989	Clean El & Ac 1	Guitar	Electric Clean
+990	Clean El & Ac 2	Guitar	Electric Clean
+991	Clean El & Ac 3	Guitar	Electric Clean
+992	Strange 12	Guitar	Electric Clean
+993	Jazzy Pick	Guitar	Electric Clean
+994	Melodic Jazz	Guitar	Electric Clean
+995	Fat Oil Jazz AF1&2	Guitar	Electric Clean
+996	Touch Wah AF1	Guitar	Electric Clean
+997	Baby AF1	Guitar	Electric Clean
+998	Good Night	Guitar	Electric Clean
+999	Dynamic Clean AF	Guitar	Electric Clean
+1000	Single Coil Chorus	Guitar	Electric Clean
+1001	Distant	Guitar	Electric Clean
+1002	Some Hair	Guitar	Distortion
+1003	Clean Slide Vel	Guitar	Electric Clean
+1004	Hit It Hard	Guitar	Electric Clean
+1005	Paddy Clean	Guitar	Electric Clean
+1006	BluesyClean Legato	Guitar	Electric Clean
+1007	Dual Coil '65	Guitar	Distortion
+1008	Dual Coil Amp	Guitar	Electric Clean
+1009	Roto Guitar MW	Guitar	Electric Clean
+1010	Dual Coil SlideVel	Guitar	Electric Clean
+1011	Dual Coil Slap Vel	Guitar	Electric Clean
+1012	Dual Coil 80sClean	Guitar	Electric Clean
+1013	Dual Coil Rotary	Guitar	Electric Clean
+1014	Electric 12Strings	Guitar	Electric Clean
+1015	Rotator AF1&2	Guitar	Distortion
+1016	Middy Tremolo	Guitar	Distortion
+1017	Retro Flanger	Guitar	Electric Clean
+1018	Vintage Strum	Guitar	Electric Clean
+1019	Spanky	Guitar	Distortion
+1020	Rockabilly	Guitar	Distortion
+1021	2 Electrics AF1&2	Guitar	Electric Clean
+1022	Light Blues AF1&2	Guitar	Distortion
+1023	DualCoil SemiClean	Guitar	Electric Clean
+1024	Chorus Dist AF1&2	Guitar	Distortion
+1025	Tex Boogie	Guitar	Distortion
+1026	59 Combo AF1&2	Guitar	Distortion
+1027	Alternative Rocker	Guitar	Distortion
+1028	Overdrive Mt&Harmo	Guitar	Distortion
+1029	Crunched Up 376	Guitar	Distortion
+1030	Dynamic Amp	Guitar	Distortion
+1031	Chuggin' Guitar	Guitar	Distortion
+1032	Chugga	Guitar	Distortion
+1033	Small Amp	Guitar	Distortion
+1034	Metal Mute	Guitar	Distortion
+1035	DistortionMt&Harmo	Guitar	Distortion
+1036	Cool Drive	Guitar	Distortion
+1037	Hard Drive	Guitar	Distortion
+1038	Hard Ramp	Guitar	Distortion
+1039	Heavy Drive	Guitar	Distortion
+1040	No.1 GTR	Guitar	Distortion
+1041	Snake Finger	Guitar	Distortion
+1042	Dual Coil BlueLead	Guitar	Distortion
+1043	Over The Top	Guitar	Distortion
+1044	Voodooman	Guitar	Distortion
+1045	Killer Whammy	Guitar	Distortion
+1046	Latin Lover	Guitar	Distortion
+1047	Oct Fuzz PdWah FC2	Guitar	Distortion
+1048	DualCoilLeadWahFC2	Guitar	Distortion
+1049	DualCoil Harmo Vel	Guitar	Distortion
+1050	Crunchy Guitar	Guitar	Distortion
+1051	Beater	Guitar	Distortion
+1052	HIP Mute	Guitar	Electric Clean
+1053	Pedal Steel	Guitar	Electric Clean
+1054	DualCoil80sCleanMt	Guitar	Electric Clean
+1055	Mid Drive(2handGt)	Guitar	Distortion
+1056	HrdRocker(2handGt)	Guitar	Distortion
+1057	ToughTube(2handGt)	Guitar	Distortion
+1058	DriveWah (2handGt)	Guitar	Distortion
+1059	Resonator Guitar	Guitar	Acoustic
+1060	Velo Growl	Bass	Acoustic
+1061	Groove Acoustic AF	Bass	Acoustic
+1062	Upright	Bass	Acoustic
+1063	Prec Flat Wound	Bass	Electric
+1064	Round Wound	Bass	Electric
+1065	Active P	Bass	Electric
+1066	Mid Range Finger	Bass	Electric
+1067	Active TRB	Bass	Electric
+1068	Passive BB AF1&2	Bass	Electric
+1069	Vintage JB AF1&2	Bass	Electric
+1070	Straight Finger AF	Bass	Electric
+1071	JB Flat Wound AF	Bass	Electric
+1072	Finger PickBass AF	Bass	Electric
+1073	Prec Amped AF1	Bass	Electric
+1074	Finger Bass Amp AF	Bass	Electric
+1075	Fret Buzzy	Bass	Electric
+1076	Small Cabinet	Bass	Electric
+1077	Simple Pick	Bass	Electric
+1078	Pick Open	Bass	Electric
+1079	Pick Mute	Bass	Electric
+1080	Pick Pull	Bass	Electric
+1081	Straight Pick AF	Bass	Electric
+1082	Velo Bass	Bass	Electric
+1083	Slap Switch	Bass	Electric
+1084	Fretless Dry	Bass	Electric
+1085	Fretless Solo	Bass	Electric
+1086	PBassFingerDist AF	Bass	Electric
+1087	Fuzz Bass AF1	Bass	Electric
+1088	Gnarly Bass	Bass	Electric
+1089	BaCement	Bass	Electric
+1090	Dist Tama Bass	Bass	Electric
+1091	5th Fuzz Bass	Bass	Electric
+1092	Chili Bass	Bass	Electric
+1093	Big Cabinet	Bass	Electric
+1094	Hybrid Bass 1	Bass	Electric
+1095	Hybrid Bass 2	Bass	Electric
+1096	3 VCOs	Bass	Synth
+1097	Brain Bass AF1&2	Bass	Synth
+1098	Lo Boy AF1&2	Bass	Synth
+1099	Dark Bass	Bass	Synth
+1100	Rn Bass RB	Bass	Synth
+1101	Fundamental	Bass	Synth
+1102	Fat Sine Resonance	Bass	Synth
+1103	Moon Bass	Bass	Synth
+1104	More Fatty	Bass	Synth
+1105	Chill Out Bass AF1	Bass	Synth
+1106	Growler	Bass	Synth
+1107	Smacked	Bass	Synth
+1108	boooooooooom	Bass	Synth
+1109	Biting	Bass	Synth
+1110	Boogie A Legato RB	Bass	Synth
+1111	Uni Punch	Bass	Synth
+1112	Noise Bass	Bass	Synth
+1113	Single Oscillator	Bass	Synth
+1114	Unison	Bass	Synth
+1115	Long Spit AF2	Bass	Synth
+1116	Big Bass	Bass	Synth
+1117	Bass & Comp!	Bass	Synth
+1118	Rave Blade	Bass	Synth
+1119	Plastic Bass	Bass	Synth
+1120	Funky Resonance RB	Bass	Synth
+1121	Phat Three	Bass	Synth
+1122	Needle Bass	Bass	Synth
+1123	Acidd	Bass	Synth
+1124	Boom Bass AF1	Bass	Synth
+1125	West Coast	Bass	Synth
+1126	Wazzo	Bass	Synth
+1127	Fast PWM Bass	Bass	Synth
+1128	Bass Pedal	Bass	Synth
+1129	Oxide	Bass	Synth
+1130	Bowngo	Bass	Synth
+1131	Wide Synth Bass	Bass	Synth
+1132	Dry Synth Bass	Bass	Synth
+1133	Kick Bass Legato	Bass	Synth
+1134	Keep Dancin'	Bass	Synth
+1135	Velo Master	Bass	Synth
+1136	Wah Bass	Bass	Synth
+1137	Pulse Step AF1	Bass	Synth
+1138	Phat Step	Bass	Synth
+1139	Octave Analog	Bass	Synth
+1140	Sync Bass	Bass	Synth
+1141	Sync Big	Bass	Synth
+1142	Puncher	Bass	Synth
+1143	Dark Comp AF1&2	Bass	Synth
+1144	Simple Bass	Bass	Synth
+1145	Fat Sine	Bass	Synth
+1146	Kompressor	Bass	Synth
+1147	Dark Uni	Bass	Synth
+1148	Fight Bass	Bass	Synth
+1149	Byon Bass	Bass	Synth
+1150	One Voice	Bass	Synth
+1151	Pro-Attack AF1	Bass	Synth
+1152	Bobby Bass	Bass	Synth
+1153	Trance Bass	Bass	Synth
+1154	Short SequenceBass	Bass	Synth
+1155	Lately	Bass	Synth
+1156	Faaat Pulse	Bass	Synth
+1157	Short PWM Bass	Bass	Synth
+1158	Hyper Velocity AF1	Bass	Synth
+1159	Deep Point	Bass	Synth
+1160	Pulse Stop	Bass	Synth
+1161	Oh Bee Bass	Bass	Synth
+1162	Booming Bass	Bass	Synth
+1163	Army Bass	Bass	Synth
+1164	Punchy Drone RB	Bass	Synth
+1165	Dee Tune	Bass	Synth
+1166	Chorus Pulse	Bass	Synth
+1167	Sweeper	Bass	Synth
+1168	Old House Organ	Bass	Synth
+1169	Data Run	Bass	Synth
+1170	Sharp 3o3	Bass	Synth
+1171	Short 3o3 Saw	Bass	Synth
+1172	Acid Fun	Bass	Synth
+1173	Compu Bass	Bass	Synth
+1174	Squeaker Bass	Bass	Synth
+1175	Violin Solo 1	Strings	Solo
+1176	Violin Solo 2 AF1	Strings	Solo
+1177	Viola Solo 1	Strings	Solo
+1178	Viola Solo 2 AF1	Strings	Solo
+1179	Cello Solo	Strings	Solo
+1180	Cello Duo AF1	Strings	Solo
+1181	ContrabassSolo1	Strings	Solo
+1182	ContrabassSolo2 AF	Strings	Solo
+1183	Quartet	Strings	Ensemble
+1184	Small Section	Strings	Ensemble
+1185	Small Ensemble	Strings	Ensemble
+1186	Almighty	Strings	Ensemble
+1187	Medium Section	Strings	Ensemble
+1188	Medium Hall	Strings	Ensemble
+1189	MediumLargeSection	Strings	Ensemble
+1190	Quick Bows	Strings	Ensemble
+1191	Aggressive AF1	Strings	Ensemble
+1192	Large Section	Strings	Ensemble
+1193	Octave Ensemble	Strings	Ensemble
+1194	Full Chamber	Strings	Ensemble
+1195	Stryngs	Strings	Ensemble
+1196	Dynamik Bow	Strings	Ensemble
+1197	SymphonicPizzicato	Strings	Pizzicato
+1198	Plucky Pizzicato	Strings	Pizzicato
+1199	Octave Pizzes	Strings	Pizzicato
+1200	Tremolo Strings 1	Strings	Ensemble
+1201	Tremolo Strs Small	Strings	Ensemble
+1202	Spicato Large	Strings	Pizzicato
+1203	Disco AF1	Strings	Pizzicato
+1204	Ens Mix	Strings	Ensemble
+1205	Lush	Strings	Ensemble
+1206	Back Ground	Strings	Ensemble
+1207	Romantic	Strings	Ensemble
+1208	Warm Back	Strings	Ensemble
+1209	Stringy	Strings	Ensemble
+1210	Big Strings	Strings	Ensemble
+1211	PWM Strings	Strings	Synth
+1212	Mourn Strings	Strings	Synth
+1213	VP Soft	Strings	Synth
+1214	PWM Simple	Strings	Synth
+1215	Glassy Rezonant	Strings	Synth
+1216	Superstrings	Strings	Synth
+1217	Light Pad	Strings	Synth
+1218	Noble Pad	Strings	Synth
+1219	Warm Big	Strings	Ensemble
+1220	Sentimental	Strings	Synth
+1221	Analog Sweep	Strings	Synth
+1222	Phase Strings	Strings	Synth
+1223	Octave Strings	Strings	Synth
+1224	JP Strings	Strings	Synth
+1225	3 Oscillators Vin	Strings	Synth
+1226	Silver Strings	Strings	Synth
+1227	String Machine	Strings	Synth
+1228	3 Octave Strings	Strings	Synth
+1229	TranceIntroduction	Strings	Synth
+1230	Mystic Trance	Strings	Synth
+1231	F.Horn + Strings	Strings	Ensemble
+1232	Wood Winds+Strings	Strings	Synth
+1233	Electric Violin AF	Strings	Solo
+1234	Tron Violin	Strings	Synth
+1235	Tron Strings	Strings	Synth
+1236	Tape Strings	Strings	Synth
+1237	Orchestronic	Strings	Synth
+1238	Vinyltron	Strings	Synth
+1239	Analog Strings	Strings	Synth
+1240	Analog Ensemble	Strings	Ensemble
+1241	Pizz-o-matic	Strings	Pizzicato
+1242	Ambient Pizza	Strings	Pizzicato
+1243	Beauty Harp	Strings	Pizzicato
+1244	Stereo Harp	Strings	Pizzicato
+1245	Trumpet 1 AF1	Brass	Solo
+1246	Tp Romantic Legato	Brass	Solo
+1247	Classical Trumpet	Brass	Solo
+1248	Baby Trumpet AF1	Brass	Solo
+1249	Bright Trumpet AF1	Brass	Solo
+1250	Tp SoftJazz Legato	Brass	Solo
+1251	Legend Mute AF1	Brass	Solo
+1252	Jazzy Flugel AF1	Brass	Solo
+1253	Trumpet Section	Brass	Ensemble
+1254	Trombone 1 AF1	Brass	Solo
+1255	Blown Bone Legato	Brass	Solo
+1256	Bright Trombone AF	Brass	Solo
+1257	NewOrleansTrombone	Brass	Solo
+1258	French Horn 1 AF1	Brass	Solo
+1259	French Horn Solo	Brass	Solo
+1260	BassTuba(Bb)	Brass	Solo
+1261	Euphonium 1	Brass	Orchestra
+1262	Bony Section	Brass	Ensemble
+1263	FrenchHornSection1	Brass	Orchestra
+1264	F.Horn + Trombone	Brass	Orchestra
+1265	F.Hrn+Trombone+Trp	Brass	Orchestra
+1266	Orchestra Brass	Brass	Orchestra
+1267	Movie Horns	Brass	Orchestra
+1268	Symphonic	Brass	Orchestra
+1269	Smooth Brass	Brass	Orchestra
+1270	Soft Brass mp-mf	Brass	Orchestra
+1271	Dynamic Brass AF	Brass	Orchestra
+1272	Accent mf-fall AF	Brass	Ensemble
+1273	Small BrassSection	Brass	Ensemble
+1274	MediumBrassSection	Brass	Ensemble
+1275	Lots O' Brass	Brass	Ensemble
+1276	Bright Section	Brass	Ensemble
+1277	Power Section	Brass	Ensemble
+1278	Shiny Brass	Brass	Ensemble
+1279	Big Brass AF1&2	Brass	Ensemble
+1280	Sforzando AF1&2	Brass	Ensemble
+1281	Soft Brass & Sax	Brass	Ensemble
+1282	Big Band	Brass	Ensemble
+1283	Sax Big Band	Brass	Ensemble
+1284	Velo Falls	Brass	Ensemble
+1285	Hybrid Section	Brass	Synth
+1286	Hybrid Bright	Brass	Synth
+1287	Hybrid Brass Swell	Brass	Synth
+1288	T Brass	Brass	Synth
+1289	Lo-fi	Brass	Ensemble
+1290	Quiet Brass	Brass	Synth
+1291	Big Syn	Brass	Synth
+1292	Thinth	Brass	Synth
+1293	XP Brass Stereo	Brass	Synth
+1294	Simple Saw Brass	Brass	Synth
+1295	Brassy	Brass	Synth
+1296	Kustom	Brass	Synth
+1297	After 1984	Brass	Synth
+1298	Finale	Brass	Synth
+1299	Huge CS80	Brass	Synth
+1300	CS-90	Brass	Synth
+1301	Ob Soft	Brass	Synth
+1302	Ob Horns	Brass	Synth
+1303	Slow PWM Brass	Brass	Synth
+1304	Soft 5th Brass	Brass	Synth
+1305	Soprano Legato	Woodwind	Saxophone
+1306	Soprano Soft AF1	Woodwind	Saxophone
+1307	Alto Vib Legato	Woodwind	Saxophone
+1308	Alto Legato	Woodwind	Saxophone
+1309	Alto	Woodwind	Saxophone
+1310	Tenor Dynamic AF1	Woodwind	Saxophone
+1311	Tenor Soft Legato	Woodwind	Saxophone
+1312	Velo Growl Legato	Woodwind	Saxophone
+1313	Tenor Growl AF1	Woodwind	Saxophone
+1314	Baritone	Woodwind	Saxophone
+1315	Hip Bari	Woodwind	Saxophone
+1316	Tenor Section	Woodwind	Saxophone
+1317	Sax Octave Section	Woodwind	Saxophone
+1318	Mixed Sax Section	Woodwind	Saxophone
+1319	Flute Legato	Woodwind	Flute
+1320	Sweet Flute AF1	Woodwind	Flute
+1321	Wood Flute	Woodwind	Flute
+1322	Oboe 1 AF1	Woodwind	Woodwind
+1323	Sweet Oboe Legato	Woodwind	Woodwind
+1324	Oboe Soft Legato	Woodwind	Woodwind
+1325	Clarinet 1 AF1	Woodwind	Woodwind
+1326	Jazzy Cla Legato	Woodwind	Woodwind
+1327	Bassoon 1 AF1	Woodwind	Woodwind
+1328	Irish Pipe Legato	Woodwind	Reed / Pipe
+1329	2 Flutes	Woodwind	Flute
+1330	Flute & Clari	Woodwind	Flute
+1331	2 Oboes & Bassoon	Woodwind	Woodwind
+1332	WoodWind Quartet	Woodwind	Woodwind
+1333	Gentle Harp	Woodwind	Reed / Pipe
+1334	Woody Harp	Woodwind	Reed / Pipe
+1335	Bluz Distort	Woodwind	Reed / Pipe
+1336	Campfire	Woodwind	Reed / Pipe
+1337	Tron Flute	Woodwind	Flute
+1338	Flootz	Woodwind	Flute
+1339	Huge Lead	Syn Lead	Analog
+1340	Bleep Lead AF2	Syn Lead	Analog
+1341	Detuned Vintage	Syn Lead	Analog
+1342	Space Lead	Syn Lead	Analog
+1343	Dual Square Lead	Syn Lead	Analog
+1344	Vintage Sync	Syn Lead	Analog
+1345	Dirty Hook	Syn Lead	Analog
+1346	Nu Mini	Syn Lead	Analog
+1347	ProgressiveRk Lead	Syn Lead	Analog
+1348	Lucky	Syn Lead	Analog
+1349	Opening	Syn Lead	Analog
+1350	Rap Lead 1	Syn Lead	Analog
+1351	Mini Soft	Syn Lead	Analog
+1352	Feeling	Syn Lead	Analog
+1353	Early Lead	Syn Lead	Analog
+1354	Funky Pulse	Syn Lead	Digital
+1355	Mr. Finger	Syn Lead	Analog
+1356	Singleline 1	Syn Lead	Analog
+1357	Soft RnB	Syn Lead	Analog
+1358	Wind Synth	Syn Lead	Analog
+1359	Broken Sine RB	Syn Lead	Analog
+1360	Duck Lead	Syn Lead	Analog
+1361	In da Night	Syn Lead	Analog
+1362	Mayday MW	Syn Lead	Analog
+1363	On D Line	Syn Lead	Analog
+1364	Early Soloist	Syn Lead	Analog
+1365	Heterodyne	Syn Lead	Analog
+1366	Classic 5th	Syn Lead	Analog
+1367	Vintage Saw	Syn Lead	Analog
+1368	Mini Three	Syn Lead	Digital
+1369	Phat Dino	Syn Lead	Digital
+1370	Dynamic Mini	Syn Lead	Digital
+1371	PWM Lead	Syn Lead	Digital
+1372	Pulse Wound	Syn Lead	Digital
+1373	Think Sync	Syn Lead	Digital
+1374	Punch Lead	Syn Lead	Digital
+1375	Bright Saw	Syn Lead	Digital
+1376	Trojan	Syn Lead	Digital
+1377	Wood Panel	Syn Lead	Digital
+1378	Push Ahead	Syn Lead	Digital
+1379	Eight	Syn Lead	Digital
+1380	Sync Power	Syn Lead	Digital
+1381	Glisten Lead	Syn Lead	Digital
+1382	Big Drone	Syn Lead	Digital
+1383	Screameemy	Syn Lead	Digital
+1384	Flange Filter	Syn Lead	Digital
+1385	Sutra	Syn Lead	Digital
+1386	Free LFO	Syn Lead	Digital
+1387	Rap Lead 2	Syn Lead	Digital
+1388	Space Power Lead	Syn Lead	Digital
+1389	Nyquist	Syn Lead	Digital
+1390	Digimetal	Syn Lead	Digital
+1391	Saw destroy	Syn Lead	Digital
+1392	Vinalog saw	Syn Lead	Digital
+1393	Mady SQU	Syn Lead	Digital
+1394	Low Undulation	Syn Lead	Digital
+1395	Impact	Syn Lead	Hip Hop
+1396	Talk Mod	Syn Lead	Hip Hop
+1397	Digital Gangsta	Syn Lead	Hip Hop
+1398	Plastic Squeeze	Syn Lead	Hip Hop
+1399	Pinz Lead	Syn Lead	Hip Hop
+1400	Dancy Saw Lead	Syn Lead	Dance
+1401	Buzz Around	Syn Lead	Dance
+1402	Xtreme Wheel	Syn Lead	Dance
+1403	Supertrance	Syn Lead	Dance
+1404	Poly Hook	Syn Lead	Dance
+1405	HPF Dance	Syn Lead	Dance
+1406	Tekk Glide	Syn Lead	Dance
+1407	Growl Tekk	Syn Lead	Dance
+1408	Plucked Chordz	Syn Lead	Dance
+1409	Chordz	Syn Lead	Dance
+1410	Cool Body	Syn Lead	Dance
+1411	Twist Sync	Syn Lead	Dance
+1412	TEKIE	Syn Lead	Dance
+1413	Sonix	Syn Lead	Dance
+1414	Big SkidHookLead 1	Syn Lead	Dance
+1415	Big SkidHookLead 2	Syn Lead	Dance
+1416	Porta Queen	Syn Lead	Electronic
+1417	Vicious Dogs	Syn Lead	Digital
+1418	Saw Pad	Pad/Choir	Analog
+1419	Dark ModulationPad	Pad/Choir	Analog
+1420	Dark Light	Pad/Choir	Warm
+1421	Ambient Synth Pad	Pad/Choir	Analog
+1422	5th Lite	Pad/Choir	Analog
+1423	Smooth BPF Sweep	Pad/Choir	Analog
+1424	High Wire	Pad/Choir	Analog
+1425	Trance MW	Pad/Choir	Analog
+1426	Xtreme Sweep	Pad/Choir	Analog
+1427	Nu Warm Pad	Pad/Choir	Warm
+1428	5th Atmosphere	Pad/Choir	Warm
+1429	Dim	Pad/Choir	Warm
+1430	Simple Air	Pad/Choir	Warm
+1431	Nature Sine	Pad/Choir	Warm
+1432	Analog	Pad/Choir	Warm
+1433	Perc Pad	Pad/Choir	Warm
+1434	Dark Atmo Pad	Pad/Choir	Warm
+1435	Dark Organ Pad	Pad/Choir	Warm
+1436	Soft Brassy	Pad/Choir	Warm
+1437	Road to Nowhere	Pad/Choir	Warm
+1438	Sweep Strings	Pad/Choir	Warm
+1439	Brass Motion Pad	Pad/Choir	Warm
+1440	Luminous	Pad/Choir	Warm
+1441	Mother Ship	Pad/Choir	Choir
+1442	Warm Backing Pad	Pad/Choir	Warm
+1443	Feather	Pad/Choir	Warm
+1444	Pan Sphere	Pad/Choir	Warm
+1445	Square	Pad/Choir	Analog
+1446	Shaper	Pad/Choir	Bright
+1447	Early Digital	Pad/Choir	Warm
+1448	Dramana	Pad/Choir	Bright
+1449	Dream Shift	Pad/Choir	Bright
+1450	Remote Space	Pad/Choir	Warm
+1451	Fathoms	Pad/Choir	Warm
+1452	SY22 2007	Pad/Choir	Warm
+1453	Mother Earth	Pad/Choir	Warm
+1454	Landing Pad	Pad/Choir	Warm
+1455	The Breath	Pad/Choir	Bright
+1456	Humanity	Pad/Choir	Warm
+1457	Vowel Pad	Pad/Choir	Choir
+1458	Feather Pad	Pad/Choir	Bright
+1459	Slow Attack Pad	Pad/Choir	Bright
+1460	Hi Brite	Pad/Choir	Bright
+1461	Pad & Syn	Pad/Choir	Bright
+1462	Cosmic Swell Pad	Pad/Choir	Bright
+1463	Sweet Flange	Pad/Choir	Bright
+1464	Waterfall	Pad/Choir	Bright
+1465	Phase Pad	Pad/Choir	Bright
+1466	Pure Synth	Pad/Choir	Bright
+1467	Pearls	Pad/Choir	Bright
+1468	Flange Wall	Pad/Choir	Bright
+1469	Tornado	Pad/Choir	Bright
+1470	Ice Rink	Pad/Choir	Bright
+1471	Turbulence	Pad/Choir	Bright
+1472	Bell Pad	Pad/Choir	Bright
+1473	Paradise	Pad/Choir	Bright
+1474	Yellow River	Pad/Choir	Bright
+1475	Love Me	Pad/Choir	Bright
+1476	Frozen Pad	Pad/Choir	Bright
+1477	Pensive	Pad/Choir	Warm
+1478	Space Vocals	Pad/Choir	Choir
+1479	Haah Pad	Pad/Choir	Choir
+1480	Oooh Pad	Pad/Choir	Choir
+1481	Back in Itopian	Pad/Choir	Choir
+1482	Strings & Choir	Pad/Choir	Choir
+1483	Angel Eyes	Pad/Choir	Choir
+1484	Glass Choir	Pad/Choir	Choir
+1485	Nativity	Pad/Choir	Choir
+1486	Seraphim	Pad/Choir	Choir
+1487	Analog Shine	Pad/Choir	Analog
+1488	Cosmic Gate	Pad/Choir	Bright
+1489	CatchingWildHorses	Pad/Choir	Bright
+1490	High Pass Gate	Pad/Choir	Bright
+1491	RhythmicFilterPad1	Pad/Choir	Warm
+1492	RhythmicFilterPad2	Pad/Choir	Bright
+1493	P5 Resonance Comp	Syn Comp	Analog
+1494	P5 Analog Punch	Syn Comp	Analog
+1495	Cool Trance	Syn Comp	Analog
+1496	>Attack<	Syn Comp	Analog
+1497	Club Finger	Syn Comp	Analog
+1498	Wobbly RB	Syn Comp	Analog
+1499	Ana Dayz	Syn Comp	Analog
+1500	Airy Nylon	Syn Comp	Analog
+1501	Progressive Attack	Syn Comp	Analog
+1502	Oracle	Syn Comp	Analog
+1503	Big Comp	Syn Comp	Digital
+1504	Rezz Punch	Syn Comp	Digital
+1505	Resonant Clavi	Syn Comp	Digital
+1506	Straight RB	Syn Comp	Digital
+1507	Psych Noise	Syn Comp	Digital
+1508	SquiffyMisbehaving	Syn Comp	Digital
+1509	Lektro Codes	Syn Comp	Digital
+1510	Hard FM Keys	Syn Comp	Digital
+1511	W Phaser	Syn Comp	Digital
+1512	DPCM Attack	Syn Comp	Digital
+1513	Talk	Syn Comp	Digital
+1514	Digy_SEQ	Syn Comp	Digital
+1515	Nerve Nasty	Syn Comp	Analog
+1516	Ring_Zplus	Syn Comp	Digital
+1517	Trance Attack	Syn Comp	Digital
+1518	Tekno Attack AF1&2	Syn Comp	Digital
+1519	PWM Percussion	Syn Comp	Digital
+1520	Stabby	Syn Comp	Digital
+1521	Detroit Stab	Syn Comp	Digital
+1522	Corrado	Syn Comp	Digital
+1523	Synthetique	Syn Comp	Digital
+1524	Noiz Rezz	Syn Comp	Digital
+1525	Tuxedo	Syn Comp	Digital
+1526	Queens	Syn Comp	Digital
+1527	Hip Voice	Syn Comp	Digital
+1528	GX1	Syn Comp	Decay
+1529	Night Watch	Syn Comp	Decay
+1530	Pluck Bells	Syn Comp	Decay
+1531	Power Dance Chords	Syn Comp	Hook
+1532	Hyper Trance	Syn Comp	Digital
+1533	Cosmic Psyche	Syn Comp	Digital
+1534	Chillin' Chords	Syn Comp	Hook
+1535	Dirty Chordz	Syn Comp	Hook
+1536	Wild Horses	Syn Comp	Electronic
+1537	Sixpack AF1&2	Syn Comp	Electronic
+1538	Percussive Chords	Syn Comp	Electronic
+1539	Chordmaster	Syn Comp	Electronic
+1540	In the Mirror	Syn Comp	Electronic
+1541	Come together!	Syn Comp	Electronic
+1542	Happy Hour	Syn Comp	Electronic
+1543	Recycling	Syn Comp	Electronic
+1544	Digital Dreaming	Syn Comp	Electronic
+1545	Carpenter's Wife	Syn Comp	Electronic
+1546	Electronic Games	Syn Comp	Electronic
+1547	Dancing Waves	Syn Comp	Electronic
+1548	Hit Factory	Syn Comp	Electronic
+1549	Freaky Loop	Syn Comp	Electronic
+1550	Mr. Wah!	Syn Comp	Electronic
+1551	Chill Comp 1	Syn Comp	Jazz/World
+1552	Chill Comp 2	Syn Comp	Jazz/World
+1553	Kalimboidal	Syn Comp	Jazz/World
+1554	Bippus	Syn Comp	Electronic
+1555	Virtuoso Sequencia	Syn Comp	Electronic
+1556	Fat Saw Arpeggio	Syn Comp	Electronic
+1557	Trancious Line	Syn Comp	Electronic
+1558	Metal Plate	Syn Comp	Electronic
+1559	Fifth Dancer	Syn Comp	Electronic
+1560	PercussiveSequence	Syn Comp	Electronic
+1561	Simply Faaat	Syn Comp	Electronic
+1562	Bright Dance	Syn Comp	Electronic
+1563	Quadro Tune	Syn Comp	Electronic
+1564	Champ	Syn Comp	Electronic
+1565	Men In Yellow	Sound FX	Moving
+1566	Metamorphosis	Sound FX	Moving
+1567	Perplex	Sound FX	Moving
+1568	Outer Planet	Sound FX	Moving
+1569	Industrial	Sound FX	Moving
+1570	Space Walking	Sound FX	Moving
+1571	Scraper	Sound FX	Moving
+1572	SE_02 <Zero Two>	Sound FX	Moving
+1573	Talking Machines	Sound FX	Moving
+1574	Tobi Mage	Sound FX	Moving
+1575	Bitzz MW	Sound FX	Moving
+1576	Thexism	Sound FX	Moving
+1577	In My Head	Sound FX	Moving
+1578	Toda	Sound FX	Ambient
+1579	Water Tank	Sound FX	Ambient
+1580	Auto Trapeze	Sound FX	Ambient
+1581	Harpist'sNightmare	Sound FX	Ambient
+1582	Find Newgt!	Sound FX	Ambient
+1583	Nile River	Sound FX	Nature
+1584	New Age Atmo	Sound FX	Nature
+1585	Wind Blows	Sound FX	Nature
+1586	Fire!	Sound FX	Nature
+1587	Scratching Machine	Sound FX	Sci-Fi
+1588	Goa Psyche	Sound FX	Sci-Fi
+1589	WaitForBadWeather	Sound FX	Sci-Fi
+1590	Reverse The Audio	Sound FX	Sci-Fi
+1591	Radio Static	Sound FX	Sci-Fi
+1592	Modifier X	Sound FX	Sci-Fi
+1593	Surveillance	Sound FX	Sci-Fi
+1594	Noise FX	Sound FX	Sci-Fi
+1595	Sample&HoldVintage	Sound FX	Sci-Fi
+1596	Lazerzz	Sound FX	Sci-Fi
+1597	uhohhrr	Sound FX	Sci-Fi
+1598	On The Fritz	Sound FX	Sci-Fi
+1599	Scratch Thing MW	Sound FX	Moving
+1600	Trash Can Lid Band	Sound FX	Moving
+1601	Piston Engine	Sound FX	Moving
+1602	Waka Waka Noize	Sound FX	Moving
+1603	Argentina	Sound FX	Moving
+1604	Gate of Eden	Musical FX	Moving
+1605	Wave Journey	Musical FX	Moving
+1606	Whispering Ghosts	Musical FX	Moving
+1607	NighttrainToMunich	Musical FX	Moving
+1608	Morning Dew	Musical FX	Moving
+1609	Calling Mr. Reso	Musical FX	Moving
+1610	2 SwitchesToHeaven	Musical FX	Moving
+1611	Cell Division	Musical FX	Moving
+1612	Jumping Needle	Musical FX	Moving
+1613	SEKAI-ISAN	Musical FX	Moving
+1614	Setsunai AF2	Musical FX	Moving
+1615	Week End	Musical FX	Moving
+1616	Dragonfly	Sound FX	Sci-Fi
+1617	TiRiPAD	Musical FX	Moving
+1618	Cluster	Musical FX	Moving
+1619	Xtreme Rezz	Musical FX	Moving
+1620	Bit Space	Musical FX	Moving
+1621	My Reality	Musical FX	Moving
+1622	Waterproof	Musical FX	Moving
+1623	Magnetics	Musical FX	Moving
+1624	Sand	Musical FX	Moving
+1625	Felicity	Musical FX	Moving
+1626	Vibrancy	Musical FX	Moving
+1627	Metalflake	Musical FX	Moving
+1628	Radio Venus	Musical FX	Moving
+1629	Elec Blue	Musical FX	Moving
+1630	Chyo Ethno	Musical FX	Moving
+1631	Metal Shaper	Musical FX	Moving
+1632	Calculator	Musical FX	Moving
+1633	konjoh BEAM	Musical FX	Moving
+1634	Blizzard	Musical FX	Ambient
+1635	SINGING BOWL	Musical FX	Ambient
+1636	Vektris	Musical FX	Ambient
+1637	Metalvox Pad	Musical FX	Ambient
+1638	Refraction	Musical FX	Ambient
+1639	Philanger	Musical FX	Ambient
+1640	Slippery Ambience	Musical FX	Moving
+1641	Ellipsotron	Musical FX	Moving
+1642	Envelope	Musical FX	Moving
+1643	Whatsis	Musical FX	Ambient
+1644	Pearl Collection	Musical FX	Ambient
+1645	Four Dimensions	Musical FX	Ambient
+1646	Hallucination	Musical FX	Ambient
+1647	Arctic Sequence	Musical FX	Ambient
+1648	Drifting	Musical FX	Ambient
+1649	Electraid	Musical FX	Ambient
+1650	Bed Time Story	Musical FX	Ambient
+1651	Clearing	Musical FX	Sweep
+1652	Long HiPa	Musical FX	Sweep
+1653	Quad Swell	Musical FX	Sweep
+1654	New Stab	Musical FX	Hit
+1655	Vinyl Hit	Musical FX	Hit
+1656	Hit Me	Musical FX	Hit
+1657	Ambient Bite	Musical FX	Hit
+1658	Green Valley	Musical FX	Ambient
+1659	Everlasting Glory	Musical FX	Ambient
+1660	Thinking of You	Musical FX	Ambient
+1661	FestivalOfHarmony	Musical FX	Ambient
+1662	Paris at Night	Musical FX	Ambient
+1663	On my Way to UK	Musical FX	Ambient
+1664	Chillin' Ibiza	Musical FX	Ambient
+1665	Heavens Door	Musical FX	Ambient
+1666	Cocktail	Musical FX	Ambient
+1667	Vanilla	Musical FX	Ambient
+1668	Ibiza Groove	Musical FX	Ambient
+1669	Nylon Chill	Musical FX	Ambient
+1670	Xtreme Harp	Musical FX	Ambient
+1671	TrancingInTheRain	Musical FX	Ambient
+1672	Gated Detune	Musical FX	Moving
+1673	Gated Choir	Musical FX	Moving
+1674	Exotic	Musical FX	Moving
+1675	Syncscraper	Musical FX	Moving
+1676	Ethnotic	Musical FX	Moving
+1677	Com Sat	Musical FX	Moving
+1678	Investikator	Musical FX	Moving
+1679	Monkey Bars	Musical FX	Moving
+1680	Chilltrancer	Musical FX	Moving
+1681	Random Beatz	Musical FX	Moving
+1682	Electro Hood	Musical FX	Moving
+1683	My Subwoofers	Musical FX	Moving
+1684	Mister Sinister	Musical FX	Moving
+1685	Polyrhythm	Musical FX	Moving
+1686	Blood Flow	Musical FX	Moving
+1687	On The Verge	Musical FX	Moving
+1688	Droid	Musical FX	Moving
+1689	Worker Ant	Musical FX	Moving
+1690	Chopp Lingo	Musical FX	Moving
+1691	Vinyl Beatnik	Musical FX	Moving
+1692	Drop Zone ARP	Musical FX	Moving
+1693	Particle	Musical FX	Moving
+1694	Simple Arp	Musical FX	Moving
+1695	Cyber Cycle	Musical FX	Moving
+1696	Bollog Puls	Musical FX	Moving
+1697	Octopus	Musical FX	Moving
+1698	Electronic Beatz	Musical FX	Moving
+1699	Dreamin' of You	Musical FX	Moving
+1700	Brothers & Sisters	Musical FX	Moving
+1701	Pizza No.1	Musical FX	Moving
+1702	Electronix	Musical FX	Moving
+1703	Tekk Now	Musical FX	Moving
+1704	Hollow Sequence	Musical FX	Ambient
+1705	Icicle	Musical FX	Ambient
+1706	Jegog	Musical FX	Moving
+1707	Octo Strobe 1	Musical FX	Moving
+1708	Octo Strobe 2	Musical FX	Moving
+1709	Random Waves	Musical FX	Moving
+1710	Semar	Musical FX	Moving
+1711	TrailingHeadlights	Musical FX	Moving
+1712	Dream Winds	Musical FX	Moving
+1713	Kemence	Ethnic	Bowed
+1714	Kemen Wet	Ethnic	Bowed
+1715	Yayli	Ethnic	Bowed
+1716	Kawala	Ethnic	Bowed
+1717	Santur	Ethnic	Struck
+1718	Baglama	Ethnic	Plucked
+1719	Kotoun	Ethnic	Plucked
+1720	Kanun	Ethnic	Plucked
+1721	Bouzuki	Ethnic	Plucked
+1722	Oud Tremolo Vel	Ethnic	Plucked
+1723	Saz Feeze	Ethnic	Plucked
+1724	Where Am I?	Ethnic	Plucked
+1725	Sakura	Ethnic	Plucked
+1726	Nomad	Ethnic	Plucked
+1727	Pluk-o-dy	Ethnic	Plucked
+1728	Tambura	Ethnic	Plucked
+1729	Sitar MW	Ethnic	Plucked
+1730	Tabla Zone	Ethnic	Struck
+1731	Udu	Ethnic	Struck
+1732	Djembe	Ethnic	Struck
+1733	Dhol	Ethnic	Struck
+1734	Khol	Ethnic	Struck
+1735	Ney	Ethnic	Blown
+1736	Zurna	Ethnic	Blown
+1737	Pungi	Ethnic	Blown
+1738	Shehnai 1	Ethnic	Blown
+1739	Didgeridoo	Ethnic	Blown
+1740	Snake Charmer	Ethnic	Blown
+1741	Mythic Flute	Ethnic	Blown
+1742	Ethnology	Ethnic	Jazz/World
+1743	Oztralian	Ethnic	Jazz/World
+1744	8Z Destruct	Drum / Perc	Drums
+1745	8Z Jarrin	Drum / Perc	Drums
+1746	8Z Romps	Drum / Perc	Drums
+1747	8Z Glitch	Drum / Perc	Drums
+1748	8Z Oxidized	Drum / Perc	Drums
+1749	8Z D&B Machine	Drum / Perc	Drums
+1750	8Z Down Tempo	Drum / Perc	Drums
+1751	8Z Early Lo-Fi	Drum / Perc	Drums
+1752	8Z Noize Xpress	Drum / Perc	Drums
+1753	8Z Trance Basics 1	Drum / Perc	Drums
+1754	8Z Reverse Beatz	Drum / Perc	Drums
+1755	8Z Crush Dance	Drum / Perc	Drums
+1756	8Z Heavy Hearts	Drum / Perc	Drums
+1757	8Z Chilly Breakz	Drum / Perc	Drums
+1758	8Z Gated Beatz	Drum / Perc	Drums
+1759	8Z Hip Hop Shakers	Drum / Perc	Drums
+1760	8Z Blip Hop	Drum / Perc	Drums
+1761	8Z Nasty Glitch	Drum / Perc	Drums
+1762	8Z Scratch	Drum / Perc	Drums
+1763	8Z Tod	Drum / Perc	Drums
+1764	8Z Psychedelic 1	Drum / Perc	Drums
+1765	8Z Psychedelic 2	Drum / Perc	Drums
+1766	8Z Dub Element	Drum / Perc	Drums
+1767	Mega Nylon	Guitar	Acoustic
+1768	Mega Steel	Guitar	Acoustic
+1769	Mega 12 Steel	Guitar	Acoustic
+1770	Mega 60s Clean	Guitar	Electric Clean
+1771	Mega60sChorusCombo	Guitar	Electric Clean
+1772	Mega 60s Tremolo	Guitar	Electric Clean
+1773	Mega 60s BluesTone	Guitar	Electric Clean
+1774	Mega 60s Phaser	Guitar	Electric Clean
+1775	Mega 60s Tube Tone	Guitar	Distortion
+1776	Mega 60sDistStack	Guitar	Distortion
+1777	Mega 60sRoadHouse	Guitar	Distortion
+1778	Mega 60sSmallBlues	Guitar	Electric Clean
+1779	Mega 60s Pedal Wah	Guitar	Distortion
+1780	Mega 60s VCM T.Wah	Guitar	Distortion
+1781	Mega 60sT.Wah&Dist	Guitar	Distortion
+1782	Mega 60sJetFlanger	Guitar	Distortion
+1783	Mega 1coil Clean	Guitar	Electric Clean
+1784	Mega 1coil Chorus	Guitar	Electric Clean
+1785	Mega 1coil Tremolo	Guitar	Electric Clean
+1786	Mega1coilBluesTone	Guitar	Electric Clean
+1787	Mega 1coil Phaser	Guitar	Electric Clean
+1788	Mega 1coilTubeTone	Guitar	Electric Clean
+1789	Mega 1coilTubeAmp1	Guitar	Distortion
+1790	Mega 1coilTubeAmp2	Guitar	Distortion
+1791	Mega1coilRoadhouse	Guitar	Distortion
+1792	Mega1coilVCM T.Wah	Guitar	Electric Clean
+1793	Mega 60sCleanDelay	Guitar	Electric Clean
+1794	Mega 60s SlapClean	Guitar	Electric Clean
+1795	Mega 60s Slap Dist	Guitar	Electric Clean
+1796	Mega1coilSlapClean	Guitar	Electric Clean
+1797	Mega 1coilSlapDist	Guitar	Distortion
+1798	Mega 1coilSlpPdWah	Guitar	Electric Clean
+1799	MegaOvdrDistortion	Guitar	Distortion
+1800	Mega Ovdr Fuzz	Guitar	Distortion
+1801	Mega Acoustic Bass	Bass	Acoustic
+1802	Mega Finger+Harmo	Bass	Electric
+1803	Mega Fretless Bass	Bass	Electric
+1804	Mega PickOpenAmped	Bass	Electric
+1805	Mega PickMuteAmped	Bass	Electric
+1806	Mega Slap Bass	Bass	Electric
+1807	Mega Finger+Slap	Bass	Electric
+1808	MegaFinger+PullAmp	Bass	Electric
+1809	Mega Pick OpenMute	Bass	Electric
+1810	Mega Pick OpMtDark	Bass	Electric
+1811	Vocoder with Delay	Pad/Choir	Choir
+1812	Funky Vocoder	Pad/Choir	Choir
+1813	Vocoder Pad 1	Pad/Choir	Choir
+1814	Vocoder Pad 2	Pad/Choir	Choir
+1815	Concert GrandPiano	Piano	Acoustic
+1816	Rock Brite Piano	Piano	Modern
+1817	CP 2007	Piano	Vintage
+1818	Honkytonk	Piano	Vintage
+1819	E.Piano 1	Keyboard	Electric Piano
+1820	E.Piano 2	Keyboard	FM Piano
+1821	Harpsichord	Keyboard	Clavi
+1822	Brite Clavi	Keyboard	Clavi
+1823	Celesta	Chromatic Perc	Mallet
+1824	Glocken	Chromatic Perc	Mallet
+1825	Music Box	Chromatic Perc	Bell
+1826	Vibes	Chromatic Perc	Mallet
+1827	Marimba	Chromatic Perc	Mallet
+1828	Xylophone	Chromatic Perc	Mallet
+1829	Tubular Bell 1	Chromatic Perc	Bell
+1830	Dulcimer	Chromatic Perc	Pitched Drum
+1831	Draw Organ	Organ	Tone Wheel
+1832	Percussive Organ	Organ	Tone Wheel
+1833	Rock Organ 1	Organ	Tone Wheel
+1834	Church Organ	Organ	Pipe
+1835	Reed Organ	Organ	Pipe
+1836	Accordion	Organ	Pipe
+1837	Harmonica	Woodwind	Reed / Pipe
+1838	Tango Accordion 1	Organ	Pipe
+1839	Nylon Guitar	Guitar	Acoustic
+1840	Steel Guitar	Guitar	Acoustic
+1841	Jazz Guitar	Guitar	Electric Clean
+1842	Clean Guitar	Guitar	Electric Clean
+1843	Mute Guitar	Guitar	Electric Clean
+1844	Overdrive Guitar	Guitar	Distortion
+1845	Distortion Guitar	Guitar	Distortion
+1846	Guitar Harmonics	Guitar	Distortion
+1847	Acoustic Bass	Bass	Acoustic
+1848	Finger Bass	Bass	Electric
+1849	Pick Bass	Bass	Electric
+1850	Fretless Bass	Bass	Electric
+1851	Slap Bass 1	Bass	Electric
+1852	Slap Bass 2 Vel	Bass	Electric
+1853	Synth Bass 1	Bass	Synth
+1854	Synth Bass 2	Bass	Synth
+1855	Violin	Strings	Solo
+1856	Viola	Strings	Solo
+1857	Cello	Strings	Solo
+1858	Contrabass	Strings	Solo
+1859	Tremolo Strings 2	Strings	Ensemble
+1860	Pizzicato	Strings	Pizzicato
+1861	Harp	Strings	Pizzicato
+1862	Timpani + Cymbal	Chromatic Perc	Pitched Drum
+1863	Strings Section 1	Strings	Ensemble
+1864	Strings Section 2	Strings	Ensemble
+1865	Synth Strings 1	Strings	Synth
+1866	Synth Strings 2	Strings	Synth
+1867	Aah Choir	Pad/Choir	Choir
+1868	Ooh Choir	Pad/Choir	Choir
+1869	Syn Voice	Pad/Choir	Choir
+1870	Orchestra Hit	Musical FX	Hit
+1871	Trumpet 2	Brass	Solo
+1872	Trombone 2	Brass	Solo
+1873	Tuba	Brass	Solo
+1874	Mute Trumpet	Brass	Solo
+1875	French Horns	Brass	Orchestra
+1876	Brass Section	Brass	Ensemble
+1877	Synth Brass 1	Brass	Synth
+1878	Synth Brass 2	Brass	Synth
+1879	Soprano Sax	Woodwind	Saxophone
+1880	Alto Sax	Woodwind	Saxophone
+1881	Tenor Sax	Woodwind	Saxophone
+1882	Baritone Sax	Woodwind	Saxophone
+1883	Oboe 2	Woodwind	Woodwind
+1884	English Horn	Woodwind	Woodwind
+1885	Bassoon 2	Woodwind	Woodwind
+1886	Clarinet 2	Woodwind	Woodwind
+1887	Piccolo 1	Woodwind	Flute
+1888	Flute	Woodwind	Flute
+1889	Recorder	Woodwind	Woodwind
+1890	Panflute	Woodwind	Flute
+1891	Bottle	Woodwind	Flute
+1892	Shakuhachi	Woodwind	Flute
+1893	Whistle	Woodwind	Woodwind
+1894	Ocarina	Woodwind	Woodwind
+1895	Square Lead	Syn Lead	Analog
+1896	Saw Lead	Syn Lead	Analog
+1897	Calliope Lead	Syn Lead	Analog
+1898	Chiff Lead	Syn Lead	Analog
+1899	Charan Lead	Syn Lead	Digital
+1900	Voice Lead	Syn Lead	Analog
+1901	Fifth Lead	Syn Lead	Analog
+1902	Bass & Lead	Syn Lead	Analog
+1903	New Age Pad	Pad/Choir	Bright
+1904	Warm Pad	Pad/Choir	Warm
+1905	Poly Synth Pad	Pad/Choir	Analog
+1906	Choir Pad	Pad/Choir	Choir
+1907	Bowed Pad	Pad/Choir	Warm
+1908	Metal Pad	Pad/Choir	Bright
+1909	Halo Pad	Pad/Choir	Bright
+1910	Sweep Pad	Pad/Choir	Bright
+1911	Rain Pad	Musical FX	Moving
+1912	Sound Track	Pad/Choir	Bright
+1913	Crystal	Chromatic Perc	Bell
+1914	Atmosphere	Pad/Choir	Warm
+1915	Brightness	Syn Comp	Digital
+1916	Goblin	Musical FX	Sweep
+1917	Echoes	Musical FX	Moving
+1918	Sci-Fi	Pad/Choir	Bright
+1919	Sitar 1	Ethnic	Plucked
+1920	Banjo 1	Ethnic	Plucked
+1921	Shamisen	Ethnic	Plucked
+1922	Koto	Ethnic	Plucked
+1923	Kalimba	Chromatic Perc	Mallet
+1924	Bagpipe	Woodwind	Reed / Pipe
+1925	Fiddle	Ethnic	Bowed
+1926	Shehnai 2	Woodwind	Woodwind
+1927	Tinkle Bell	Chromatic Perc	Bell
+1928	Agogo	Drum / Perc	Percussion
+1929	Steel Drum	Chromatic Perc	Pitched Drum
+1930	Woodblock	Drum / Perc	Percussion
+1931	Taiko Drum	Drum / Perc	Percussion
+1932	Melodic Tom	Drum / Perc	Drums
+1933	Synth Drum	Drum / Perc	Drums
+1934	Reverse Cymbal	Sound FX	Moving
+1935	Fret Noise	Sound FX	Nature
+1936	Breath Noiz	Sound FX	Nature
+1937	Seashore	Sound FX	Nature
+1938	Tweet	Sound FX	Nature
+1939	Telephone	Sound FX	Nature
+1940	Helicopter	Sound FX	Nature
+1941	Applause	Sound FX	Nature
+1942	Gunshot	Sound FX	Nature
+1943	Natural Grand S6	Piano	Acoustic
+1944	Piano Rock S6	Piano	Modern
+1945	Woody Piano S6	Piano	Vintage
+1946	Intimate S6	Piano	Vintage
+1947	Clavi Bril Treble	Keyboard	Clavi
+1948	Clavi Amped	Keyboard	Clavi
+1949	Clavi Phaser	Keyboard	Clavi
+1950	Clavi Touch Wah	Keyboard	Clavi
+1951	Clavi PdWah FC2&MW	Keyboard	Clavi
+1952	NaturalHarpsichord	Keyboard	Clavi
+1953	Octave Harpsichord	Keyboard	Clavi
+1954	Vx Full Bars	Organ	Combo
+1955	Vx Dark Bars	Organ	Combo
+1956	Fr All Tabs	Organ	Combo
+1957	Fr Bright Boost	Organ	Combo
+1958	Fr String Tabs	Organ	Combo
+1959	Vx Full Bars Amped	Organ	Combo
+1960	Vx Surf Organ	Organ	Combo
+1961	Fr Raspy Tabs	Organ	Combo
+1962	Master Accordion	Organ	Pipe
+1963	French Musette	Organ	Pipe
+1964	Cassotto	Organ	Pipe
+1965	Tango Accordion 2	Organ	Pipe
+1966	Vibraphone	Chromatic Perc	Mallet
+1967	Vibraphone Soft	Chromatic Perc	Mallet
+1968	Tubular Bell 2	Chromatic Perc	Bell
+1969	RealTimpani AF Mfl	Chromatic Perc	Mallet
+1970	1coil Clean AF1&2	Guitar	Electric Clean
+1971	1coil Amped Vel	Guitar	Electric Clean
+1972	Vintage1coilChorus	Guitar	Electric Clean
+1973	Surfin' 60s 1coil	Guitar	Electric Clean
+1974	Breakback Mountain	Guitar	Distortion
+1975	Grunged Up	Guitar	Distortion
+1976	Jazz Clean AF1&2	Guitar	Electric Clean
+1977	Arched Top	Guitar	Electric Clean
+1978	Jazz Blues	Guitar	Electric Clean
+1979	Round Wound Finger	Bass	Electric
+1980	Tube Finger Bass	Bass	Electric
+1981	Slightly Grunged	Bass	Electric
+1982	Prec Pick	Bass	Electric
+1983	Pick Amp	Bass	Electric
+1984	Universal AF1&2	Bass	Synth
+1985	Analog Bullet Bass	Bass	Synth
+1986	Analog Perc Bass	Bass	Synth
+1987	Analog Step Bass	Bass	Synth
+1988	Short Buzz AF1&2	Bass	Rock/Pop
+1989	Bass Machine AF1	Bass	Electronic
+1990	Deep Ramp AF1&2	Bass	Electronic
+1991	Section Strings 1	Strings	Ensemble
+1992	Section Strings 2	Strings	Ensemble
+1993	Section Strings 3	Strings	Ensemble
+1994	Section Strings 4	Strings	Ensemble
+1995	Tremolo Section	Strings	Ensemble
+1996	Pizzicato Vel	Strings	Pizzicato
+1997	Orchestra Harp	Strings	Pizzicato
+1998	Harp Ambient	Strings	Pizzicato
+1999	Gleaming Pad AF1&2	Strings	Synth
+2000	Fat PWM Synth Vel	Strings	Synth
+2001	VintagePolyStrings	Strings	Synth
+2002	SoftTrumpetLegato	Brass	Solo
+2003	Trumpet Vibrato	Brass	Solo
+2004	Trumpet Shake Vel	Brass	Solo
+2005	FrenchHornSection2	Brass	Orchestra
+2006	Flugelhorn	Brass	Solo
+2007	Jazz Brass Section	Brass	Ensemble
+2008	Ob Syncomp	Brass	Synth
+2009	Tacky Brass AF1&2	Brass	Synth
+2010	Mellow Soprano	Woodwind	Saxophone
+2011	Alto Accent Legato	Woodwind	Saxophone
+2012	Tenor Max	Woodwind	Saxophone
+2013	SoftTenorSaxLegato	Woodwind	Saxophone
+2014	Piccolo Legato	Woodwind	Flute
+2015	Bizz AF2	Syn Lead	Electronic
+2016	Reflector AT AF1&2	Syn Lead	Electronic
+2017	Mellow Swell AF1&2	Pad/Choir	Warm
+2018	Frozen Glasspad	Pad/Choir	Warm
+2019	Lunar Eclipse AF	Pad/Choir	Bright
+2020	Melting Steel AF	Pad/Choir	Choir
+2021	Prayer Call	Pad/Choir	Choir
+2022	Bass n' Gate	Pad/Choir	Rock/Pop
+2023	PWM Stabs	Syn Comp	Analog
+2024	Queen of Pop AF1&2	Syn Comp	Analog
+2025	Multi Bell	Syn Comp	Electronic
+2026	Acid 'n Space AF	Syn Comp	Electronic
+2027	Middle Ear AF1&2	Syn Comp	Electronic
+2028	Badger AF1&2	Syn Comp	Electronic
+2029	Voodoo Wah	Syn Comp	Electronic
+2030	Jumping Wheel AF	Syn Comp	Electronic
+2031	Devils Wah AF1&2	Syn Comp	Electronic
+2032	Horizons AF1&2	Syn Comp	Electronic
+2033	Hypnotic AF1&2	Syn Comp	Electronic
+2034	Airy Buzz AF1&2	Syn Comp	Electronic
+2035	Trancious Stepz	Syn Comp	Electronic
+2036	Trilogy AF1&2	Syn Comp	Electronic
+2037	PWM Picks AF1&2	Syn Comp	Electronic
+2038	VariChord AT AF1&2	Syn Comp	Electronic
+2039	Voxdance AT AF1&2	Syn Comp	Electronic
+2040	Spacewave Dancer	Sound FX	Moving
+2041	Berimbau Ookawaton	Musical FX	Moving
+2042	Club Telemetrix	Musical FX	Moving
+2043	Venusian Rhumba	Musical FX	Moving
+2044	Dripping Quarks	Musical FX	Ambient
+2045	Undulator	Musical FX	Ambient
+2046	Expanse	Musical FX	Ambient
+2047	Deep Motion AF1&2	Musical FX	Ambient
+2048	Metallic Airstabs	Musical FX	Ambient
+2049	Descendant	Musical FX	Ambient
+2050	Angel in Love	Musical FX	Moving
+2051	Berlin Dreamz	Musical FX	Moving
+2052	Complexions AF1&2	Musical FX	Moving
+2053	Crazy Groove AF1&2	Musical FX	Moving
+2054	Da Thumperz	Musical FX	Moving
+2055	Meister Chilla	Musical FX	Moving
+2056	X-Generator AF1&2	Musical FX	Moving
+2057	Glaring Message AF	Musical FX	Moving
+2058	Sitar 2	Ethnic	Plucked
+2059	India Harmonium	Ethnic	Jazz/World
+2060	Berimbau	Ethnic	Struck
+2061	Banjo 2	Ethnic	Plucked
+2062	Nu Orc Percussion	Drum / Perc	Percussion
+2063	8Z Cajon	Drum / Perc	Drums
+2064	8Z Djembe	Drum / Perc	Drums
+2065	8Z Static	Drum / Perc	Drums
+2066	8Z RX11	Drum / Perc	Drums
+2067	8Z Trance Basics 2	Drum / Perc	Drums
+2068	8Z Tom Heartz	Drum / Perc	Drums
+2069	Mega 1coil Old R&R	Guitar	Electric Clean
+2070	Mega Jazz Guitar	Guitar	Electric Clean
+2071	PowerStandardKit 1	Drum / Perc	Drums
+2072	PowerStandardKit 2	Drum / Perc	Drums
+2073	Hyper Standard Kit	Drum / Perc	Drums
+2074	Dry Standard Kit	Drum / Perc	Drums
+2075	Modern Rock Kit	Drum / Perc	Drums
+2076	Rock Stereo Kit 1	Drum / Perc	Drums
+2077	Rock Stereo Kit 2	Drum / Perc	Drums
+2078	Nu Hip Hop Kit 1	Drum / Perc	Drums
+2079	Nu Hip Hop Kit 2	Drum / Perc	Drums
+2080	Hip Hop Kit 1	Drum / Perc	Drums
+2081	Hip Hop Kit 2	Drum / Perc	Drums
+2082	Hip Hop Kit 3	Drum / Perc	Drums
+2083	Hip Hop Kit 4	Drum / Perc	Drums
+2084	Hip Stick Kit 1	Drum / Perc	Drums
+2085	Hip Stick Kit 2	Drum / Perc	Drums
+2086	R&B Kit 1	Drum / Perc	Drums
+2087	R&B Kit 2	Drum / Perc	Drums
+2088	R&B Kit 3	Drum / Perc	Drums
+2089	Trance Kit	Drum / Perc	Drums
+2090	Psychedelic Kit	Drum / Perc	Drums
+2091	Chill Out Kit	Drum / Perc	Drums
+2092	Brush Kit	Drum / Perc	Drums
+2093	Jazz Kit	Drum / Perc	Drums
+2094	Pop Latin Kit	Drum / Perc	Percussion
+2095	Analog T9 Kit	Drum / Perc	Drums
+2096	Analog T8 Kit	Drum / Perc	Drums
+2097	Tekno Kit	Drum / Perc	Drums
+2098	House Kit 1	Drum / Perc	Drums
+2099	House Kit 2	Drum / Perc	Drums
+2100	HouseCompressedKit	Drum / Perc	Drums
+2101	Big Kit	Drum / Perc	Drums
+2102	Break Kit	Drum / Perc	Drums
+2103	Drum'n'Bass Kit	Drum / Perc	Drums
+2104	Acid Kit	Drum / Perc	Drums
+2105	Jungle Kit	Drum / Perc	Drums
+2106	Electric Kit	Drum / Perc	Drums
+2107	Human Kit	Drum / Perc	Drums
+2108	Hard Kit	Drum / Perc	Drums
+2109	Distorted Kit	Drum / Perc	Drums
+2110	Ambient Kit	Drum / Perc	Drums
+2111	Garage Kit	Drum / Perc	Drums
+2112	Synth Pop Kit	Drum / Perc	Drums
+2113	Orchestra Kit	Drum / Perc	Drums
+2114	Drum Machines Kit	Drum / Perc	Drums
+2115	Rock Multiple Kits	Drum / Perc	Drums
+2116	HipHopMultipleKits	Drum / Perc	Drums
+2117	Percussion Kit	Drum / Perc	Percussion
+2118	LatinPercussionKit	Drum / Perc	Percussion
+2119	Guitar/Bass FX Kit	Drum / Perc	Percussion
+2120	Wacko Kit	Drum / Perc	Percussion
+2121	Wood Bits Kit	Drum / Perc	Percussion
+2122	Metal Bits Kit	Drum / Perc	Percussion
+2123	Hands Kit	Drum / Perc	Percussion
+2124	Scratches	Drum / Perc	Percussion
+2125	Acoustic Snares	Drum / Perc	Drums
+2126	Grouped St Snares	Drum / Perc	Drums
+2127	All Kicks	Drum / Perc	Drums
+2128	Dance Kicks	Drum / Perc	Drums
+2129	Arabic Mixed Kit 1	Drum / Perc	Drums
+2130	Belly Dance Kit	Drum / Perc	Drums
+2131	Dance Snares	Drum / Perc	Drums
+2132	Special SFXs	Drum / Perc	Percussion
+2133	Synthetic Kit	Drum / Perc	Drums
+2134	SFX Kit	Drum / Perc	Percussion
+2135	Stereo GM Kit	Drum / Perc	Drums
+2136	Maple Custom Kit	Drum / Perc	Drums
+2137	Oak Custom Kit	Drum / Perc	Drums
+2138	Nu Jazzy Kit	Drum / Perc	Drums
+2139	Illest Hip Hop Kit	Drum / Perc	Drums
+2140	Perc Master Kit	Drum / Perc	Percussion
+2141	Nu Orchestra Kit	Drum / Perc	Drums
+2142	Japan Kit	Drum / Perc	Percussion
+2143	Turkish Kit	Drum / Perc	Percussion
+2144	NY Jam Sesh	Piano	Acoustic
+2145	Scoring Melancholy	Piano	Acoustic
+2146	Saturnalia	Piano	Electronic
+2147	Rotary Rd	Keyboard	Electric Piano
+2148	Out West	Keyboard	Electric Piano
+2149	ICE Theme	Keyboard	Electric Piano
+2150	Paddy Organ	Organ	Synth
+2151	Mondo Distorto AT	Guitar	Synth
+2152	Amp Boosted Slap	Bass	Electric
+2153	Mini Sub	Bass	Synth
+2154	Folder Bass	Bass	Synth
+2155	Laser Trumpet	Syn Lead	Digital
+2156	Thair-Uh-Min	Syn Lead	Digital
+2157	My Ballad	Syn Lead	Analog
+2158	Wave Mod	Syn Lead	Digital
+2159	Sycronomicon	Syn Lead	Digital
+2160	Death to DACs! AT	Syn Lead	Digital
+2161	Party Chips	Syn Lead	Electronic
+2162	8bit Dude	Syn Lead	Electronic
+2163	First Strike	Syn Lead	Digital
+2164	The Polysynth MW	Pad/Choir	Analog
+2165	Updraft	Pad/Choir	Warm
+2166	Extended Heaven	Pad/Choir	Warm
+2167	Ozone Cleaner	Pad/Choir	Bright
+2168	Tensor	Pad/Choir	Bright
+2169	Piercing Light	Pad/Choir	Bright
+2170	Film Choir	Pad/Choir	Choir
+2171	Tapes	Pad/Choir	Warm
+2172	Lodestar	Pad/Choir	Electronic
+2173	Paraphonica	Pad/Choir	Warm
+2174	Ambient Synth Pad 2	Pad/Choir	Analog
+2175	Space is Fine	Syn Comp	Digital
+2176	Stranger Dreams	Syn Comp	Electronic
+2177	Freedom Runner	Syn Comp	Decay
+2178	FUTURE-X	Syn Comp	Digital
+2179	Moon Shape	Syn Comp	Electronic
+2180	Elektro Shape	Syn Comp	Decay
+2181	Arpeggion X	Syn Comp	Digital
+2182	Retro SEQ exLFO	Sound FX	Sci-Fi
+2183	Riser X	Sound FX	Electronic
+2184	Copy	Musical FX	Moving
+2185	Super Slicer	Musical FX	Moving
+2186	Secret Garden	Musical FX	Moving
+2187	Sea Cycles	Musical FX	Moving
+2188	Space Worms	Musical FX	Moving
+2189	Distortion EVOLUTION	Musical FX	Electronic
+2190	White Wings	Musical FX	Ambient
+2191	Electronik Symphonik	Musical FX	Moving
+2192	Ice Walkers	Musical FX	Ambient
+2193	Full of Shape	Musical FX	Electronic
+2194	Rubber Bullitz	Musical FX	Electronic
+2195	Wired	Musical FX	Electronic
+2196	Glavinet	Keyboard	FM Piano
+2197	Morph The EP MW	Keyboard	FM Piano
+2198	FM Morph Keys 2	Keyboard	FM Piano
+2199	NeoMorph FM	Keyboard	FM Piano
+2200	FM Guitar SmartMorph	Guitar	Synth
+2201	FM Bass Gallery XL	Bass	Synth
+2202	Baroque Morphdown	Strings	Synth
+2203	Jets	Syn Lead	Digital
+2204	Wave Shapers	Syn Lead	Digital
+2205	Texture Lead	Syn Lead	Digital
+2206	Smart Morph PadScene	Pad/Choir	Bright
+2207	CelestialOrchestrial	Pad/Choir	Warm
+2208	Morphalux	Pad/Choir	Electronic
+2209	Snow Flurries	Pad/Choir	Warm
+2210	Dramatic Turns	Pad/Choir	Electronic
+2211	Compu Sigh	Pad/Choir	Electronic
+2212	SY Wavepad	Pad/Choir	Electronic
+2213	Grotteratti	Syn Comp	Digital
+2214	Metalcimer	Syn Comp	Decay
+2215	FM Morpher	Syn Comp	Digital
+2216	FM Variations	Syn Comp	Digital
+2217	Burbaladder	Syn Comp	Electronic
+2218	Celestial Ornaments	Chromatic Perc	Bell
+2219	Rewind Time	Chromatic Perc	Synth Bell
+2220	Dreamy Tin	Chromatic Perc	Synth Bell
+2221	Morphcussion	Drum / Perc	Percussion
+2222	Interstella FM	Sound FX	Sci-Fi
+2223	Hydra Drone	Musical FX	Ambient
+2224	Synthetic Heart	Musical FX	Electronic
+2225	Maze	Musical FX	Moving
+2226	Super Devil	Musical FX	Ambient
+2227	Drone Generator	Musical FX	Moving

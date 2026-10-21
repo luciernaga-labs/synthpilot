@@ -10,7 +10,8 @@ pub use change::{Layout, Location, ParameterChange};
 pub use error::{EditError, EncodeError, ValidationError};
 pub use id::{DeviceId, EngineId, ParameterId};
 pub use parameter::{
-    ParameterDefinition, Scope, SourceReference, Support, Unit, ValueFormat, ValueRange,
+    ChoiceGroup, ListedValue, ParameterDefinition, Scope, SourceReference, Support, Unit,
+    ValueFormat, ValueRange,
 };
 pub use profile::{DeviceProfile, EngineProfile, EngineSupport};
 pub use reader::{PartData, Received, SoundReader};

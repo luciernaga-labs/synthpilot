@@ -49,6 +49,16 @@ impl Part {
     pub fn value(&self, parameter: ParameterId, element: Option<u8>) -> Option<i32> {
         self.values.get(&(parameter, element)).copied()
     }
+
+    #[must_use]
+    pub fn with(&self, change: &ParameterChange) -> Self {
+        let mut part = self.clone();
+        part.values.insert(
+            (change.parameter, change.location.element_number()),
+            change.value,
+        );
+        part
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -180,7 +190,14 @@ impl Sound {
         engine: &dyn EngineProfile,
         change: ParameterChange,
     ) -> Result<SysExMessage, EditError> {
-        self.part_for(change.location.part_number(), engine)?;
+        let part = self.part_for(change.location.part_number(), engine)?;
+        let definition = engine
+            .parameter(change.parameter)
+            .ok_or(ValidationError::UnknownParameter(change.parameter))?;
+        let effective = engine
+            .refine(definition, part)
+            .ok_or(EditError::Unavailable(change.parameter))?;
+        effective.validate(&change, engine.layout())?;
         let message = engine.encode(&change)?;
         self.insert(change);
         Ok(message)

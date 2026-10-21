@@ -1,0 +1,961 @@
+rev	0083	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	0083	2	Room Size	0	4	0–4	146
+rev	0083	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0083	4	High Damp Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0083	6	High Ratio	0	10	0.0 – 1.0	146
+rev	0083	13	EQ Low Frequency	1	34	22Hz – 1.0kHz	146
+rev	0083	14	EQ Low Gain	52	76	-12dB – 0dB – +12dB	146
+rev	0083	15	EQ High Frequency	28	59	500Hz – 18.0kHz	146
+rev	0083	16	EQ High Gain	52	76	-12dB – 0dB – +12dB	146
+rev	0093	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	0093	2	Room Size	0	4	0–4	146
+rev	0093	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0093	4	High Damp Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0093	6	High Ratio	0	10	0.0 – 1.0	146
+rev	0093	13	EQ Low Frequency	1	34	22Hz – 1.0kHz	146
+rev	0093	14	EQ Low Gain	52	76	-12dB – 0dB – +12dB	146
+rev	0093	15	EQ High Frequency	28	59	500Hz – 18.0kHz	146
+rev	0093	16	EQ High Gain	52	76	-12dB – 0dB – +12dB	146
+rev	00A1	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	00A1	2	Plate Type	0	2	0–2	146
+rev	00A1	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	00A1	4	High Damp Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	00A1	6	High Ratio	0	10	0.0 – 1.0	146
+rev	00A1	13	EQ Low Frequency	1	34	22Hz – 1.0kHz	146
+rev	00A1	14	EQ Low Gain	52	76	-12dB – 0dB – +12dB	146
+rev	00A1	15	EQ High Frequency	28	59	500Hz – 18.0kHz	146
+rev	00A1	16	EQ High Gain	52	76	-12dB – 0dB – +12dB	146
+rev	0080	1	Reverb Time	0	69	0.3s – xy.zs	146
+rev	0080	2	Diffusion	0	10	0 – 10	146
+rev	0080	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0080	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	0080	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0080	6	Room Size	0	31	0 – 31	146
+rev	0080	7	High Ratio	1	10	0.1 – 1.0	146
+rev	0080	8	Low Ratio	1	14	0.1 – 1.4	146
+rev	0080	9	Decay	0	63	0 – 63	146
+rev	0090	1	Reverb Time	0	69	0.3s – xy.zs	146
+rev	0090	2	Diffusion	0	10	0 – 10	146
+rev	0090	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0090	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	0090	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0090	6	Room Size	0	31	0 – 31	146
+rev	0090	7	High Ratio	1	10	0.1 – 1.0	146
+rev	0090	8	Low Ratio	1	14	0.1 – 1.4	146
+rev	0090	9	Decay	0	63	0 – 63	146
+rev	0081	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	0081	2	Diffusion	0	10	0 – 10	146
+rev	0081	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0081	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	0081	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0081	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	0081	12	Density	0	4	0–4	146
+rev	0081	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	0081	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	0081	15	Feedback Level	1	127	-63 – +63	146
+rev	0082	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	0082	2	Diffusion	0	10	0 – 10	146
+rev	0082	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0082	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	0082	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0082	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	0082	12	Density	0	4	0–4	146
+rev	0082	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	0082	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	0082	15	Feedback Level	1	127	-63 – +63	146
+rev	0091	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	0091	2	Diffusion	0	10	0 – 10	146
+rev	0091	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0091	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	0091	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0091	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	0091	12	Density	0	4	0–4	146
+rev	0091	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	0091	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	0091	15	Feedback Level	1	127	-63 – +63	146
+rev	0092	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	0092	2	Diffusion	0	10	0 – 10	146
+rev	0092	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	0092	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	0092	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	0092	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	0092	12	Density	0	4	0–4	146
+rev	0092	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	0092	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	0092	15	Feedback Level	1	127	-63 – +63	146
+rev	00A0	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	00A0	2	Diffusion	0	10	0 – 10	146
+rev	00A0	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	00A0	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	00A0	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	00A0	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	00A0	12	Density	0	4	0–4	146
+rev	00A0	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	00A0	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	00A0	15	Feedback Level	1	127	-63 – +63	146
+rev	00B0	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	00B0	2	Diffusion	0	10	0 – 10	146
+rev	00B0	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	00B0	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	00B0	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	00B0	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	00B0	12	Density	0	4	0–4	146
+rev	00B0	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	00B0	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	00B0	15	Feedback Level	1	127	-63 – +63	146
+rev	00C0	1	Reverb Time	0	69	0.3s – 30.0s	146
+rev	00C0	2	Diffusion	0	10	0 – 10	146
+rev	00C0	3	Initial Delay	0	127	0.1ms – 200.0ms	146
+rev	00C0	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	146
+rev	00C0	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	146
+rev	00C0	6	Width	0	104	0.5m – 30.2m	146
+rev	00C0	7	Height	0	104	0.5m – 30.2m	146
+rev	00C0	8	Depth	0	104	0.5m – 30.2m	146
+rev	00C0	9	Wall Vary	0	30	0 – 30	146
+rev	00C0	11	Reverb Delay	0	127	0.1ms – 200.0ms	146
+rev	00C0	12	Density	0	4	0–4	146
+rev	00C0	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	146
+rev	00C0	14	Feedback High Damp	1	10	0.1 – 1.0	146
+rev	00C0	15	Feedback Level	1	127	-63 – +63	146
+rev	00C0	16	Space Type	0	1	0–1	146
+var	0082	1	Reverb Time	0	69	0.3s – 30.0s	147
+var	0082	2	Diffusion	0	10	0 – 10	147
+var	0082	3	Initial Delay	0	63	0.1ms – 99.3ms	147
+var	0082	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	147
+var	0082	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	147
+var	0082	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0082	11	Reverb Delay	0	63	0.1ms – 99.3ms	147
+var	0082	12	Density	0	4	0–4	147
+var	0082	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	147
+var	0082	14	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0082	15	Feedback Level	1	127	-63 – +63	147
+var	0092	1	Reverb Time	0	69	0.3s – 30.0s	147
+var	0092	2	Diffusion	0	10	0 – 10	147
+var	0092	3	Initial Delay	0	63	0.1ms – 99.3ms	147
+var	0092	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	147
+var	0092	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	147
+var	0092	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0092	11	Reverb Delay	0	63	0.1ms – 99.3ms	147
+var	0092	12	Density	0	4	0–4	147
+var	0092	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	147
+var	0092	14	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0092	15	Feedback Level	1	127	-63 – +63	147
+var	00B0	1	Reverb Time	0	69	0.3s – 30.0s	147
+var	00B0	2	Diffusion	0	10	0 – 10	147
+var	00B0	3	Initial Delay	0	63	0.1ms – 99.3ms	147
+var	00B0	4	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	147
+var	00B0	5	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	147
+var	00B0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	00B0	11	Reverb Delay	0	63	0.1ms – 99.3ms	147
+var	00B0	12	Density	0	4	0–4	147
+var	00B0	13	ER/Rev Balance	1	127	E63>R – E=R – E<R63	147
+var	00B0	14	Feedback High Damp	1	10	0.1 – 1.0	147
+var	00B0	15	Feedback Level	1	127	-63 – +63	147
+var	00D0	1	Type	0	1	Type A, Type B	147
+var	00D0	2	Room Size	0	127	0.1 – 20.0	147
+var	00D0	3	Diffusion	0	10	0 – 10	147
+var	00D0	4	Initial Delay	0	127	0.1ms – 200ms	147
+var	00D0	5	Feedback Level	1	127	-63 – 0 – +63	147
+var	00D0	6	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	147
+var	00D0	7	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	147
+var	00D0	10	Dry/Wet	1	127	D63>W – D=W – D<W63	147
+var	00D0	11	Liveness	0	10	0 – 10	147
+var	00D0	12	Density	0	3	0–3	147
+var	00D0	13	Feedback High Damp	1	10	0.1 – 1.0	147
+var	00D8	1	Type	0	1	Type A, Type B	147
+var	00D8	2	Room Size	0	127	0.1 – 20.0	147
+var	00D8	3	Diffusion	0	10	0 – 10	147
+var	00D8	4	Initial Delay	0	127	0.1ms – 200ms	147
+var	00D8	5	Feedback Level	1	127	-63 – 0 – +63	147
+var	00D8	6	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	147
+var	00D8	7	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	147
+var	00D8	10	Dry/Wet	1	127	D63>W – D=W – D<W63	147
+var	00D8	11	Liveness	0	10	0 – 10	147
+var	00D8	12	Density	0	3	0–3	147
+var	00D8	13	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0100	1	Delay Time L>R	1	16383	0.1ms – 1638.3ms	147
+var	0100	2	Delay Time R>L	1	16383	0.1ms – 1638.3ms	147
+var	0100	3	Feedback Level	1	127	-63 – +63	147
+var	0100	4	Input Select	0	4	L, R, L&R, L-MODE2, R-MODE2	147
+var	0100	5	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0100	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0100	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0100	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0100	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0100	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0110	1	Delay Time L>R	0	19	32nd/3 – 4thx6	147
+var	0110	2	Delay Time R>L	0	19	32nd/3 – 4thx6	147
+var	0110	3	Feedback Level	1	127	-63 – +63	147
+var	0110	4	Input Select	0	4	L, R, L&R, L-MODE2, R-MODE2	147
+var	0110	5	Feedback High Dump	1	10	0.1 – 1.0	147
+var	0110	6	Lag	1	127	-63ms – +63ms	147
+var	0110	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0110	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0110	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0110	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0110	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0120	1	Delay Time	0	19	32nd/3 – 4thx6	147
+var	0120	2	Feedback Level	1	127	-63 – +63	147
+var	0120	3	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0120	4	L/R Diffusion	1	127	-63ms – +63ms	147
+var	0120	5	Lag	1	127	-63ms – +63ms	147
+var	0120	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0120	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0120	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0120	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0120	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0128	1	Delay Time	0	19	32nd/3 – 4thx6	147
+var	0128	2	Feedback Level	1	127	-63 – +63	147
+var	0128	3	Feedback High Dump	1	10	0.1 – 1.0	147
+var	0128	4	L/R Diffusion	1	127	-63ms – +63ms	147
+var	0128	5	Lag	1	127	-63ms – +63ms	147
+var	0128	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0128	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0128	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0128	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0128	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0130	1	Delay Time	1	14860	0.1ms – 1486.0ms	147
+var	0130	2	Delay transition rate	1	48	1 – 48	147
+var	0130	3	Feedback Level	1	127	-63 – +63	147
+var	0130	4	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0130	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0130	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0130	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0130	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0130	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0130	11	Control Type	0	1	Normal, Scratch	147
+var	0140	1	Delay Time L	1	16383	0.1ms – 1638.3ms	147
+var	0140	2	Delay Time R	1	16383	0.1ms – 1638.3ms	147
+var	0140	3	Feedback Time 1	1	16383	0.1ms – 1638.3ms	147
+var	0140	4	Feedback Time 2	1	16383	0.1ms – 1638.3ms	147
+var	0140	5	Feedback Level	1	127	-63 – +63	147
+var	0140	6	Feedback High Damp	1	10	0.1 – 1.0	147
+var	0140	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	147
+var	0140	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0140	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0140	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0140	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0150	1	Delay Time L	1	16383	0.1ms – 1638.3ms	148
+var	0150	2	Delay Time R	1	16383	0.1ms – 1638.3ms	148
+var	0150	3	Delay Time C	1	16383	0.1ms – 1638.3ms	148
+var	0150	4	Feedback Time	1	16383	0.1ms – 1638.3ms	148
+var	0150	5	Feedback Level	1	127	-63 – +63	148
+var	0150	6	Delay Level C	0	127	0 – 127	148
+var	0150	7	Feedback High Damp	1	10	0.1 – 1.0	148
+var	0150	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	0150	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0150	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0150	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0150	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0160	1	Delay Time	0	127	25ms – 800ms	148
+var	0160	2	Feedback Level	0	127	0 – 127	148
+var	0160	3	Delay Input Level	0	127	0 – 127	148
+var	0160	4	Type	0	4	Mellow, Dub, Narrow, Soft, …	148
+var	0160	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	0168	1	Delay Time	0	127	50ms – 1.0ms	148
+var	0168	2	Feedback Level	0	127	0 – 127	148
+var	0168	3	Delay Input Level	0	127	0 – 127	148
+var	0168	4	Type	0	4	Mellow, Dub, Narrow, Soft, …	148
+var	0168	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	0180	1	LFO Speed	0	127	0.0Hz – 39.70Hz	148
+var	0180	3	PM Depth	0	127	0 – 127	148
+var	0180	4	Feedback Level	1	127	-63 – +63	148
+var	0180	5	Delay Offset	0	127	0.0ms – 50.0ms	148
+var	0180	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0180	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0180	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0180	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0180	10	Dry / Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	0180	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	148
+var	0180	12	EQ Mid Gain	52	76	-12dB – +12dB	148
+var	0180	13	EQ Mid Width	1	120	0.1 – 12.0	148
+var	0180	15	Input Mode	0	1	Mono, Stereo	148
+var	0190	1	LFO Speed	0	127	0.0Hz – 39.70Hz	148
+var	0190	2	AM Depth	0	127	0 – 127	148
+var	0190	3	PM Depth	0	127	0 – 127	148
+var	0190	4	Feedback Level	1	127	-63 – +63	148
+var	0190	5	Delay Offset	0	127	0.0ms – 50.0ms	148
+var	0190	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0190	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0190	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0190	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0190	10	Dry / Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	0190	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	148
+var	0190	12	EQ Mid Gain	52	76	-12dB – +12dB	148
+var	0190	13	EQ Mid Width	1	120	0.1 – 12.0	148
+var	0190	15	Input Mode	0	1	Mono, Stereo	148
+var	01A0	1	LFO Speed	0	127	0.0Hz – 39.70Hz	148
+var	01A0	2	LFO Depth	0	127	0 – 127	148
+var	01A0	3	Feedback Level	1	127	-63 – +63	148
+var	01A0	4	Delay Offset	0	127	0.0ms – 50.0ms	148
+var	01A0	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	01A0	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	01A0	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	01A0	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	01A0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	01A0	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	148
+var	01A0	12	EQ Mid Gain	52	76	-12dB – +12dB	148
+var	01A0	13	EQ Mid Width	1	120	0.1 – 12.0	148
+var	01A0	15	Input Mode	0	1	Mono, Stereo	148
+var	01B0	1	LFO Speed	0	127	0.0Hz – 39.70Hz	148
+var	01B0	2	LFO Depth	0	127	0 – 127	148
+var	01B0	3	Delay Offset	0	127	0.0ms – 50.0ms	148
+var	01B0	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	01B0	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	01B0	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	01B0	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	01B0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	01B0	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	148
+var	01B0	12	EQ Mid Gain	52	76	-12dB – +12dB	148
+var	01B0	13	EQ Mid Width	1	120	0.1 – 12.0	148
+var	01C0	1	Detune	14	114	-50cent – +50cent	148
+var	01C0	2	Initial Delay Lch	0	127	0.0ms – 50.0ms	148
+var	01C0	3	Initial Delay Rch	0	127	0.0ms – 50.0ms	148
+var	01C0	4	Spread	0	63	0 – 63	148
+var	01C0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	148
+var	01C0	11	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	01C0	12	EQ Low Gain	52	76	-12dB – +12dB	147
+var	01C0	13	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	01C0	14	EQ High Gain	52	76	-12dB – +12dB	147
+var	0200	1	Speed	0	235	0.040Hz – 10.00Hz	149
+var	0200	2	Manual	0	127	0 – 127	149
+var	0200	3	Depth	0	127	0 – 127	149
+var	0200	4	Feedback	0	127	0 – 127	149
+var	0200	5	Type	0	2	1–3	149
+var	0200	6	Spread	0	127	0 – 127	149
+var	0200	7	Mix	0	127	0 – 127	149
+var	0210	1	LFO Speed	0	127	0.0Hz – 39.70Hz	149
+var	0210	2	LFO Depth	0	127	0 – 127	149
+var	0210	3	LFO Wave	0	2	Triangle, Sine, Random	149
+var	0210	4	Delay Offset	0	139	0.09 – 36.21ms	149
+var	0210	5	Feedback Level	0	200	-100 – +100%	149
+var	0210	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0210	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0210	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0210	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0210	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	149
+var	0210	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	149
+var	0210	12	EQ Mid Gain	52	76	-12dB – +12dB	149
+var	0210	13	EQ Mid Width	1	120	0.1 – 12.0	149
+var	0210	14	Modulation Phase	0	16	-180 – +180	149
+var	0210	15	Feedback High Damp	1	10	0.1 – 1.0	149
+var	0210	16	Analog Feel	0	10	0 – 10	149
+var	0220	1	LFO Speed	5	29	16th – 4thx16	149
+var	0220	2	LFO Depth	0	127	0 – 127	149
+var	0220	3	Feedback Level	1	127	-63 – +63	149
+var	0220	4	Delay Offset	0	127	0.0ms – 50.0ms	149
+var	0220	5	LFO Phase Reset	0	2	Off (free run), Key On Reset, …	149
+var	0220	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0220	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0220	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0220	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0220	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	149
+var	0220	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	149
+var	0220	12	EQ Mid Gain	52	76	-12dB – +12dB	149
+var	0220	13	EQ Mid Width	1	120	0.1 – 12.0	149
+var	0220	14	LFO Phase Difference	4	124	-180deg – +180deg	149
+var	0230	1	Sensitivity	0	127	0 – 127	149
+var	0230	2	Delay Offset	0	127	0 – 127	149
+var	0230	3	Feedback Level	1	127	-63 – +63	149
+var	0230	4	Attack Time	0	127	0.3ms – 227ms	149
+var	0230	5	Release Time	0	127	2.6ms – 2171ms	149
+var	0230	6	Release Curve	0	127	0 – 127	149
+var	0230	7	Direction	0	1	Up, Down	149
+var	0230	8	Dyna Threshold Level	0	127	0 – 127	149
+var	0230	9	Dyna Level Offset	0	127	0 – 127	149
+var	0230	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	149
+var	0230	12	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	149
+var	0230	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0230	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0230	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0230	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0208	1	Flanger Control	0	127	0 – 127	149
+var	0208	2	Bottom	0	127	0 – 127	149
+var	0208	3	Top	0	127	0 – 127	149
+var	0208	4	Feedback	0	127	0 – 127	149
+var	0208	5	Type	0	2	1–3	149
+var	0208	6	Spread	0	127	0 – 127	149
+var	0208	7	Mix	0	127	0 – 127	149
+var	0280	1	Speed	0	252	0.100Hz – 10.00Hz	149
+var	0280	2	Manual	0	127	0 – 127	149
+var	0280	3	Depth	0	127	0 – 127	149
+var	0280	4	Feedback	0	127	0 – 127	149
+var	0280	5	Stage	0	5	4, 6, 8, 10, 12, 16	149
+var	0280	6	Mode	0	2	1, 2, 3	149
+var	0280	7	Color	0	127	0 – 127	149
+var	0290	1	Speed	0	252	0.100Hz – 10.00Hz	149
+var	0290	2	Manual	0	127	0 – 127	149
+var	0290	3	Depth	0	127	0 – 127	149
+var	0290	4	Feedback	0	127	0 – 127	149
+var	0290	5	Stage	0	3	4, 6, 8, 10	149
+var	0290	6	Mode	0	1	1, 2	149
+var	0290	7	Color	0	127	0 – 127	149
+var	0290	8	Spread	0	127	0 – 127	149
+var	02A0	1	LFO Speed	5	29	16th – 4thx16	150
+var	02A0	2	LFO Depth	0	127	0 – 127	150
+var	02A0	3	Phase Shift Offset	0	127	0 – 127	150
+var	02A0	4	Feedback Level	1	127	-63 – +63	150
+var	02A0	5	LFO Phase Reset	0	2	Off (free run), Key On Reset, …	150
+var	02A0	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	02A0	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	02A0	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	02A0	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	02A0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	150
+var	02A0	11	Stage	4	22	4 – 22	150
+var	02A0	12	Diffusion	0	1	Mono, Stereo	150
+var	02B0	1	Sensitivity	0	127	0 – 127	150
+var	02B0	2	Dyna Level Offset	0	127	0 – 127	150
+var	02B0	3	Feedback Level	1	127	-63 – +63	150
+var	02B0	4	Attack Time	0	127	0.3ms – 227ms	150
+var	02B0	5	Release Time	0	127	2.6ms – 2171ms	150
+var	02B0	6	Release Curve	0	127	0 – 127	150
+var	02B0	7	Direction	0	1	up, down	150
+var	02B0	8	Dyna Threshold Level	0	127	0 – 127	150
+var	02B0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	150
+var	02B0	11	Stage	4	6	4, 5, 6	150
+var	02B0	12	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	150
+var	02B0	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	02B0	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	02B0	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	02B0	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0298	1	Phase Control	0	127	0 – 127	150
+var	0298	2	Bottom	0	127	0 – 127	150
+var	0298	3	Top	0	127	0 – 127	150
+var	0298	4	Feedback	0	127	0 – 127	150
+var	0298	5	Stage	0	3	4, 6, 8, 10	150
+var	0298	6	Mode	0	1	1, 2	150
+var	0298	7	Color	0	127	0 – 127	150
+var	0298	8	Spread	0	127	0 – 127	150
+var	0300	1	LFO Speed	0	127	0.0Hz – 39.70Hz	150
+var	0300	2	L/R Depth	0	127	0 – 127	150
+var	0300	3	F/R Depth	0	127	0 – 127	150
+var	0300	4	Pan Direction	0	5	L<>R, L>>R, L<<R, L turn, …	150
+var	0300	5	LFO Wave	0	28	0 – 28	150
+var	0300	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0300	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0300	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0300	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0300	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	150
+var	0300	12	EQ Mid Gain	52	76	-12dB – +12dB	150
+var	0300	13	EQ Mid Width	1	120	0.1 – 12.0	150
+var	0300	15	Input Mode	0	1	Mono, Stereo	150
+var	0310	1	LFO Speed	0	127	0.0Hz – 39.70Hz	150
+var	0310	2	AM Depth	0	127	0 – 127	150
+var	0310	3	PM Depth	0	127	0 – 127	150
+var	0310	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0310	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0310	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0310	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	0310	11	EQ Mid Frequency	14	54	100Hz – 10.0kHz	150
+var	0310	12	EQ Mid Gain	52	76	-12dB – +12dB	150
+var	0310	13	EQ Mid Width	1	120	0.1 – 12.0	150
+var	0310	14	LFO Phase difference	4	124	-180deg – +180deg	150
+var	0310	15	Input Mode	0	1	Mono, Stereo	150
+var	0320	1	Rotor Speed Slow	0	63	0.0Hz – 2.65Hz	150
+var	0320	2	Horn Speed Slow	0	63	0.0Hz – 2.65Hz	150
+var	0320	3	Rotor Speed Fast	64	127	0.0Hz – 39.70Hz	150
+var	0320	4	Horn Speed Fast	64	127	0.0Hz – 39.70Hz	150
+var	0320	5	Slow-Fast Time of Rotor	0	127	0 – 127	150
+var	0320	6	Slow-Fast Time of Horn	0	127	0 – 127	150
+var	0320	7	Drive Rotor	0	127	0 – 127	150
+var	0320	8	Drive Horn	0	127	0 – 127	150
+var	0320	9	Rotor/Horn Balance	1	127	R63>H – R=H – R<H63	150
+var	0320	11	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0320	12	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0320	13	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0320	14	EQ High Gain	52	76	-12dB – +12dB	147
+var	0320	15	Mic L-R Angle	0	60	0deg – 180deg	150
+var	0320	16	Speed Control	0	1	Slow, Fast	150
+var	0330	1	Speed Control	0	1	Slow, Fast	150
+var	0330	2	Drive	0	100	0.0 – 10.0	150
+var	0330	3	Tone	0	100	0.0 – 10.0	150
+var	0330	4	Rotor/Horn Balance	1	127	R63>H – R=H– R<H63	150
+var	0330	5	Output Level	0	127	0 – 127	150
+var	0330	6	Mic L-R Angle	0	3	0deg, 90deg, 120deg, …	150
+var	0330	7	Input Level	52	76	-6dB – 0dB – +6dB	150
+var	0330	8	Modulation Depth	0	63	0 – 63	150
+var	0330	11	Slow-Fast Time of Horn	14	127	x0.21 – x1.00 – x2.00	150
+var	0330	12	Fast-Slow Time of Horn	14	127	x0.21 – x1.00 – x2.00	150
+var	0330	13	Rotor Speed Slow	0	127	0.0rpm – 88.3rpm	150
+var	0330	14	Horn Speed Slow	0	127	0.0rpm – 89.6rpm	150
+var	0330	15	Rotor Speed Fast	1	127	189.3rpm – 736.8rpm	150
+var	0330	16	Horn Speed Fast	1	127	209.4rpm – 817.6rpm	150
+var	0330	17	Slow-Fast Time of Rotor	14	127	x0.21 – x1.00 – x2.00	150
+var	0330	18	Fast-Slow Time of Rotor	14	127	x0.21 – x1.00 – x2.00	150
+var	0380	1	Overdrive	0	100	0 – 100%	150
+var	0380	2	Device	0	4	Transistor, Vintage Tube, …	150
+var	0380	3	Speaker Type	0	5	Flat, Stack, Combo, Twin, …	150
+var	0380	4	Presence	0	20	-10 – 10	150
+var	0380	5	Output Level	0	100	0 – 100%	150
+var	0380	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	150
+var	0390	1	Overdrive	0	127	0 – 127	151
+var	0390	2	AMP Type	0	6	Off, Stack, Combo, Tube, …	151
+var	0390	3	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	151
+var	0390	4	Output Level	0	127	0 – 127	151
+var	0390	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	151
+var	03A0	1	Overdrive	0	127	0 – 127	151
+var	03A0	2	EQ Low Frequency	4	40	32Hz – 2.0kHz	151
+var	03A0	3	EQ Low Gain	52	76	-12dB – +12dB	151
+var	03A0	4	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	151
+var	03A0	5	Output Level	0	127	0 – 127	151
+var	03A0	7	EQ Mid Frequency	14	54	100Hz – 10.0kHz	151
+var	03A0	8	EQ Mid Gain	52	76	-12dB – +12dB	151
+var	03A0	9	EQ Mid Width	1	120	0.1 – 12.0	151
+var	03A0	10	Dry / Wet Balance	1	127	D63>W – D=W – D<W63	151
+var	03A0	11	Edge	0	127	0 – 127	151
+var	03A0	12	Attack	0	19	1ms – 40ms	151
+var	03A0	13	Release	0	15	10ms – 680ms	151
+var	03A0	14	Threshold	79	121	-48dB – -6dB	151
+var	03A0	15	Ratio	0	7	1.0 – 20.0	151
+var	03B0	1	Overdrive	0	100	0 – 100%	151
+var	03B0	2	Device	0	4	Transistor, Vintage Tube, …	151
+var	03B0	3	Speaker Type	0	5	Flat, Stack, Combo, Twin, …	151
+var	03B0	4	Presence	0	20	-10 – 10	151
+var	03B0	5	Output Level	0	100	0 – 100%	151
+var	03B0	6	Delay Time L	1	16383	0.1ms – 1638.3ms	151
+var	03B0	7	Delay Time R	1	16383	0.1ms – 1638.3ms	151
+var	03B0	8	Feedback Time	1	16383	0.1ms – 1638.3ms	151
+var	03B0	9	Feedback Level	1	127	-63 – +63	151
+var	03B0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	151
+var	03B0	11	Delay Mix	0	127	0 – 127	151
+var	03B0	12	Feedback High Damp	1	10	0.1 – 1.0	151
+var	03B0	13	Compress	79	121	-48dB – -6dB	151
+var	03C0	1	Gain Boost	0	1	Low, High	151
+var	03C0	2	Volume	0	100	0.0 – 10.0	151
+var	03C0	3	Low Cut	0	100	0.0 – 10.0	151
+var	03C0	4	Mid Cut	0	100	0.0 – 10.0	151
+var	03C0	5	Mid Width	0	100	0.0 – 10.0	151
+var	03C0	6	Mid Sweep	0	100	0.0 – 10.0	151
+var	03C0	7	High Cut	0	100	0.0 – 10.0	151
+var	03C0	8	Balance	0	100	0.0 – 10.0	151
+var	03C0	9	Output Level	0	127	0 – 127	151
+var	03C0	11	Speaker Type	0	10	Off, BS 4x12, AC 2x12, AC 1x12, AC	151
+var	03C0	12	Speaker Air	0	2	0–2	151
+var	03C0	13	Mic Position	0	1	Center, Edge	151
+var	03C0	14	Presence	0	100	0.0 – 10.0	151
+var	03C1	1	Panning	0	100	0.0 – 10.0	151
+var	03C1	2	Volume	0	100	0.0 – 10.0	151
+var	03C1	3	Distortion	0	100	Off, 0.1 – 10.0	151
+var	03C1	4	Bass	0	100	0.0 – 10.0	151
+var	03C1	5	Middle	0	100	0.0 – 10.0	151
+var	03C1	6	Treble	0	100	0.0 – 10.0	151
+var	03C1	7	High Treble	0	100	0.0 – 10.0	151
+var	03C1	9	Output Level	0	127	0 – 127	151
+var	03C1	11	Speaker Type	0	10	Off, BS 4x12, AC 2x12, AC 1x12, AC	151
+var	03C1	12	Speaker Air	0	2	0–2	151
+var	03C1	13	Mic Position	0	1	Center, Edge	151
+var	03C1	14	Chorus	0	2	Off, Chorus, Vib	151
+var	03C1	15	Vib Speed	0	100	0.0 – 10.0	151
+var	03C1	16	Depth	0	100	0.0 – 10.0	151
+var	03C2	1	Type	0	5	Raw1, Vintage1, Modern1, Raw2, …	151
+var	03C2	2	Gain	0	100	0.0 – 10.0	151
+var	03C2	4	Bass	0	100	0.0 – 10.0	151
+var	03C2	5	Middle	0	100	0.0 – 10.0	151
+var	03C2	6	Treble	0	100	0.0 – 10.0	151
+var	03C2	7	Presence	0	100	0.0 – 10.0	151
+var	03C2	8	Master Volume	0	100	0.0 – 10.0	151
+var	03C2	9	Output Level	0	127	0 – 127	151
+var	03C2	11	Speaker Type	0	10	Off, BS 4x12, AC 2x12, AC 1x12, AC	151
+var	03C2	12	Speaker Air	0	2	0–2	151
+var	03C2	13	Mic Position	0	1	Center, Edge	151
+var	03C3	1	Type	0	2	Crunch, Hi-Gain, Lead	151
+var	03C3	2	Preamp	0	100	0.0 – 10.0	151
+var	03C3	3	Tone Shift	0	2	Normal, Loose, Tight	151
+var	03C3	4	Bass	0	100	0.0 – 10.0	151
+var	03C3	5	Middle	0	100	0.0 – 10.0	151
+var	03C3	6	Treble	0	100	0.0 – 10.0	151
+var	03C3	7	Presence	0	100	0.0 – 10.0	151
+var	03C3	8	Master Volume	0	100	0.0 – 10.0	151
+var	03C3	9	Output Level	0	127	0 – 127	151
+var	03C3	11	Speaker Type	0	10	Off, BS 4x12, AC 2x12, AC 1x12, AC	151
+var	03C3	12	Speaker Air	0	2	0–2	151
+var	03C3	13	Mic Position	0	1	Center, Edge	151
+var	03C4	1	Comp. Sustain	0	100	Off, 0.1 – 10.0	152
+var	03C4	2	Wah SW	0	7	Off, Wah Pedal, Auto+ Full, Auto+	152
+var	03C4	3	Wah Pedal	0	127	0 – 127	152
+var	03C4	4	Dist SW	0	7	Off, Overdrive, Distortion1, …	152
+var	03C4	5	Dist Drive	0	100	0.0 – 10.0	152
+var	03C4	6	Dist EQ	0	8	High Boost, Mid Boost, Mid Cut 1, …	152
+var	03C4	7	Dist Tone	0	100	0.0 – 10.0	152
+var	03C4	8	Dist Presence	0	100	0.0 – 10.0	152
+var	03C4	9	Output Level	0	127	0 – 127	152
+var	03C4	11	Speaker Type	0	12	Off, Stack, Twin, Tweed, Oldies, …	152
+var	03C4	12	LFO Speed	0	127	0.1Hz – 9.925Hz	152
+var	03C4	13	Phaser SW	0	4	Off, Standard, Wide, Vibe, Tremolo	152
+var	03C4	14	Delay SW	0	16	Off, Delay M, Echo1 M, Echo2 M, …	152
+var	03C4	15	Delay Ctrl	0	127	0 – 127	152
+var	03C4	16	Delay Time	0	127	0 – 127	152
+var	03C5	1	Comp. SW	0	1	Off, On	152
+var	03C5	2	Comp. Sustain	0	100	0.0 – 10.0	152
+var	03C5	3	Comp. Level	0	100	0.0 – 10.0	152
+var	03C5	4	Dist Type	1	7	Overdrive, Distortion1, Distortion2, …	152
+var	03C5	5	Dist Drive	0	100	0.0 – 10.0	152
+var	03C5	6	Dist EQ	0	8	High Boost, Mid Boost, Mid Cut 1, …	152
+var	03C5	7	Dist Tone	0	100	0.0 – 10.0	152
+var	03C5	8	Dist Presence	0	100	0.0 – 10.0	152
+var	03C5	9	Output Level	0	127	0 – 127	152
+var	03C5	11	Speaker Type	0	12	Off, Stack, Twin, Tweed, Oldies, …	152
+var	03C6	1	Mode	0	1	Bright, Top Boost	152
+var	03C6	2	Normal	0	100	0.0 – 10.0	152
+var	03C6	3	Brilliant	0	100	0.0 – 10.0	152
+var	03C6	4	Bass	0	100	0.0 – 10.0	152
+var	03C6	6	Treble	0	100	0.0 – 10.0	152
+var	03C6	7	Cut	0	100	0.0 – 10.0	152
+var	03C6	9	Output Level	0	127	0 – 127	152
+var	03C6	11	Speaker Type	0	10	Off, BS 4x12, AC 2x12, AC 1x12, AC	152
+var	03C6	12	Speaker Air	0	2	0–2	152
+var	03C6	13	Mic Position	0	1	Center, Edge	152
+var	03C7	1	Sensitivity	0	1	High, Low	152
+var	03C7	2	Preamp	0	100	0.0 – 10.0	152
+var	03C7	4	Bass	0	100	0.0 – 10.0	152
+var	03C7	5	Middle	0	100	0.0 – 10.0	152
+var	03C7	6	Treble	0	100	0.0 – 10.0	152
+var	03C7	7	Presence	0	100	0.0 – 10.0	152
+var	03C7	8	Master Volume	0	100	0.0 – 10.0	152
+var	03C7	9	Output Level	0	127	0 – 127	152
+var	03C7	11	Speaker Type	0	10	Off, BS 4x12, AC 2x12, AC 1x12, AC	152
+var	03C7	12	Speaker Air	0	2	0–2	152
+var	03C7	13	Mic Position	0	1	Center, Edge	152
+var	0400	1	Input Level	0	200	-∞ – 0.00dB	152
+var	0400	2	Output Level	0	200	-∞ – 0.00dB	152
+var	0400	3	Ratio	0	4	2, 4, 8, 12, 20	152
+var	0400	4	Attack	0	200	0.022ms – 50.40ms	152
+var	0400	5	Release	0	200	10.88ms – 544.22ms	152
+var	0400	6	Meter	0	1	OUT, GR	152
+var	0400	11	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	152
+var	0410	1	Attack	0	19	1ms – 40ms	152
+var	0410	2	Release	0	15	10ms – 680ms	152
+var	0410	3	Threshold	79	121	-48dB – -6dB	152
+var	0410	4	Ratio	0	7	1.0 – 20.0	152
+var	0410	5	Output Level	0	127	0 – 127	152
+var	0410	11	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	152
+var	0420	1	Low Attack	0	29	1ms – 200ms	152
+var	0420	2	Low Threshold	73	121	-54dB – -6dB	152
+var	0420	3	Low Ratio	0	7	1.0 – 20.0	152
+var	0420	4	Low Gain	0	55	-∞ – +18dB	152
+var	0420	5	Mid Attack	0	29	1ms – 200ms	152
+var	0420	6	Mid Threshold	73	121	-54dB – -6dB	152
+var	0420	7	Mid Ratio	0	7	1.0 – 20.0	152
+var	0420	8	Mid Gain	0	55	-∞ – +18dB	152
+var	0420	9	High Attack	0	29	1ms – 200ms	152
+var	0420	10	High Threshold	73	121	-54dB – -6dB	152
+var	0420	11	High Ratio	0	7	1.0 – 20.0	152
+var	0420	12	High Gain	0	55	-∞ – +18dB	152
+var	0420	13	Divide Freq Low	0	124	16Hz – 20kHz	152
+var	0420	14	Divide Freq High	0	124	16Hz – 20kHz	152
+var	0420	15	Common Release	0	23	10ms – 3000ms	152
+var	0420	16	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	152
+var	0430	1	Threshold	0	120	-60dB – 0dB	153
+var	0430	2	Knee	0	8	0–8	153
+var	0430	3	Attack	0	127	0.01ms – 80ms	153
+var	0430	4	Release	0	127	6.25ms – 999.0ms	153
+var	0430	5	Ratio	0	127	1.00 – ∞	153
+var	0430	6	Side Chain EQ Switch	0	1	Off, On	153
+var	0430	7	Side Chain EQ Q	0	126	0.1 – 10.0	153
+var	0430	8	Side Chain EQ Frequency	0	127	11.89Hz – 17.78kHz	153
+var	0430	9	Side Chain EQ Gain	0	120	-30 – +30 dB	153
+var	0430	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	153
+var	0430	11	Output Level	0	120	-20 – +40 dB	153
+var	0430	12	Make Up Gain	0	120	-20 – +40 dB	153
+var	0430	13	Post-comp HPF	0	127	Off, 1.035Hz – 80.35Hz	153
+var	0430	14	Clipper	0	100	Off, 1 – 100	153
+var	0430	15	Clipper Source	0	1	Dry+Wet, Wet	153
+var	0430	17	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	153
+var	0438	1	Threshold	0	120	-60dB – 0dB	153
+var	0438	2	Knee	0	8	0–8	153
+var	0438	3	Attack	0	127	0.01ms – 80ms	153
+var	0438	4	Release	0	127	6.25ms – 999.0ms	153
+var	0438	5	Ratio	0	127	1–∞	153
+var	0438	6	Side Chain EQ Switch	0	1	Off, On	153
+var	0438	7	Side Chain EQ Q	0	126	0.1 – 10.0	153
+var	0438	8	Side Chain EQ Frequency	0	127	11.89Hz – 17.78kHz	153
+var	0438	9	Side Chain EQ Gain	0	120	-30 – +30 dB	153
+var	0438	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	153
+var	0438	11	Output Level	0	120	-20 – +40 dB	153
+var	0438	12	Make Up Gain	0	80	-20 – +20 dB	153
+var	0438	13	Post-comp HPF	0	127	Off, 1.035Hz – 80.35Hz	153
+var	0438	14	Clipper	0	100	Off, 1 – 100	153
+var	0438	15	Clipper Source	0	1	Dry+Wet, Wet	153
+var	0438	16	Gain Limit	0	120	0 – +12dB	153
+var	0438	17	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	153
+var	0440	1	Type	0	4	Natural, Rich, Punchy, …	153
+var	0440	2	Compression	0	100	0 – 100	153
+var	0440	3	Texture	0	100	0 – 100	153
+var	0440	4	Output Level	0	120	-18dB – +18dB	153
+var	0440	5	Input Level	0	120	-18dB – +18dB	153
+var	0500	1	Speed	0	254	0.100Hz – 20.00Hz	153
+var	0500	2	Bottom	0	127	0 – 127	153
+var	0500	3	Top	0	127	0 – 127	153
+var	0500	4	Resonance Offset	40	88	-12.0 – +12.0	153
+var	0500	5	LFO Wave	0	1	Sin, Trp	153
+var	0500	6	Type	0	3	High, Mid, Low Bass	153
+var	0500	7	Overdrive	0	80	0.0dB – +40.0dB	153
+var	0500	8	Output	24	84	-20.0dB – +10.0dB	153
+var	0510	1	Sensitivity	0	127	0 – 127	153
+var	0510	2	Bottom	0	127	0 – 127	153
+var	0510	3	Top	0	127	0 – 127	153
+var	0510	4	Resonance Offset	40	88	-12.0 – +12.0	153
+var	0510	5	Direction	0	1	Up, Down	153
+var	0510	6	Type	0	3	High, Mid, Low, Bass	153
+var	0510	7	Overdrive	0	80	0.0dB – +40.0dB	153
+var	0510	8	Output	24	84	-20.0dB – +10.0dB	153
+var	0510	11	Attack Offset	59	69	-5 – +5	153
+var	0520	1	Pedal Control	0	127	0 – 127	153
+var	0520	2	Bottom	0	127	0 – 127	153
+var	0520	3	Top	0	127	0 – 127	153
+var	0520	4	Resonance Offset	40	88	-12.0 – +12.0	153
+var	0520	5	Direction	0	1	Up, Down	153
+var	0520	6	Type	0	3	High, Mid, Low, Bass	153
+var	0520	7	Overdrive	0	80	0.0dB – +40.0dB	153
+var	0520	8	Output	24	84	-20.0dB – +10.0dB	153
+var	0580	1	Sampling Frequency Control	0	127	44.1 – 344Hz	154
+var	0580	2	Word Length	1	127	1 – 127	154
+var	0580	3	Output Level	0	42	-6dB – +36dB	154
+var	0580	4	Pre-LPF Cutoff Frequency	10	60	63Hz – 20.0kHz	154
+var	0580	5	Filter Type	0	5	Thru, PowerBass, Radio, …	154
+var	0580	6	Pre-LPF Resonance	10	120	1.0 – 12.0	154
+var	0580	7	Bit Assign	0	6	0–6	154
+var	0580	8	Emphasis	0	1	Off, On	154
+var	0580	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	154
+var	0580	15	Input Mode	0	1	Mono, Stereo	154
+var	0590	1	Mod Depth	0	10	0 – 10	154
+var	0590	2	Mod Speed	0	127	0 – 127	154
+var	0590	3	Mod Feedback	1	127	-63 – +63	154
+var	0590	4	Mod Mix Balance	1	127	1 – 127	154
+var	0590	5	Drive	0	127	0 – 127	154
+var	0590	6	AM Speed	0	127	0.00Hz – 39.7Hz	154
+var	0590	7	AM Depth	0	127	0 – 127	154
+var	0590	8	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	154
+var	0590	9	LPF Resonance	10	120	1.0 – 12.0	154
+var	0590	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	154
+var	0590	11	EQ Frequency	14	54	100Hz – 10.0kHz	154
+var	0590	12	EQ Gain	52	76	-12 – +12dB	154
+var	0590	13	EQ Width	10	120	1.0 – 12.0	154
+var	05A0	1	Click Density	0	5	0–5	154
+var	05A0	2	Click Level	0	127	0 – 127	154
+var	05A0	3	Noise Tone	0	6	0–6	154
+var	05A0	4	Noise Mod Speed	0	127	0.00Hz – 39.7Hz	154
+var	05A0	5	Noise Mod Depth	0	127	0 – 127	154
+var	05A0	6	Dry Send to Noise	0	127	0 – 127	154
+var	05A0	7	Noise LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	154
+var	05A0	8	Noise LPF Q	10	120	1.0 – 12.0	154
+var	05A0	9	Noise Level	0	127	0 – 127	154
+var	05A0	11	Dry Level	0	127	0 – 127	154
+var	05A0	12	Dry LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	154
+var	05B0	1	Sample Rate	0	16383	0 – 100.00	154
+var	05B0	2	Bit	1	16	1 – 16	154
+var	05B0	3	Crush Type	0	1	Soft, Hard	154
+var	05B0	4	Input Level	1	127	-19.5dB – +12dB	154
+var	05B0	5	M/S	0	1	Off, On	154
+var	05B0	6	Side Sample Rate	0	16383	0 – 100.00	154
+var	05B0	7	Side Bit	1	16	1 – 16	154
+var	05B0	8	Sample Rate Link	0	100	-1.0 – +1.0	154
+var	05B0	9	Bit Link	0	100	-1.0 – +1.0	154
+var	05B0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	154
+var	05B0	11	Output Level	1	127	-19.5dB – +12dB	154
+var	0600	1	OSC Frequency Coarse	0	127	0.5 – 5kHz	154
+var	0600	2	OSC Frequency Fine	0	127	0 – 127	154
+var	0600	3	LFO Wave	0	1	Tri, Sine	154
+var	0600	4	LFO Depth	0	127	0 – 127	154
+var	0600	5	LFO Speed	0	127	0.0Hz – 39.70Hz	154
+var	0600	6	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	154
+var	0600	7	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	154
+var	0600	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	154
+var	0600	12	Modulator Input Level	0	127	-∞dB – 0dB – +24dB	154
+var	0600	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0600	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0600	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0600	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0610	1	Sensitivity	0	127	0 – 127	154
+var	0610	2	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	154
+var	0610	3	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	154
+var	0610	4	Attack Time	0	127	0.3ms – 227ms	154
+var	0610	5	Release Time	0	127	2.6ms – 2171ms	154
+var	0610	6	Release Curve	0	127	0 – 127	154
+var	0610	7	Direction	0	1	Up, Down	154
+var	0610	8	Dyna Threshold Level	0	127	0 – 127	154
+var	0610	9	Dyna Level Offset	0	127	0 – 127	154
+var	0610	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	154
+var	0610	12	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	154
+var	0610	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0610	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0610	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0610	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0620	1	Filter Type	0	5	LPF (12dB), LPF (18dB), LPF	154
+var	0620	2	Sensitivity	0	127	0 – 127	154
+var	0620	3	Dyna Level Offset	0	127	0 – 127	154
+var	0620	4	Resonance	0	127	-16 – +111	154
+var	0620	5	Attack Time	0	127	0.3ms – 227ms	154
+var	0620	6	Release Time	0	127	2.6ms – 2171ms	154
+var	0620	7	Release Curve	0	127	0 – 127	154
+var	0620	8	Direction	0	1	up, down	154
+var	0620	9	Dyna Threshold Level	0	127	0 – 127	154
+var	0620	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	154
+var	0620	12	Side Chain Input Level	0	127	-∞dB – 0dB – +24dB	154
+var	0620	13	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	0620	14	EQ Low Gain	52	76	-12dB – +12dB	147
+var	0620	15	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	0620	16	EQ High Gain	52	76	-12dB – +12dB	147
+var	0630	1	Mod Speed	0	127	0 – 127	154
+var	0630	2	Mod Wave Type	0	3	TypeA, TypeB, TypeC, …	154
+var	0630	3	Mod Depth	0	127	0 – 127	154
+var	0630	4	Mod Depth Offset R	1	127	-63 – +63	154
+var	0630	5	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	154
+var	0630	6	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	154
+var	0630	7	Delay Time	1	3700	0.1ms – 370.0ms	154
+var	0630	8	Delay Time Offset R	0	884	0 – 884	154
+var	0630	9	Delay Level	0	127	0 – 127	154
+var	0630	10	Dry Mix Level	0	127	0 – 127	154
+var	0630	11	Feedback Level	1	127	-63 – +63	154
+var	0630	12	FB Level Offset R	1	127	-63 – +63	154
+var	0630	13	AM Speed	0	127	0.00Hz – 39.7Hz	154
+var	0630	14	AM Wave	0	3	Tri, Sine, Saw Up, Saw Down	154
+var	0630	15	AM Depth	0	127	0 – 127	154
+var	0630	16	AM Inverse R	0	1	Normal, Inverse	154
+var	0640	1	On/Off Switch	0	1	On, Off	155
+var	0640	2	Low Level	0	127	-64 – +63	155
+var	0640	3	Mid Level	0	127	-64 – +63	155
+var	0640	4	High Level	0	127	-64 – +63	155
+var	0640	5	Low Mute	0	1	Off, On	155
+var	0640	6	Mid Mute	0	1	Off, On	155
+var	0640	7	High Mute	0	1	Off, On	155
+var	0660	1	Mod Speed	0	127	0 – 127	155
+var	0660	2	Mod Depth	0	127	0 – 127	155
+var	0660	3	Mod Gain	52	76	-12 – +12dB	155
+var	0660	4	Mod Mix Balance	1	127	D63>W – D=W – D<W63	155
+var	0660	5	Pre Mod HPF Cutoff	0	52	20Hz – 8.0kHz	155
+var	0660	6	Mod LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	155
+var	0660	7	Mod LPF Resonance	10	120	1.0 – 12.0	155
+var	0660	8	Delay Time	1	7400	0.1 – 740.0ms	155
+var	0660	9	Delay Time Offset R	0	884	0 – 884	155
+var	0660	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	155
+var	0660	11	Feedback Level	1	127	-63 – +63	155
+var	0660	12	FB Level Offset R	1	127	-63 – +63	155
+var	0660	13	Feedback Hi Damp	1	10	0.1 – 1.0	155
+var	0660	14	FB Hi Damp Offset R	1	19	-0.9 – +0.9	155
+var	0628	1	Filter Type	0	4	LPF (12dB), LPF (18dB), LPF	155
+var	0628	2	Cutoff Frequency Control	0	127	0 – 127	155
+var	0628	3	Resonance	0	127	0 – 127	155
+var	0628	4	Filter Output Level	52	76	-12dB – +12dB	155
+var	0628	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	155
+var	0670	1	Break	0	1	Off, On	155
+var	0670	2	Speed	0	4	Fast, Middle, Slow, …	155
+var	0670	3	Speed Adjust	0	120	+30% – -30%	155
+var	0670	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	155
+var	0670	11	Output Level	1	127	-19.5dB – +12dB	155
+var	0680	1	EQ1 (LSH) Frequency	12	84	31.5Hz – 2.0kHz	156
+var	0680	2	EQ1 (LSH) Gain	60	300	-12.0dB – +12.0dB	156
+var	0680	3	EQ2 Q	0	60	0.50 – 16.00	156
+var	0680	4	EQ2 Frequency	20	124	50.0 Hz – 20.0kHz	156
+var	0680	5	EQ2 Gain	0	360	-18.0dB – +18.0dB	156
+var	0680	6	EQ3 Q	0	60	0.50 – 16.00	156
+var	0680	7	EQ3 Frequency	20	124	50.0Hz – 20.0kHz	156
+var	0680	8	EQ3 Gain	0	360	-18.0dB – +18.0dB	156
+var	0680	9	EQ4 Q	0	60	0.50 – 16.00	156
+var	0680	10	EQ4 Frequency	20	124	50.0Hz – 20.0kHz	156
+var	0680	11	EQ4 Gain	0	360	-18.0dB – +18.0dB	156
+var	0680	12	EQ5 (HSH) Frequency	60	124	500Hz – 20.0kHz	156
+var	0680	13	EQ5 (HSH) Gain	60	300	-12.0dB – +12.0dB	156
+var	0680	14	Output Level	60	300	-12.0dB – +12.0dB	156
+var	0688	1	Presence	0	100	0 – 100	156
+var	0688	2	Texture	0	100	0 – 100	156
+var	0688	3	Output Level	0	120	-6dB – +6dB	156
+var	0690	1	HPF Cutoff Frequency	28	58	500Hz – 16.0kHz	156
+var	0690	2	Drive	0	127	0 – 127	156
+var	0690	3	Mix Level	0	127	0 – 127	156
+var	0698	1	Low Subband Gain Lch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	2	Low Subband Gain Rch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	3	Mid1 Subband Gain Lch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	4	Mid1 Subband Gain Rch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	5	Mid2 Subband Gain Lch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	6	Mid2 Subband Gain Rch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	7	Mid3 Subband Gain Lch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	8	Mid3 Subband Gain Rch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	9	High Subband Gain Lch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	10	High Subband Gain Rch	5801	7801	-14.00dB – 6.00dB	156
+var	0698	11	Width Low	0	100	0.00 – 1.00	156
+var	0698	12	Width Mid1	0	100	0.00 – 1.00	156
+var	0698	13	Width Mid2	0	100	0.00 – 1.00	156
+var	0698	14	Width Mid3	0	100	0.00 – 1.00	156
+var	0698	15	Width High	0	100	0.00 – 1.00	156
+var	0698	16	On/Off Switch	0	1	Off, On	156
+var	06A0	1	Vowel	0	4	a, i, u, e, o	156
+var	06A0	2	Move Speed	1	62	1 – 62	156
+var	06A0	3	Drive	0	127	0 – 127	156
+var	06A0	4	Output Level	0	127	0 – 127	156
+var	06A8	1	Fold	0	1000	0.000 – 1.000	156
+var	06A8	2	Fold Type	0	1	Soft, Hard	156
+var	06A8	3	LFO Depth	0	127	0 – 127	156
+var	06A8	4	LFO Speed	0	1023	0.01Hz – 1400Hz	156
+var	06A8	5	LFO Shape	0	100	-50 – +50	156
+var	06A8	9	Input Level	0	120	-40 – +20 dB	156
+var	06A8	10	Dry/Wet	1	127	D63>W – D=W – D<W63	156
+var	06A8	11	Output Level	0	120	-40 – +20 dB	156
+var	06A8	12	SEQ Depth	0	127	0 – 127	156
+var	06A8	13	SEQ Clock	0	15	0.5x – 10.0x	156
+var	06A8	14	SEQ Pattern	0	9	A–J	156
+var	06A8	15	SEQ Variation	0	100	0 - 100	156
+var	06A8	16	SEQ Phase Reset	0	3	OFF, Key On, Seq Start, Seq	156
+var	06B0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	157
+var	06B0	16	Damper Control	0	127	0 – 127	157
+var	06C0	1	Pitch 1	40	88	-24 – +24	157
+var	06C0	2	Fine 1	14	114	-50 – +50	157
+var	06C0	3	Initial Delay 1	0	127	0.1ms – 400.0ms	157
+var	06C0	4	Feedback Level 1	1	127	-63 – +63	157
+var	06C0	5	Pitch 2	40	88	-24 – +24	157
+var	06C0	6	Fine 2	14	114	-50 – +50	157
+var	06C0	7	Initial Delay 2	0	127	0.1ms – 400.0ms	157
+var	06C0	8	Feedback Level 2	1	127	-63 – +63	157
+var	06C0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	157
+var	06C0	11	Pan 1	1	127	L63 – C – R63	157
+var	06C0	12	Output Level 1	0	127	0 – 127	157
+var	06C0	13	Pan 2	1	127	L63 – C – R63	157
+var	06C0	14	Output Level 2	0	127	0 – 127	157
+var	06D0	1	Type	0	5	S-hall, L-hall, Random, …	157
+var	06D0	2	Room Size	0	127	0.1 – 20.0	157
+var	06D0	3	Diffusion	0	10	0 – 10	157
+var	06D0	4	Initial Delay	0	127	0.1ms – 200.0ms	157
+var	06D0	5	Feedback Level	1	127	-63 – +63	157
+var	06D0	6	HPF Cutoff Frequency	0	52	20Hz – 8.0kHz	157
+var	06D0	7	LPF Cutoff Frequency	34	60	1.0kHz – 20.0kHz	157
+var	06D0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	157
+var	06D0	11	Liveness	0	10	0 – 10	157
+var	06D0	12	Density	0	3	0–3	157
+var	06D0	13	Feedback High Damp	1	10	0.1 – 1.0	157
+var	06E0	1	Formant Shift	62	66	-2, -1, 0, +1, +2	157
+var	06E0	2	Formant Offset	1	127	-63 – +63	157
+var	06E0	3	Vocoder Attack	0	29	1ms – 200ms	157
+var	06E0	4	Vocoder Release	0	23	10ms – 3000ms	157
+var	06E0	5	Mic Output Gate Switch	0	1	Off, On	157
+var	06E0	7	HPF Cutoff Frequency	27	58	Thru, 500Hz – 16.0kHz	157
+var	06E0	8	HPF Output Level	0	127	0 – 127	157
+var	06E0	10	Dry/Wet Balance	1	127	D63>W – D=W – D<W63	157
+var	06E0	11	Mic Input Level	0	127	-∞dB – 0dB – +24dB	157
+var	06E0	12	Inst Level	0	127	0 – 127	157
+var	06E0	13	Noise Level	0	127	0 – 127	157
+var	06E0	14	Output Level	0	127	0 – 127	157
+var	06E0	15	BPF1 Gain	46	82	-18dB – +18dB	157
+var	06E0	16	BPF2 Gain	46	82	-18dB – +18dB	157
+var	06E0	17	BPF3 Gain	46	82	-18dB – +18dB	157
+var	06E0	18	BPF4 Gain	46	82	-18dB – +18dB	157
+var	06E0	19	BPF5 Gain	46	82	-18dB – +18dB	157
+var	06E0	20	BPF6 Gain	46	82	-18dB – +18dB	157
+var	06E0	21	BPF7 Gain	46	82	-18dB – +18dB	157
+var	06E0	22	BPF8 Gain	46	82	-18dB – +18dB	157
+var	06E0	23	BPF9 Gain	46	82	-18dB – +18dB	157
+var	06E0	24	BPF10 Gain	46	82	-18dB – +18dB	157
+var	06F0	1	Comp Attack	0	19	1ms – 40ms	157
+var	06F0	2	Comp Release	0	15	10ms – 680ms	157
+var	06F0	3	Comp Threshold	79	121	-48dB – -6dB	157
+var	06F0	4	Comp Ratio	0	7	1.0 – 20.0	157
+var	06F0	5	Comp Output Level	0	127	0 – 127	157
+var	06F0	6	EQ Low Frequency	4	40	32Hz – 2.0kHz	147
+var	06F0	7	EQ Low Gain	52	76	-12dB – +12dB	147
+var	06F0	8	EQ High Frequency	28	58	500Hz – 16.0kHz	147
+var	06F0	9	EQ High Gain	52	76	-12dB – +12dB	147
+var	06F0	11	Noise Gate Attack	0	19	1ms – 40ms	157
+var	06F0	12	Noise Gate Release	0	15	10ms – 680ms	157
+var	06F0	13	Noise Gate Threshold	54	97	-73dB – -30dB	157
+var	06F0	14	EQ Mid Frequency	14	54	100Hz – 10.0kHz	157
+var	06F0	15	EQ Mid Gain	52	76	-12dB – +12dB	157
+var	06F0	16	EQ Mid Width	1	120	0.1 – 12.0	157

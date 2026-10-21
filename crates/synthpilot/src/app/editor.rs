@@ -5,7 +5,8 @@ use std::time::{Duration, Instant};
 
 use eframe::egui::{self, Align2, Color32, FontId, Key, RichText, Stroke};
 use synthpilot_core::domain::{
-    EngineProfile, ParameterDefinition, ParameterId, Part, Scope, Sound, Support, ValueFormat,
+    EngineProfile, ListedValue, ParameterDefinition, ParameterId, Part, Scope, Sound, Support,
+    ValueFormat,
 };
 
 use super::controller::Controller;
@@ -81,12 +82,21 @@ pub(crate) fn show(
     } else {
         sound.part(number)
     };
+    let busy = reading.is_some() || controller.loading().is_some();
     let (Some(engine), Some(part)) = (workspace.engine(), current) else {
-        empty_part(ui, sound, number, actions);
+        empty_part(ui, workspace, sound, number, busy, actions);
         return;
     };
 
     header(ui, number, part, engine);
+    if number != EFFECTS && !workspace.device().presets().is_empty() {
+        egui::CollapsingHeader::new("Change sound…")
+            .id_salt(("change_sound", number))
+            .show(ui, |ui| {
+                sound_picker(ui, workspace.device().presets(), number, busy, actions);
+            });
+        ui.add_space(6.0);
+    }
     if let Some((finished, requested)) = reading {
         theme::banner(
             ui,
@@ -105,9 +115,9 @@ pub(crate) fn show(
         part,
         originals: &originals,
     };
-    let has_elements = by_scope(engine, Scope::Element)
+    let has_elements = by_scope(engine, part, Scope::Element)
         .iter()
-        .any(|parameter| parameter.is_implemented());
+        .any(ParameterDefinition::is_implemented);
     if has_elements && reading.is_none() {
         auto_select_element(ui, &view, just_read, actions);
         element_shortcuts(ui, &view, actions);
@@ -218,7 +228,23 @@ fn no_sound(ui: &mut egui::Ui, actions: &mut Vec<Action>) {
     });
 }
 
-fn empty_part(ui: &mut egui::Ui, sound: &Sound, number: u8, actions: &mut Vec<Action>) {
+fn empty_part(
+    ui: &mut egui::Ui,
+    workspace: &Workspace,
+    sound: &Sound,
+    number: u8,
+    busy: bool,
+    actions: &mut Vec<Action>,
+) {
+    let presets = workspace.device().presets();
+    if number != EFFECTS && !presets.is_empty() {
+        ui.add_space(4.0);
+        ui.heading(RichText::new(format!("Part {number} is empty")).strong());
+        ui.weak("Pick a sound from the keyboard's presets to add it to this Part.");
+        ui.add_space(8.0);
+        sound_picker(ui, presets, number, busy, actions);
+        return;
+    }
     centered(ui, |ui| {
         ui.heading(format!("Part {number} is empty"));
         ui.weak(format!("This Performance doesn't use Part {number}."));
@@ -234,6 +260,74 @@ fn empty_part(ui: &mut egui::Ui, sound: &Sound, number: u8, actions: &mut Vec<Ac
         {
             actions.push(Action::SelectPart(first));
         }
+    });
+}
+
+/// A searchable list of the keyboard's preset sounds and a button that loads
+/// the chosen one into `part`.
+fn sound_picker(
+    ui: &mut egui::Ui,
+    presets: &'static [ListedValue],
+    part: u8,
+    busy: bool,
+    actions: &mut Vec<Action>,
+) {
+    let search_id = egui::Id::unique(("sound_search", part));
+    let chosen_id = egui::Id::unique(("sound_chosen", part));
+    let mut search: String = ui.data(|data| data.get_temp(search_id)).unwrap_or_default();
+    let mut chosen: Option<i32> = ui.data(|data| data.get_temp(chosen_id)).flatten();
+    ui.add(
+        egui::TextEdit::singleline(&mut search)
+            .hint_text("Search a name or category, e.g. Bell, Pad/Choir, CFX")
+            .desired_width(420.0),
+    );
+    let needle = search.trim().to_lowercase();
+    let matches: Vec<(i32, &ListedValue)> = (1..)
+        .zip(presets.iter())
+        .filter(|(number, preset)| {
+            needle.is_empty()
+                || preset.name.to_lowercase().contains(&needle)
+                || preset.group.to_lowercase().contains(&needle)
+                || number.to_string() == needle
+        })
+        .collect();
+    ui.weak(format!("{} of {} sounds", matches.len(), presets.len()));
+    let row_height = ui.text_style_height(&egui::TextStyle::Body) + 6.0;
+    egui::ScrollArea::vertical()
+        .id_salt(("sound_list", part))
+        .max_height(260.0)
+        .show_rows(ui, row_height, matches.len(), |ui, rows| {
+            for (number, preset) in &matches[rows] {
+                let text = format!("{number:>4}  {}   {}", preset.name, preset.group);
+                if ui.selectable_label(chosen == Some(*number), text).clicked() {
+                    chosen = Some(*number);
+                }
+            }
+        });
+    ui.add_space(6.0);
+    let label = match chosen.and_then(|number| presets.get(usize::try_from(number - 1).ok()?)) {
+        Some(preset) => format!("Load {} into Part {part}", preset.name),
+        None => format!("Choose a sound for Part {part}"),
+    };
+    let button = ui
+        .add_enabled(
+            chosen.is_some() && !busy,
+            egui::Button::new(label).min_size(egui::vec2(240.0, 30.0)),
+        )
+        .on_hover_text(
+            "Replaces this Part's sound and its insertion effects with the preset. For a preset with several Parts, the keyboard loads only the first one. Needs MIDI I/O Mode set to Multi on the keyboard.",
+        );
+    if button.clicked()
+        && let Some(number) = chosen
+    {
+        actions.push(Action::LoadPreset { part, number });
+    }
+    if part == 1 {
+        ui.weak("Part 1 holds the main sound of the Performance.");
+    }
+    ui.data_mut(|data| {
+        data.insert_temp(search_id, search);
+        data.insert_temp(chosen_id, chosen);
     });
 }
 
@@ -255,11 +349,12 @@ fn header(ui: &mut egui::Ui, number: u8, part: &Part, engine: &dyn EngineProfile
     ui.add_space(8.0);
 }
 
-fn by_scope(engine: &dyn EngineProfile, scope: Scope) -> Vec<&ParameterDefinition> {
+fn by_scope(engine: &dyn EngineProfile, part: &Part, scope: Scope) -> Vec<ParameterDefinition> {
     engine
         .parameters()
         .iter()
         .filter(|parameter| parameter.scope == scope)
+        .filter_map(|parameter| engine.refine(parameter, part))
         .collect()
 }
 
@@ -350,7 +445,8 @@ fn element_shortcuts(ui: &egui::Ui, view: &View<'_>, actions: &mut Vec<Action>) 
 }
 
 fn performance_section(ui: &mut egui::Ui, view: &View<'_>, actions: &mut Vec<Action>) {
-    let parameters = by_scope(view.engine, Scope::Performance);
+    let owned = by_scope(view.engine, view.part, Scope::Performance);
+    let parameters: Vec<&ParameterDefinition> = owned.iter().collect();
     if parameters.is_empty() {
         return;
     }
@@ -364,7 +460,8 @@ fn performance_section(ui: &mut egui::Ui, view: &View<'_>, actions: &mut Vec<Act
 }
 
 fn part_section(ui: &mut egui::Ui, view: &View<'_>, number: u8, actions: &mut Vec<Action>) {
-    let parameters = by_scope(view.engine, Scope::Part);
+    let owned = by_scope(view.engine, view.part, Scope::Part);
+    let parameters: Vec<&ParameterDefinition> = owned.iter().collect();
     if parameters.is_empty() {
         return;
     }
@@ -383,7 +480,8 @@ fn element_section(
     has_elements: bool,
     actions: &mut Vec<Action>,
 ) {
-    let parameters = by_scope(view.engine, Scope::Element);
+    let owned = by_scope(view.engine, view.part, Scope::Element);
+    let parameters: Vec<&ParameterDefinition> = owned.iter().collect();
     if parameters.is_empty() {
         return;
     }
@@ -765,13 +863,21 @@ fn control(ui: &mut egui::Ui, parameter: &ParameterDefinition, value: &mut i32) 
             }
             off | on
         }
+        ValueFormat::Listed { first, values } => listed(ui, parameter, value, first, values),
         ValueFormat::Choice(_) => {
             egui::ComboBox::from_id_salt(parameter.id.as_str())
                 .width(CONTROL_WIDTH)
                 .height(320.0)
-                .selected_text(parameter.display_value(*value))
+                .selected_text(match parameter.group_of(*value) {
+                    Some(group) => format!("{}  ·  {group}", parameter.display_value(*value)),
+                    None => parameter.display_value(*value),
+                })
                 .show_ui(ui, |ui| {
                     for option in parameter.range.min()..=parameter.range.max() {
+                        if let Some(group) = parameter.group_starting_at(option) {
+                            ui.add_space(4.0);
+                            ui.label(egui::RichText::new(group).small().strong().weak());
+                        }
                         ui.selectable_value(value, option, parameter.display_value(option));
                     }
                 })
@@ -780,8 +886,56 @@ fn control(ui: &mut egui::Ui, parameter: &ParameterDefinition, value: &mut i32) 
         ValueFormat::Number
         | ValueFormat::Signed
         | ValueFormat::Pan
-        | ValueFormat::Scaled { .. } => slider(ui, parameter, value),
+        | ValueFormat::Scaled { .. }
+        | ValueFormat::Note => slider(ui, parameter, value),
     }
+}
+
+fn listed(
+    ui: &mut egui::Ui,
+    parameter: &ParameterDefinition,
+    value: &mut i32,
+    first: i32,
+    values: &[ListedValue],
+) -> egui::Response {
+    let search_id = egui::Id::unique(("listed_search", parameter.id.as_str()));
+    egui::ComboBox::from_id_salt(parameter.id.as_str())
+        .width(CONTROL_WIDTH)
+        .height(360.0)
+        .selected_text(parameter.display_value(*value))
+        .show_ui(ui, |ui| {
+            let mut search: String = ui.data(|data| data.get_temp(search_id)).unwrap_or_default();
+            ui.add(
+                egui::TextEdit::singleline(&mut search)
+                    .hint_text("Search name or category, e.g. EP or Keys/Rd")
+                    .desired_width(320.0),
+            );
+            ui.data_mut(|data| data.insert_temp(search_id, search.clone()));
+            let needle = search.trim().to_lowercase();
+            let matches: Vec<(i32, &ListedValue)> = (first..)
+                .zip(values.iter())
+                .filter(|(number, listed)| {
+                    needle.is_empty()
+                        || listed.name.to_lowercase().contains(&needle)
+                        || listed.group.to_lowercase().contains(&needle)
+                        || number.to_string() == needle
+                })
+                .collect();
+            ui.weak(format!("{} of {}", matches.len(), values.len()));
+            let row_height = ui.text_style_height(&egui::TextStyle::Body) + 4.0;
+            egui::ScrollArea::vertical().max_height(300.0).show_rows(
+                ui,
+                row_height,
+                matches.len(),
+                |ui, rows| {
+                    for (number, listed) in &matches[rows] {
+                        let text = format!("{number} {}   {}", listed.name, listed.group);
+                        ui.selectable_value(value, *number, text);
+                    }
+                },
+            );
+        })
+        .response
 }
 
 fn slider(ui: &mut egui::Ui, parameter: &ParameterDefinition, value: &mut i32) -> egui::Response {
@@ -864,6 +1018,9 @@ fn parse(parameter: &ParameterDefinition, text: &str) -> Option<i32> {
             .parse::<f64>()
             .ok()
             .map(|number| round(number * 1000.0 / f64::from(thousandths))),
+        ValueFormat::Note => parameter
+            .value_named(&text)
+            .or_else(|| text.parse::<i32>().ok()),
         _ => text.parse::<i32>().ok(),
     }?;
     parameter.range.contains(number).then_some(number)
