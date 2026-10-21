@@ -437,8 +437,8 @@ mod tests {
             ]
         );
         assert!(!panel.can_undo());
-        assert!(panel.undo().is_empty());
-        assert!(panel.apply(&workspace).is_empty());
+        assert_eq!(panel.undo(), Vec::<Action>::new());
+        assert_eq!(panel.apply(&workspace), Vec::<Action>::new());
     }
 
     #[test]

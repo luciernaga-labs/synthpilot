@@ -138,16 +138,16 @@ fn types_list_the_parameters_they_bring() {
     );
     assert_eq!(
         effects.dependents(variation, 0),
-        [] as [synthpilot_core::domain::ParameterDefinition; 0]
+        Vec::<synthpilot_core::domain::ParameterDefinition>::new()
     );
     assert_eq!(
         effects.dependents(variation, 999),
-        [] as [synthpilot_core::domain::ParameterDefinition; 0]
+        Vec::<synthpilot_core::domain::ParameterDefinition>::new()
     );
     let volume = effects.parameter(effects::REVERB_RETURN).unwrap();
     assert_eq!(
         effects.dependents(volume, 1),
-        [] as [synthpilot_core::domain::ParameterDefinition; 0]
+        Vec::<synthpilot_core::domain::ParameterDefinition>::new()
     );
 
     let awm2 = device.engine(awm2::ENGINE_ID).unwrap();

@@ -203,7 +203,10 @@ mod tests {
         sound.load(1, &engine, None, &[]).unwrap();
         let part = sound.part(1).unwrap();
         assert_eq!(engine.refine(&definition, part), Some(definition));
-        assert!(engine.dependents(&definition, 1).is_empty());
+        assert_eq!(
+            engine.dependents(&definition, 1),
+            Vec::<ParameterDefinition>::new()
+        );
         assert!(!engine.reshapes(definition.id));
         assert!(device.common().is_none());
     }

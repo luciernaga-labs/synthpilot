@@ -538,11 +538,17 @@ mod tests {
         assert_eq!(workspace.value_at(&reverb), Some(9));
 
         let wrong = ParameterChange::new(awm2::ELEMENT_LEVEL, Location::element(1, 3), 500);
-        assert!(workspace.apply(Action::Apply(wrong)).is_empty());
+        assert_eq!(
+            workspace.apply(Action::Apply(wrong)),
+            Vec::<SysExMessage>::new()
+        );
         assert!(workspace.error().is_some());
 
         let empty = ParameterChange::new(part::VOLUME, Location::part(9), 1);
-        assert!(workspace.apply(Action::Apply(empty)).is_empty());
+        assert_eq!(
+            workspace.apply(Action::Apply(empty)),
+            Vec::<SysExMessage>::new()
+        );
         assert_eq!(workspace.value_at(&empty), None);
     }
 

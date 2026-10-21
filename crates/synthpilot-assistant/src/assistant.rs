@@ -286,7 +286,7 @@ mod tests {
             ("Pad/Warm".to_owned(), "1=Warm".to_owned()),
         ]);
         let proposal = assistant.propose("CATALOG", &listings, "pad").unwrap();
-        assert!(proposal.changes.is_empty());
+        assert_eq!(proposal.changes, Vec::<crate::plan::Suggestion>::new());
         let calls = calls.lock().unwrap();
         assert_eq!(calls.len(), 1 + MAX_LOOKUPS);
         assert!(calls[1].1.contains("### Part 6\\n## Part 6 · AWM2"));

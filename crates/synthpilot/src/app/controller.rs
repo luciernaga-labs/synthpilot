@@ -552,7 +552,7 @@ mod tests {
             Vec::new(),
             now,
         );
-        assert!(keyboard.sent_channel().is_empty());
+        assert_eq!(keyboard.sent_channel(), Vec::<ChannelMessage>::new());
         assert_eq!(
             controller.error(),
             Some("This sound can't be loaded into that Part.")

@@ -153,7 +153,7 @@ mod tests {
         .unwrap()
         .unwrap();
         assert_eq!(local.base_url, "http://localhost:11434/v1");
-        assert!(local.api_key.is_empty());
+        assert_eq!(local.api_key, "");
     }
 
     #[test]
