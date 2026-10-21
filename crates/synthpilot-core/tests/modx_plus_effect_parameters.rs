@@ -136,10 +136,19 @@ fn types_list_the_parameters_they_bring() {
         &chorus[..4],
         ["LFO Speed", "LFO Depth", "Feedback Level", "Delay Offset"]
     );
-    assert!(effects.dependents(variation, 0).is_empty());
-    assert!(effects.dependents(variation, 999).is_empty());
+    assert_eq!(
+        effects.dependents(variation, 0),
+        [] as [synthpilot_core::domain::ParameterDefinition; 0]
+    );
+    assert_eq!(
+        effects.dependents(variation, 999),
+        [] as [synthpilot_core::domain::ParameterDefinition; 0]
+    );
     let volume = effects.parameter(effects::REVERB_RETURN).unwrap();
-    assert!(effects.dependents(volume, 1).is_empty());
+    assert_eq!(
+        effects.dependents(volume, 1),
+        [] as [synthpilot_core::domain::ParameterDefinition; 0]
+    );
 
     let awm2 = device.engine(awm2::ENGINE_ID).unwrap();
     let insertion = awm2.parameter(part::INSERTION_A_TYPE).unwrap();
