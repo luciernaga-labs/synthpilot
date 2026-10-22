@@ -252,7 +252,7 @@ fn unimplemented_parameters_never_produce_messages() {
             checked += 1;
         }
     }
-    assert_eq!(checked, 10);
+    assert_eq!(checked, 7);
 }
 
 #[test]
@@ -269,7 +269,7 @@ fn implemented_parameters_cite_the_data_list() {
                 Support::Implemented(source) => {
                     assert_eq!(source.document, modx_plus::DATA_LIST);
                     assert!(
-                        [197, 198, 207, 208, 209, 217, 218, 219, 220].contains(&source.page),
+                        [197, 198, 207, 208, 209, 210, 217, 218, 219, 220].contains(&source.page),
                         "{}",
                         definition.id
                     );

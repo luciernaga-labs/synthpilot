@@ -1,10 +1,13 @@
 pub mod awm2;
 mod catalog;
 pub mod drum;
+pub mod effect_parameters;
 pub mod effects;
 pub mod fm_x;
 pub mod part;
+pub mod performances;
 mod reader;
+pub mod waves;
 
 pub use awm2::Awm2;
 pub use drum::Drum;
@@ -14,9 +17,9 @@ pub use fm_x::FmX;
 use reader::Decoder;
 
 use super::DeviceDescriptor;
-use crate::domain::{DeviceId, DeviceProfile, EngineProfile, Received};
-use crate::protocol::SysExMessage;
+use crate::domain::{DeviceId, DeviceProfile, EngineProfile, ListedValue, Received};
 use crate::protocol::yamaha::{DeviceNumber, ModelId};
+use crate::protocol::{ChannelMessage, SysExMessage};
 
 pub const DEVICE_ID: DeviceId = DeviceId::new("yamaha-modx-plus");
 pub const PART_COUNT: u8 = 16;
@@ -93,5 +96,13 @@ impl DeviceProfile for ModxPlus {
 
     fn decode(&self, bytes: &[u8]) -> Received {
         self.decoder.decode(bytes)
+    }
+
+    fn presets(&self) -> &'static [ListedValue] {
+        performances::all()
+    }
+
+    fn load_preset(&self, part: u8, number: i32) -> Option<Vec<ChannelMessage>> {
+        performances::load(part, number)
     }
 }

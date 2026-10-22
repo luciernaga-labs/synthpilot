@@ -1,6 +1,8 @@
+mod channel;
 mod sysex;
 pub mod yamaha;
 
+pub use channel::ChannelMessage;
 pub use sysex::{END, START, Segment, SysExError, SysExMessage, hex};
 
 use thiserror::Error;

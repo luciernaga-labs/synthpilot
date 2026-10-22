@@ -1,7 +1,7 @@
 use std::sync::mpsc::{self, Receiver, Sender};
 
 use midir::{MidiInput, MidiInputConnection, MidiOutput, MidiOutputConnection};
-use synthpilot_core::protocol::SysExMessage;
+use synthpilot_core::protocol::{ChannelMessage, SysExMessage};
 
 use crate::{Connection, MidiError, Packet, Port};
 
@@ -93,6 +93,15 @@ impl Connection for MidiConnection {
     }
 
     fn send(&mut self, message: &SysExMessage) -> Result<(), MidiError> {
+        self.output
+            .send(message.as_bytes())
+            .map_err(|error| MidiError::Send {
+                port: self.port.name.clone(),
+                reason: error.to_string(),
+            })
+    }
+
+    fn send_channel(&mut self, message: &ChannelMessage) -> Result<(), MidiError> {
         self.output
             .send(message.as_bytes())
             .map_err(|error| MidiError::Send {

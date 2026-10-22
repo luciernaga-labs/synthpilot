@@ -1,8 +1,11 @@
 use super::PART_COUNT;
 use super::catalog::{self, Addressing, Block, Entry, Mapping};
+use super::effect_parameters::{
+    self, Group, List, REVERB_IDS, REVERB_SLOT_NAMES, SLOTS, VARIATION_IDS, VARIATION_SLOT_NAMES,
+};
 use crate::domain::{
-    EncodeError, EngineId, EngineProfile, Layout, ParameterChange, ParameterDefinition,
-    ParameterId, Scope, ValueFormat, ValueRange,
+    ChoiceGroup, EncodeError, EngineId, EngineProfile, Layout, ParameterChange,
+    ParameterDefinition, ParameterId, Part, Scope, ValueFormat, ValueRange,
 };
 use crate::protocol::SysExMessage;
 use crate::protocol::yamaha::DeviceNumber;
@@ -13,13 +16,11 @@ pub const REVERB_TYPE: ParameterId = ParameterId::new("effects.reverb-type");
 pub const REVERB_RETURN: ParameterId = ParameterId::new("effects.reverb-return");
 pub const REVERB_PAN: ParameterId = ParameterId::new("effects.reverb-pan");
 pub const REVERB_SWITCH: ParameterId = ParameterId::new("effects.reverb-switch");
-pub const REVERB_PARAMETERS: ParameterId = ParameterId::new("effects.reverb-parameters");
 pub const VARIATION_TYPE: ParameterId = ParameterId::new("effects.variation-type");
 pub const VARIATION_RETURN: ParameterId = ParameterId::new("effects.variation-return");
 pub const VARIATION_PAN: ParameterId = ParameterId::new("effects.variation-pan");
 pub const VARIATION_TO_REVERB: ParameterId = ParameterId::new("effects.variation-to-reverb");
 pub const VARIATION_SWITCH: ParameterId = ParameterId::new("effects.variation-switch");
-pub const VARIATION_PARAMETERS: ParameterId = ParameterId::new("effects.variation-parameters");
 
 pub const EFFECT_TYPE_PAGE: u16 = 144;
 
@@ -30,7 +31,6 @@ const VARIATION: Block = Block::new(0x30, Addressing::Performance { mid: 0x42 },
 const REVERB_CATEGORY: &str = "Reverb";
 const VARIATION_CATEGORY: &str = "Variation";
 const OFF_ON: &[&str] = &["Off", "On"];
-const PARAMETERS_REASON: &str = "Each effect type has its own parameters, and SynthPilot doesn't know them yet. Change them on the keyboard for now.";
 
 const fn prepend<T: Copy, const N: usize, const M: usize>(first: T, rest: [T; N]) -> [T; M] {
     assert!(M == N + 1, "the result holds one more value");
@@ -164,11 +164,149 @@ const EFFECT_VALUES: [u32; 88] = [
     0x06C0, 0x06D0, 0x06E0, 0x06F0,
 ];
 
+/// Effect Type List (pages 144–145): VINYL BREAK and the four BEAT REPEAT
+/// types have no number in the `InsB` column, so Insertion B cannot use them.
+const INSERTION_B_GAP: usize = 70;
+const INSERTION_B_GAP_LENGTH: usize = 5;
+
+const fn without_gap<T: Copy, const N: usize, const M: usize>(values: [T; N]) -> [T; M] {
+    assert!(M + INSERTION_B_GAP_LENGTH == N, "the result drops the gap");
+    let mut out = [values[0]; M];
+    let mut index = 0;
+    while index < M {
+        out[index] = if index < INSERTION_B_GAP {
+            values[index]
+        } else {
+            values[index + INSERTION_B_GAP_LENGTH]
+        };
+        index += 1;
+    }
+    out
+}
+
+const INSERTION_B_NAMES: [&str; 83] = without_gap(EFFECT_NAMES);
+const INSERTION_B_VALUES: [u32; 83] = without_gap(EFFECT_VALUES);
+
+/// Category headings of the Effect Type List (pages 144–145), numbered as in
+/// the REV column.
+pub(super) const REVERB_GROUPS: &[ChoiceGroup] = &[ChoiceGroup {
+    name: "Reverb",
+    first: 1,
+}];
+
+/// Category headings of the Effect Type List, numbered as in the VAR and `InsA`
+/// columns.
+pub(super) const EFFECT_GROUPS: &[ChoiceGroup] = &[
+    ChoiceGroup {
+        name: "Reverb",
+        first: 1,
+    },
+    ChoiceGroup {
+        name: "Delay",
+        first: 6,
+    },
+    ChoiceGroup {
+        name: "Chorus",
+        first: 15,
+    },
+    ChoiceGroup {
+        name: "Flanger",
+        first: 20,
+    },
+    ChoiceGroup {
+        name: "Phaser",
+        first: 25,
+    },
+    ChoiceGroup {
+        name: "Tremolo & Rotary",
+        first: 30,
+    },
+    ChoiceGroup {
+        name: "Distortion",
+        first: 34,
+    },
+    ChoiceGroup {
+        name: "Compressor",
+        first: 46,
+    },
+    ChoiceGroup {
+        name: "Wah",
+        first: 52,
+    },
+    ChoiceGroup {
+        name: "Lo-Fi",
+        first: 55,
+    },
+    ChoiceGroup {
+        name: "Tech",
+        first: 59,
+    },
+    ChoiceGroup {
+        name: "Misc",
+        first: 76,
+    },
+];
+
+/// The same headings numbered as in the `InsB` column, which skips five Tech
+/// types.
+pub(super) const INSERTION_B_GROUPS: &[ChoiceGroup] = &[
+    ChoiceGroup {
+        name: "Reverb",
+        first: 1,
+    },
+    ChoiceGroup {
+        name: "Delay",
+        first: 6,
+    },
+    ChoiceGroup {
+        name: "Chorus",
+        first: 15,
+    },
+    ChoiceGroup {
+        name: "Flanger",
+        first: 20,
+    },
+    ChoiceGroup {
+        name: "Phaser",
+        first: 25,
+    },
+    ChoiceGroup {
+        name: "Tremolo & Rotary",
+        first: 30,
+    },
+    ChoiceGroup {
+        name: "Distortion",
+        first: 34,
+    },
+    ChoiceGroup {
+        name: "Compressor",
+        first: 46,
+    },
+    ChoiceGroup {
+        name: "Wah",
+        first: 52,
+    },
+    ChoiceGroup {
+        name: "Lo-Fi",
+        first: 55,
+    },
+    ChoiceGroup {
+        name: "Tech",
+        first: 59,
+    },
+    ChoiceGroup {
+        name: "Misc",
+        first: 71,
+    },
+];
+
 const REVERB_LABELS: [&str; 13] = prepend("NO EFFECT", REVERB_NAMES);
 const REVERB_TABLE: [u32; 13] = prepend(0x0000, REVERB_VALUES);
 const VARIATION_LABELS: [&str; 89] = prepend("NO EFFECT", EFFECT_NAMES);
 pub(super) const INSERTION_LABELS: [&str; 89] = prepend("THRU", EFFECT_NAMES);
 pub(super) const EFFECT_TABLE: [u32; 89] = prepend(0x0000, EFFECT_VALUES);
+pub(super) const INSERTION_B_LABELS: [&str; 84] = prepend("THRU", INSERTION_B_NAMES);
+pub(super) const INSERTION_B_TABLE: [u32; 84] = prepend(0x0000, INSERTION_B_VALUES);
 
 pub(super) const fn effect_type(
     id: ParameterId,
@@ -212,6 +350,7 @@ const ENTRIES: &[Entry] = &[
             Scope::Performance,
             &REVERB_LABELS,
         )
+        .with_groups(REVERB_GROUPS)
         .with_default(2)
         .with_help("Kind of reverb shared by every Part. NO EFFECT turns it off."),
         Mapping::listed(REVERB, 0x00, 2, &REVERB_TABLE, 197),
@@ -251,15 +390,6 @@ const ENTRIES: &[Entry] = &[
         .with_help("Turns the reverb on or off for the whole Performance."),
         Mapping::new(REVERB, 0x46, 1, (0x00, 0x01), 198),
     ),
-    Entry::unverified(
-        common(
-            REVERB_PARAMETERS,
-            "Reverb Parameters 1–24",
-            REVERB_CATEGORY,
-            ValueRange::new(0, 0x3FFF),
-        ),
-        PARAMETERS_REASON,
-    ),
     Entry::verified(
         effect_type(
             VARIATION_TYPE,
@@ -269,6 +399,7 @@ const ENTRIES: &[Entry] = &[
             Scope::Performance,
             &VARIATION_LABELS,
         )
+        .with_groups(EFFECT_GROUPS)
         .with_default(15)
         .with_help("Second shared effect, such as a chorus, a delay or another reverb. NO EFFECT turns it off."),
         Mapping::listed(VARIATION, 0x00, 2, &EFFECT_TABLE, 198),
@@ -319,31 +450,58 @@ const ENTRIES: &[Entry] = &[
         .with_help("Turns the Variation effect on or off for the whole Performance."),
         Mapping::new(VARIATION, 0x47, 1, (0x00, 0x01), 198),
     ),
-    Entry::unverified(
-        common(
-            VARIATION_PARAMETERS,
-            "Variation Parameters 1–24",
-            VARIATION_CATEGORY,
-            ValueRange::new(0, 0x3FFF),
-        ),
-        PARAMETERS_REASON,
-    ),
 ];
 
+const REVERB_SLOTS: Group = Group {
+    list: List::Reverb,
+    control: REVERB_TYPE,
+    kinds: &REVERB_TABLE,
+    ids: &REVERB_IDS,
+    names: &REVERB_SLOT_NAMES,
+    block: REVERB,
+    category: REVERB_CATEGORY,
+    scope: Scope::Performance,
+    pages: (197, 198),
+};
+
+const VARIATION_SLOTS: Group = Group {
+    list: List::Variation,
+    control: VARIATION_TYPE,
+    kinds: &EFFECT_TABLE,
+    ids: &VARIATION_IDS,
+    names: &VARIATION_SLOT_NAMES,
+    block: VARIATION,
+    category: VARIATION_CATEGORY,
+    scope: Scope::Performance,
+    pages: (198, 198),
+};
+
+const GROUPS: [&Group; 2] = [&REVERB_SLOTS, &VARIATION_SLOTS];
+
+pub const REVERB_PARAMETERS: [ParameterId; SLOTS] = REVERB_IDS;
+pub const VARIATION_PARAMETERS: [ParameterId; SLOTS] = VARIATION_IDS;
+
 pub(super) fn entries() -> Vec<Entry> {
-    ENTRIES.to_vec()
+    let mut entries = ENTRIES.to_vec();
+    for group in GROUPS {
+        entries.extend(group.entries(ENGINE_ID));
+    }
+    entries
 }
 
 pub struct Effects {
     device_number: DeviceNumber,
+    entries: Vec<Entry>,
     parameters: Vec<ParameterDefinition>,
 }
 
 impl Effects {
     pub fn new(device_number: DeviceNumber) -> Self {
+        let entries = entries();
         Self {
             device_number,
-            parameters: catalog::definitions(ENTRIES),
+            parameters: catalog::definitions(&entries),
+            entries,
         }
     }
 }
@@ -377,7 +535,19 @@ impl EngineProfile for Effects {
     }
 
     fn encode(&self, change: &ParameterChange) -> Result<SysExMessage, EncodeError> {
-        catalog::encode(ENTRIES, self.layout(), self.device_number, change)
+        catalog::encode(&self.entries, self.layout(), self.device_number, change)
+    }
+
+    fn refine(&self, parameter: &ParameterDefinition, part: &Part) -> Option<ParameterDefinition> {
+        effect_parameters::refine(&GROUPS, parameter, part)
+    }
+
+    fn dependents(&self, control: &ParameterDefinition, value: i32) -> Vec<ParameterDefinition> {
+        effect_parameters::dependents(&GROUPS, &self.parameters, control, value)
+    }
+
+    fn reshapes(&self, parameter: ParameterId) -> bool {
+        GROUPS.iter().any(|group| group.control == parameter)
     }
 }
 
@@ -408,6 +578,79 @@ mod tests {
         assert_eq!(INSERTION_LABELS[0], "THRU");
         assert_eq!(INSERTION_LABELS[88], "NOISE GATE+COMP+EQ");
         assert_eq!(EFFECT_TABLE[88], (0x0D << 7) | 0x70);
+    }
+
+    #[test]
+    fn insertion_b_skips_the_types_its_column_leaves_out() {
+        assert_eq!(INSERTION_B_LABELS[70], "CONTROL FILTER");
+        assert_eq!(INSERTION_B_TABLE[70], (0x0C << 7) | 0x28);
+        assert_eq!(INSERTION_B_LABELS[71], "VCM EQ 501");
+        assert_eq!(INSERTION_B_TABLE[71], 0x0D << 7);
+        assert_eq!(INSERTION_B_LABELS[83], "NOISE GATE+COMP+EQ");
+        assert!(
+            !INSERTION_B_LABELS
+                .iter()
+                .any(|name| name.contains("BEAT REPEAT"))
+        );
+        assert!(!INSERTION_B_LABELS.contains(&"VINYL BREAK"));
+    }
+
+    #[test]
+    fn groups_follow_the_effect_type_list_categories() {
+        let first = |groups: &[ChoiceGroup], name: &str| {
+            groups
+                .iter()
+                .find(|group| group.name == name)
+                .unwrap()
+                .first
+        };
+        let at = |index: i32| usize::try_from(index).unwrap();
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Delay"))],
+            "CROSS DELAY"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Chorus"))],
+            "G CHORUS"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Flanger"))],
+            "VCM FLANGER"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Phaser"))],
+            "VCM PHASER MONO"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Tremolo & Rotary"))],
+            "AUTO PAN"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Distortion"))],
+            "AMP SIMULATOR 1"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Compressor"))],
+            "VCM COMPRESSOR 376"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Wah"))],
+            "VCM AUTO WAH"
+        );
+        assert_eq!(INSERTION_LABELS[at(first(EFFECT_GROUPS, "Lo-Fi"))], "LO-FI");
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Tech"))],
+            "RING MODULATOR"
+        );
+        assert_eq!(
+            INSERTION_LABELS[at(first(EFFECT_GROUPS, "Misc"))],
+            "VCM EQ 501"
+        );
+        assert_eq!(
+            INSERTION_B_LABELS[at(first(INSERTION_B_GROUPS, "Misc"))],
+            "VCM EQ 501"
+        );
+        assert_eq!(REVERB_LABELS[at(first(REVERB_GROUPS, "Reverb"))], "HD HALL");
     }
 
     #[test]
@@ -455,9 +698,13 @@ mod tests {
                 .iter()
                 .all(|parameter| parameter.scope == Scope::Performance)
         );
-        let parameters = effects.parameter(REVERB_PARAMETERS).unwrap();
-        assert!(matches!(parameters.support, Support::NotImplemented { .. }));
+        let slot = effects.parameter(REVERB_PARAMETERS[0]).unwrap();
+        assert!(matches!(slot.support, Support::Implemented(_)));
+        assert_eq!(slot.name, "Reverb Parameter 1");
         assert_eq!(entries().len(), effects.parameters().len());
+        assert!(effects.reshapes(REVERB_TYPE));
+        assert!(effects.reshapes(VARIATION_TYPE));
+        assert!(!effects.reshapes(REVERB_RETURN));
     }
 
     #[test]

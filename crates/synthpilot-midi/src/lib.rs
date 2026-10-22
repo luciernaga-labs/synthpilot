@@ -5,7 +5,7 @@ use std::fmt;
 use std::sync::{Arc, Mutex, PoisonError};
 
 pub use device::{MidiConnection, output_ports};
-use synthpilot_core::protocol::SysExMessage;
+use synthpilot_core::protocol::{ChannelMessage, SysExMessage};
 use thiserror::Error;
 
 #[derive(Debug, Clone, PartialEq, Eq, Error)]
@@ -53,6 +53,14 @@ pub trait Connection {
 
     fn send(&mut self, message: &SysExMessage) -> Result<(), MidiError>;
 
+    /// Sends a channel message such as a Bank Select or a Program Change.
+    fn send_channel(&mut self, _message: &ChannelMessage) -> Result<(), MidiError> {
+        Err(MidiError::Send {
+            port: self.port().name.clone(),
+            reason: "this connection only sends System Exclusive messages".to_owned(),
+        })
+    }
+
     fn receive(&mut self) -> Vec<Packet>;
 }
 
@@ -60,6 +68,7 @@ pub trait Connection {
 pub struct RecordingConnection {
     port: Port,
     sent: Arc<Mutex<Vec<SysExMessage>>>,
+    channel: Arc<Mutex<Vec<ChannelMessage>>>,
     incoming: Arc<Mutex<VecDeque<Packet>>>,
 }
 
@@ -71,6 +80,7 @@ impl RecordingConnection {
                 name: name.to_owned(),
             },
             sent: Arc::default(),
+            channel: Arc::default(),
             incoming: Arc::default(),
         }
     }
@@ -92,6 +102,13 @@ impl RecordingConnection {
 
     pub fn sent(&self) -> Vec<SysExMessage> {
         self.sent
+            .lock()
+            .unwrap_or_else(PoisonError::into_inner)
+            .clone()
+    }
+
+    pub fn sent_channel(&self) -> Vec<ChannelMessage> {
+        self.channel
             .lock()
             .unwrap_or_else(PoisonError::into_inner)
             .clone()
@@ -122,6 +139,14 @@ impl Connection for RecordingConnection {
             .push(message.clone());
         Ok(())
     }
+
+    fn send_channel(&mut self, message: &ChannelMessage) -> Result<(), MidiError> {
+        self.channel
+            .lock()
+            .unwrap_or_else(PoisonError::into_inner)
+            .push(message.clone());
+        Ok(())
+    }
 }
 
 #[cfg(test)]
@@ -138,6 +163,9 @@ mod tests {
         output.send(&second).unwrap();
         assert_eq!(log.sent(), [first, second]);
         assert_eq!(output.port().to_string(), "Test");
+        let program = ChannelMessage::program_change(2, 5).unwrap();
+        output.send_channel(&program).unwrap();
+        assert_eq!(log.sent_channel(), [program]);
         assert!(output.can_receive());
     }
 

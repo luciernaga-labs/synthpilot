@@ -15,6 +15,12 @@ pub(crate) enum Action {
     SelectElement(u8),
     SelectParameter(ParameterId),
     SetValue(ParameterId, i32),
+    Apply(ParameterChange),
+    /// Loads preset `number` (see `DeviceProfile::presets`) into `part`.
+    LoadPreset {
+        part: u8,
+        number: i32,
+    },
 }
 
 pub(crate) struct Preview {
@@ -101,7 +107,11 @@ impl Workspace {
 
     pub(crate) fn preview(&self) -> Option<Preview> {
         let engine = self.engine()?;
-        let definition = *engine.parameter(self.selected?)?;
+        let generic = engine.parameter(self.selected?)?;
+        let definition = self
+            .current()
+            .and_then(|part| engine.refine(generic, part))
+            .unwrap_or(*generic);
         let location = self.location(&definition);
         let value = self
             .value(&definition)
@@ -115,12 +125,38 @@ impl Workspace {
     }
 
     pub(crate) fn load(&mut self, sound: Sound) {
-        self.part = (1..=sound.part_count())
-            .find(|number| sound.part(*number).is_some())
-            .unwrap_or(1);
+        let previous = self.sound.is_some().then_some(self.part);
+        let keeps = |part: u8| match part {
+            EFFECTS => sound.common().is_some(),
+            number => sound.part(number).is_some(),
+        };
+        let reload = previous.is_some_and(keeps);
+        if !reload {
+            self.part = (1..=sound.part_count())
+                .find(|number| sound.part(*number).is_some())
+                .unwrap_or(1);
+            self.element = 1;
+        }
         self.sound = Some(sound);
-        self.element = 1;
-        self.selected = self.first_parameter();
+        let selected = self.selected.filter(|id| {
+            reload
+                && self
+                    .engine()
+                    .is_some_and(|engine| engine.parameter(*id).is_some())
+        });
+        self.selected = selected.or_else(|| self.first_parameter());
+    }
+
+    pub(crate) fn reshapes(&self, action: Action) -> bool {
+        let (part, id) = match action {
+            Action::SetValue(id, _) => (self.part, id),
+            Action::Apply(change) => (change.location.part_number(), change.parameter),
+            _ => return false,
+        };
+        self.sound
+            .as_ref()
+            .and_then(|sound| engine_for(self.device.as_ref(), sound, part))
+            .is_some_and(|engine| engine.reshapes(id))
     }
 
     pub(crate) fn receive(&mut self, data: &PartData) {
@@ -154,6 +190,7 @@ impl Workspace {
         self.error = None;
         match action {
             Action::SetValue(id, value) => return self.set_value(id, value).into_iter().collect(),
+            Action::Apply(change) => return self.apply_change(change).into_iter().collect(),
             Action::SelectDevice(id) => self.select_device(id),
             Action::SelectPart(part) => {
                 self.part = part;
@@ -162,7 +199,7 @@ impl Workspace {
             }
             Action::SelectElement(element) => self.element = element,
             Action::SelectParameter(id) => self.selected = Some(id),
-            Action::ReadFromKeyboard => {}
+            Action::ReadFromKeyboard | Action::LoadPreset { .. } => {}
         }
         Vec::new()
     }
@@ -184,6 +221,27 @@ impl Workspace {
         let definition = engine.parameter(id)?;
         let location = Location::for_scope(definition.scope, self.part, self.element);
         match sound.apply(engine, ParameterChange::new(id, location, value)) {
+            Ok(message) => Some(message),
+            Err(error) => {
+                self.error = Some(error.to_string());
+                None
+            }
+        }
+    }
+
+    pub(crate) fn value_at(&self, change: &ParameterChange) -> Option<i32> {
+        let sound = self.sound.as_ref()?;
+        let part = match change.location.part_number() {
+            EFFECTS => sound.common()?,
+            number => sound.part(number)?,
+        };
+        part.value(change.parameter, change.location.element_number())
+    }
+
+    fn apply_change(&mut self, change: ParameterChange) -> Option<SysExMessage> {
+        let sound = self.sound.as_mut()?;
+        let engine = engine_for(self.device.as_ref(), sound, change.location.part_number())?;
+        match sound.apply(engine, change) {
             Ok(message) => Some(message),
             Err(error) => {
                 self.error = Some(error.to_string());
@@ -463,5 +521,80 @@ mod tests {
         let sent = workspace.apply(Action::SetValue(part::REVERB_SEND, 40));
         let hex: Vec<_> = sent.iter().map(SysExMessage::to_hex).collect();
         assert_eq!(hex, ["F0 43 10 7F 1C 07 31 00 29 28 F7"]);
+    }
+
+    #[test]
+    fn applies_changes_at_their_own_location() {
+        let mut workspace = with(awm2::ENGINE_ID);
+        let level = ParameterChange::new(awm2::ELEMENT_LEVEL, Location::element(1, 3), 77);
+        let sent = workspace.apply(Action::Apply(level));
+        let hex: Vec<_> = sent.iter().map(SysExMessage::to_hex).collect();
+        assert_eq!(hex, ["F0 43 10 7F 1C 07 41 20 28 4D F7"]);
+        assert_eq!(workspace.value_at(&level), Some(77));
+        assert_eq!(workspace.element(), 1);
+
+        let reverb = ParameterChange::new(effects::REVERB_TYPE, Location::performance(), 9);
+        assert_eq!(workspace.apply(Action::Apply(reverb)).len(), 1);
+        assert_eq!(workspace.value_at(&reverb), Some(9));
+
+        let wrong = ParameterChange::new(awm2::ELEMENT_LEVEL, Location::element(1, 3), 500);
+        assert_eq!(
+            workspace.apply(Action::Apply(wrong)),
+            Vec::<SysExMessage>::new()
+        );
+        assert!(workspace.error().is_some());
+
+        let empty = ParameterChange::new(part::VOLUME, Location::part(9), 1);
+        assert_eq!(
+            workspace.apply(Action::Apply(empty)),
+            Vec::<SysExMessage>::new()
+        );
+        assert_eq!(workspace.value_at(&empty), None);
+    }
+
+    #[test]
+    fn effect_types_reshape_the_editor() {
+        let mut workspace = with(awm2::ENGINE_ID);
+        assert!(workspace.reshapes(Action::SetValue(part::INSERTION_A_TYPE, 15)));
+        assert!(!workspace.reshapes(Action::SetValue(part::VOLUME, 15)));
+        assert!(workspace.reshapes(Action::Apply(ParameterChange::new(
+            effects::VARIATION_TYPE,
+            Location::performance(),
+            17
+        ))));
+        assert!(!workspace.reshapes(Action::SelectPart(1)));
+
+        workspace.apply(Action::SelectPart(EFFECTS));
+        workspace.apply(Action::SelectParameter(effects::VARIATION_PARAMETERS[0]));
+        let preview = workspace.preview().unwrap();
+        assert_eq!(preview.definition.name, "LFO Speed");
+    }
+
+    #[test]
+    fn reloading_keeps_the_selected_part_and_parameter() {
+        let mut workspace = workspace();
+        let mut sound = Sound::new(workspace.device());
+        let device = workspace.device();
+        sound
+            .load(1, device.engine(awm2::ENGINE_ID).unwrap(), None, &[])
+            .unwrap();
+        sound
+            .load(4, device.engine(fm_x::ENGINE_ID).unwrap(), None, &[])
+            .unwrap();
+        let again = sound.clone();
+        let effects_only = Sound::new(workspace.device());
+        workspace.load(sound);
+        workspace.apply(Action::SelectPart(4));
+        workspace.apply(Action::SelectElement(3));
+        workspace.apply(Action::SelectParameter(fm_x::ALGORITHM));
+        workspace.load(again);
+        assert_eq!(workspace.part(), 4);
+        assert_eq!(workspace.element(), 3);
+        assert_eq!(workspace.selected(), Some(fm_x::ALGORITHM));
+
+        workspace.apply(Action::SelectPart(EFFECTS));
+        workspace.load(effects_only);
+        assert_eq!(workspace.part(), EFFECTS);
+        assert_eq!(workspace.selected(), Some(effects::REVERB_TYPE));
     }
 }

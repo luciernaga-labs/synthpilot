@@ -42,6 +42,8 @@ pub enum EditError {
     EmptyPart(u8),
     #[error("This keyboard has no settings shared by the whole Performance.")]
     NoPerformance,
+    #[error("{0} isn't used by the selected effect type.")]
+    Unavailable(ParameterId),
     #[error(
         "Part {part} is a {actual} Part, not {expected}. Select Read from keyboard to update it."
     )]

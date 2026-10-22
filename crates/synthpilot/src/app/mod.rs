@@ -1,3 +1,5 @@
+mod assistant;
+mod assistant_view;
 mod controller;
 mod editor;
 mod midi;
@@ -24,6 +26,7 @@ const FIELD_WIDTH: f32 = 260.0;
 pub(crate) struct SynthPilotApp {
     controller: Controller,
     chosen_device: Option<DeviceId>,
+    assistant: assistant::AssistantPanel,
 }
 
 impl Default for SynthPilotApp {
@@ -31,6 +34,7 @@ impl Default for SynthPilotApp {
         Self {
             controller: Controller::new(MidiLink::new()),
             chosen_device: devices::catalog().first().map(|descriptor| descriptor.id),
+            assistant: assistant::AssistantPanel::from_env(),
         }
     }
 }
@@ -77,6 +81,21 @@ impl eframe::App for SynthPilotApp {
                             workspace,
                             controller.reading(),
                             controller.status(),
+                            &mut actions,
+                        );
+                    });
+                self.assistant.poll(workspace);
+                let panel = &mut self.assistant;
+                egui::Panel::right("assistant")
+                    .resizable(true)
+                    .default_size(340.0)
+                    .min_size(280.0)
+                    .show(ui, |ui| {
+                        assistant_view::show(
+                            ui,
+                            panel,
+                            workspace,
+                            controller.reading().is_some(),
                             &mut actions,
                         );
                     });

@@ -12,6 +12,7 @@ keywords.workspace = true
 
 [dependencies]
 eframe.workspace = true
+synthpilot-assistant.workspace = true
 synthpilot-core.workspace = true
 synthpilot-midi.workspace = true
 

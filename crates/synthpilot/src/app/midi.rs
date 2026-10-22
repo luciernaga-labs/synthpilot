@@ -1,6 +1,6 @@
 use std::time::{Duration, Instant};
 
-use synthpilot_core::protocol::SysExMessage;
+use synthpilot_core::protocol::{ChannelMessage, SysExMessage};
 use synthpilot_midi::{Connection, MidiConnection, MidiError, Packet, Port};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -110,6 +110,21 @@ impl MidiLink {
             }
             self.sent += 1;
         }
+    }
+
+    /// Sends channel messages. Returns whether every message went out.
+    pub(crate) fn send_channel(&mut self, messages: &[ChannelMessage]) -> bool {
+        let Some(output) = self.output.as_mut() else {
+            return false;
+        };
+        for message in messages {
+            if let Err(error) = output.send_channel(message) {
+                self.fail(&error);
+                return false;
+            }
+            self.sent += 1;
+        }
+        true
     }
 
     fn refresh(&mut self) {

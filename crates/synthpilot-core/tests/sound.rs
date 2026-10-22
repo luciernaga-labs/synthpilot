@@ -17,7 +17,8 @@ fn new_awm2_sound_starts_from_data_list_defaults() {
     assert_eq!(part.value(awm2::ELEMENT_SWITCH, Some(2)), Some(0));
     assert_eq!(part.value(awm2::ELEMENT_LEVEL, Some(8)), Some(127));
     assert_eq!(part.value(awm2::FILTER_CUTOFF, Some(1)), Some(160));
-    assert_eq!(part.value(awm2::WAVE_NUMBER, Some(1)), None);
+    assert_eq!(part.value(awm2::WAVE_NUMBER, Some(1)), Some(1));
+    assert_eq!(part.value(awm2::FILTER_TYPE, Some(1)), None);
     assert!((2..=16).all(|number| sound.part(number).is_none()));
 }
 

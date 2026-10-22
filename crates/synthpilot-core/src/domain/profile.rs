@@ -1,8 +1,8 @@
 use super::{
-    DeviceId, EncodeError, EngineId, Layout, Location, ParameterChange, ParameterDefinition,
-    ParameterId, Received,
+    DeviceId, EncodeError, EngineId, Layout, ListedValue, Location, ParameterChange,
+    ParameterDefinition, ParameterId, Part, Received,
 };
-use crate::protocol::SysExMessage;
+use crate::protocol::{ChannelMessage, SysExMessage};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum EngineSupport {
@@ -44,6 +44,18 @@ pub trait EngineProfile: Send + Sync {
 
     fn default_value(&self, parameter: &ParameterDefinition, _location: Location) -> Option<i32> {
         parameter.default
+    }
+
+    fn refine(&self, parameter: &ParameterDefinition, _part: &Part) -> Option<ParameterDefinition> {
+        Some(*parameter)
+    }
+
+    fn dependents(&self, _control: &ParameterDefinition, _value: i32) -> Vec<ParameterDefinition> {
+        Vec::new()
+    }
+
+    fn reshapes(&self, _parameter: ParameterId) -> bool {
+        false
     }
 
     fn support(&self) -> EngineSupport {
@@ -92,6 +104,18 @@ pub trait DeviceProfile: Send + Sync {
 
     fn decode(&self, _bytes: &[u8]) -> Received {
         Received::Ignored
+    }
+
+    /// The instrument's preset sounds, numbered from 1, that can be loaded
+    /// into a Part with [`DeviceProfile::load_preset`].
+    fn presets(&self) -> &'static [ListedValue] {
+        &[]
+    }
+
+    /// Messages that load preset `number` (1-based, see
+    /// [`DeviceProfile::presets`]) into Part `part`, replacing its sound.
+    fn load_preset(&self, _part: u8, _number: i32) -> Option<Vec<ChannelMessage>> {
+        None
     }
 }
 
@@ -168,6 +192,47 @@ mod tests {
         assert_eq!(EngineSupport::Complete.label(), "Fully editable");
         assert_eq!(EngineSupport::Partial.label(), "Partly editable");
         assert_eq!(EngineSupport::NotImplemented.label(), "Not editable yet");
+    }
+
+    #[test]
+    fn engines_have_static_parameters_by_default() {
+        let engine = FakeEngine(vec![parameter("a", true)]);
+        let definition = *engine.parameter(ParameterId::new("a")).unwrap();
+        let device = DeviceForTests;
+        let mut sound = crate::domain::Sound::new(&device);
+        sound.load(1, &engine, None, &[]).unwrap();
+        let part = sound.part(1).unwrap();
+        assert_eq!(engine.refine(&definition, part), Some(definition));
+        assert_eq!(
+            engine.dependents(&definition, 1),
+            Vec::<ParameterDefinition>::new()
+        );
+        assert!(!engine.reshapes(definition.id));
+        assert!(device.common().is_none());
+    }
+
+    struct DeviceForTests;
+
+    impl DeviceProfile for DeviceForTests {
+        fn id(&self) -> DeviceId {
+            DeviceId::new("test")
+        }
+
+        fn manufacturer(&self) -> &'static str {
+            "Test"
+        }
+
+        fn model(&self) -> &'static str {
+            "Device"
+        }
+
+        fn part_count(&self) -> u8 {
+            1
+        }
+
+        fn engines(&self) -> &[Box<dyn EngineProfile>] {
+            &[]
+        }
     }
 
     #[test]

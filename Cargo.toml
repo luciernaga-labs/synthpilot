@@ -1,6 +1,11 @@
 [workspace]
 resolver = "3"
-members = ["crates/synthpilot", "crates/synthpilot-core", "crates/synthpilot-midi"]
+members = [
+    "crates/synthpilot",
+    "crates/synthpilot-assistant",
+    "crates/synthpilot-core",
+    "crates/synthpilot-midi",
+]
 
 [workspace.package]
 version = "0.1.0"
@@ -11,11 +16,16 @@ repository = "https://github.com/luciernaga-labs/synthpilot"
 keywords = ["midi", "sysex", "synthesizer", "yamaha", "modx"]
 
 [workspace.dependencies]
+dotenvy = "0.15"
 eframe = { version = "0.37", default-features = false, features = ["accesskit", "default_fonts", "glow", "wayland", "x11"] }
 midir = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+synthpilot-assistant = { path = "crates/synthpilot-assistant", version = "0.1.0" }
 synthpilot-core = { path = "crates/synthpilot-core", version = "0.1.0" }
 synthpilot-midi = { path = "crates/synthpilot-midi", version = "0.1.0" }
 thiserror = "2"
+ureq = "3"
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
